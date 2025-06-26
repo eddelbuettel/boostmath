@@ -8,6 +8,9 @@
 #include <boost/math/special_functions/ellint_1.hpp>
 #include <boost/math/special_functions/ellint_2.hpp>
 #include <boost/math/special_functions/ellint_3.hpp>
+#include <boost/math/special_functions/ellint_d.hpp>
+#include <boost/math/special_functions/jacobi_zeta.hpp>
+#include <boost/math/special_functions/heuman_lambda.hpp>
 
 extern "C" {
   SEXP ellint_rf_(SEXP x_, SEXP y_, SEXP z_) {
@@ -109,6 +112,41 @@ extern "C" {
     double k = cpp11::as_cpp<double>(k_);
     double n = cpp11::as_cpp<double>(n_);
     double result = boost::math::ellint_3(k, n);
+    return cpp11::as_sexp(result);
+    END_CPP11
+  }
+
+  SEXP ellint_d_incomplete_(SEXP k_, SEXP phi_) {
+    BEGIN_CPP11
+    double k = cpp11::as_cpp<double>(k_);
+    double phi = cpp11::as_cpp<double>(phi_);
+    double result = boost::math::ellint_d(k, phi);
+    return cpp11::as_sexp(result);
+    END_CPP11
+  }
+
+  SEXP ellint_d_(SEXP k_) {
+    BEGIN_CPP11
+    double k = cpp11::as_cpp<double>(k_);
+    double result = boost::math::ellint_d(k);
+    return cpp11::as_sexp(result);
+    END_CPP11
+  }
+  
+  SEXP jacobi_zeta_(SEXP k_, SEXP phi_) {
+    BEGIN_CPP11
+    double k = cpp11::as_cpp<double>(k_);
+    double phi = cpp11::as_cpp<double>(phi_);
+    double result = boost::math::jacobi_zeta(k, phi);
+    return cpp11::as_sexp(result);
+    END_CPP11
+  }
+
+  SEXP heuman_lambda_(SEXP k_, SEXP phi_) {
+    BEGIN_CPP11
+    double k = cpp11::as_cpp<double>(k_);
+    double phi = cpp11::as_cpp<double>(phi_);
+    double result = boost::math::heuman_lambda(k, phi);
     return cpp11::as_sexp(result);
     END_CPP11
   }

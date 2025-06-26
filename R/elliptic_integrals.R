@@ -41,3 +41,19 @@ ellint_3_incomplete <- function(k, n, phi) {
 ellint_3 <- function(k, n) {
   .Call(`ellint_3_`, k, n)
 }
+
+ellint_d_incomplete <- function(k, phi) {
+  .Call(`ellint_d_incomplete_`, k, phi)
+}
+
+ellint_d <- function(k) {
+  .Call(`ellint_d_`, k)
+}
+
+jacobi_zeta <- function(k, phi) {
+  .Call(`jacobi_zeta_`, k, phi)
+}
+
+heuman_lambda <- function(k, phi) {
+  .Call(`heuman_lambda_`, k, phi)
+}

@@ -132,6 +132,61 @@ extern "C" {
   SEXP ellint_2_(SEXP k_);
   SEXP ellint_3_incomplete_(SEXP k_, SEXP n_, SEXP phi_);
   SEXP ellint_3_(SEXP k_, SEXP n_);
+  SEXP ellint_d_incomplete_(SEXP k_, SEXP phi_);
+  SEXP ellint_d_(SEXP k_);
+  SEXP jacobi_zeta_(SEXP k_, SEXP phi_);
+  SEXP heuman_lambda_(SEXP k_, SEXP phi_);
+
+  // jacobi_elliptic_functions.cpp
+  SEXP jacobi_elliptic_(SEXP k_, SEXP u_);
+  SEXP jacobi_cd_(SEXP k_, SEXP u_);
+  SEXP jacobi_cn_(SEXP k_, SEXP u_);
+  SEXP jacobi_cs_(SEXP k_, SEXP u_);
+  SEXP jacobi_dc_(SEXP k_, SEXP u_);
+  SEXP jacobi_dn_(SEXP k_, SEXP u_);
+  SEXP jacobi_ds_(SEXP k_, SEXP u_);
+  SEXP jacobi_nc_(SEXP k_, SEXP u_);
+  SEXP jacobi_nd_(SEXP k_, SEXP u_);
+  SEXP jacobi_ns_(SEXP k_, SEXP u_);
+  SEXP jacobi_sc_(SEXP k_, SEXP u_);
+  SEXP jacobi_sd_(SEXP k_, SEXP u_);
+  SEXP jacobi_sn_(SEXP k_, SEXP u_);
+
+  // jacobi_theta_functions.cpp
+  SEXP jacobi_theta1_(SEXP x_, SEXP q_);
+  SEXP jacobi_theta1tau_(SEXP x_, SEXP tau_);
+  SEXP jacobi_theta2_(SEXP x_, SEXP q_);
+  SEXP jacobi_theta2tau_(SEXP x_, SEXP tau_);
+  SEXP jacobi_theta3_(SEXP x_, SEXP q_);
+  SEXP jacobi_theta3tau_(SEXP x_, SEXP tau_);
+  SEXP jacobi_theta3m1_(SEXP x_, SEXP q_);
+  SEXP jacobi_theta3m1tau_(SEXP x_, SEXP tau_);
+  SEXP jacobi_theta4_(SEXP x_, SEXP q_);
+  SEXP jacobi_theta4tau_(SEXP x_, SEXP tau_);
+  SEXP jacobi_theta4m1_(SEXP x_, SEXP q_);
+  SEXP jacobi_theta4m1tau_(SEXP x_, SEXP tau_);
+
+  // lambert_w_function.cpp
+  SEXP lambert_w0_(SEXP z_);
+  SEXP lambert_wm1_(SEXP z_);
+  SEXP lambert_w0_prime_(SEXP z_);
+  SEXP lambert_wm1_prime_(SEXP z_);
+
+  // riemann_zeta_function.cpp
+  SEXP zeta_(SEXP z_);
+
+  // exponential_integrals.cpp
+  SEXP expint_en_(SEXP n_, SEXP z_);
+  SEXP expint_ei_(SEXP z_);
+
+  // hypergeometric_functions.cpp
+  SEXP hypergeometric_1F0_(SEXP a_, SEXP z_);
+  SEXP hypergeometric_0F1_(SEXP b_, SEXP z_);
+  SEXP hypergeometric_2F0_(SEXP a1_, SEXP a2_, SEXP z_);
+  SEXP hypergeometric_1F1_(SEXP a_, SEXP b_, SEXP z_);
+  SEXP hypergeometric_1F1_regularized_(SEXP a_, SEXP b_, SEXP z_);
+  SEXP log_hypergeometric_1F1_(SEXP a_, SEXP b_, SEXP z_);
+  SEXP hypergeometric_pFq_(SEXP a_, SEXP b_, SEXP z_);
 
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
@@ -183,9 +238,7 @@ extern "C" {
     {"ibeta_inv_", (DL_FUNC) &ibeta_inv_, 3},
     {"ibetac_inv_", (DL_FUNC) &ibetac_inv_, 3},
     {"ibeta_inva_", (DL_FUNC) &ibeta_inva_, 3},
-    {"ibetac_inva_", (DL_FUNC) &ibetac_inva_, 3},
-    {"ibeta_invb_", (DL_FUNC) &ibeta_invb_, 3},
-    {"ibetac_invb_", (DL_FUNC) &ibetac_invb_, 3},
+    {"ibetac_inva_", (DL_FUNC) &ibetac_invb_, 3},
     {"ibeta_derivative_", (DL_FUNC) &ibeta_derivative_, 3},
 
     // error_functions.cpp
@@ -245,25 +298,67 @@ extern "C" {
     // airy_functions.cpp
     {"airy_ai_", (DL_FUNC) &airy_ai_, 1},
     {"airy_bi_", (DL_FUNC) &airy_bi_, 1},
-    {"airy_ai_prime_", (DL_FUNC) &airy_ai_prime_, 1},
-    {"airy_bi_prime_", (DL_FUNC) &airy_bi_prime_, 1},
-    {"airy_ai_zero_", (DL_FUNC) &airy_ai_zero_, 1},
-    {"airy_bi_zero_", (DL_FUNC) &airy_bi_zero_, 1},
-    {"airy_ai_zero_multiple_", (DL_FUNC) &airy_ai_zero_multiple_, 2},
-    {"airy_bi_zero_multiple_", (DL_FUNC) &airy_bi_zero_multiple_, 2},
-
-    // elliptic_integrals.cpp
-    {"ellint_rf_", (DL_FUNC) &ellint_rf_, 3},
-    {"ellint_rd_", (DL_FUNC) &ellint_rd_, 3},
-    {"ellint_rj_", (DL_FUNC) &ellint_rj_, 4},
-    {"ellint_rc_", (DL_FUNC) &ellint_rc_, 2},
-    {"ellint_rg_", (DL_FUNC) &ellint_rg_, 3},
     {"ellint_1_incomplete_", (DL_FUNC) &ellint_1_incomplete_, 2},
     {"ellint_1_", (DL_FUNC) &ellint_1_, 1},
     {"ellint_2_incomplete_", (DL_FUNC) &ellint_2_incomplete_, 2},
     {"ellint_2_", (DL_FUNC) &ellint_2_, 1},
     {"ellint_3_incomplete_", (DL_FUNC) &ellint_3_incomplete_, 3},
     {"ellint_3_", (DL_FUNC) &ellint_3_, 2},
+    {"ellint_d_incomplete_", (DL_FUNC) &ellint_d_incomplete_, 2},
+    {"ellint_d_", (DL_FUNC) &ellint_d_, 1},
+    {"jacobi_zeta_", (DL_FUNC) &jacobi_zeta_, 2},
+    {"heuman_lambda_", (DL_FUNC) &heuman_lambda_, 2},
+
+    // jacobi_elliptic_functions.cpp
+    {"jacobi_elliptic_", (DL_FUNC) &jacobi_elliptic_, 2},
+    {"jacobi_cd_", (DL_FUNC) &jacobi_cd_, 2},
+    {"jacobi_cn_", (DL_FUNC) &jacobi_cn_, 2},
+    {"jacobi_cs_", (DL_FUNC) &jacobi_cs_, 2},
+    {"jacobi_dc_", (DL_FUNC) &jacobi_dc_, 2},
+    {"jacobi_dn_", (DL_FUNC) &jacobi_dn_, 2},
+    {"jacobi_ds_", (DL_FUNC) &jacobi_ds_, 2},
+    {"jacobi_nc_", (DL_FUNC) &jacobi_nc_, 2},
+    {"jacobi_nd_", (DL_FUNC) &jacobi_nd_, 2},
+    {"jacobi_ns_", (DL_FUNC) &jacobi_ns_, 2},
+    {"jacobi_sc_", (DL_FUNC) &jacobi_sc_, 2},
+    {"jacobi_sd_", (DL_FUNC) &jacobi_sd_, 2},
+    {"jacobi_sn_", (DL_FUNC) &jacobi_sn_, 2},
+
+    // jacobi_theta_functions.cpps
+    {"jacobi_theta1_", (DL_FUNC) &jacobi_theta1_, 2},
+    {"jacobi_theta1tau_", (DL_FUNC) &jacobi_theta1tau_, 2},
+    {"jacobi_theta2_", (DL_FUNC) &jacobi_theta2_, 2},
+    {"jacobi_theta2tau_", (DL_FUNC) &jacobi_theta2tau_, 2},
+    {"jacobi_theta3_", (DL_FUNC) &jacobi_theta3_, 2},
+    {"jacobi_theta3tau_", (DL_FUNC) &jacobi_theta3tau_, 2},
+    {"jacobi_theta3m1_", (DL_FUNC) &jacobi_theta3m1_, 2},
+    {"jacobi_theta3m1tau_", (DL_FUNC) &jacobi_theta3m1tau_, 2},
+    {"jacobi_theta4_", (DL_FUNC) &jacobi_theta4_, 2},
+    {"jacobi_theta4tau_", (DL_FUNC) &jacobi_theta4tau_, 2},
+    {"jacobi_theta4m1_", (DL_FUNC) &jacobi_theta4m1_, 2},
+    {"jacobi_theta4m1tau_", (DL_FUNC) &jacobi_theta4m1tau_, 2},
+
+    // lambert_w_function.cpp
+    {"lambert_w0_", (DL_FUNC) &lambert_w0_, 1},
+    {"lambert_wm1_", (DL_FUNC) &lambert_wm1_, 1},
+    {"lambert_w0_prime_", (DL_FUNC) &lambert_w0_prime_, 1},
+    {"lambert_wm1_prime_", (DL_FUNC) &lambert_wm1_prime_, 1},
+
+    // riemann_zeta_function.cpp
+    {"zeta_", (DL_FUNC) &zeta_, 1},
+
+    // exponential_integrals.cpp
+    {"expint_en_", (DL_FUNC) &expint_en_, 2},
+    {"expint_ei_", (DL_FUNC) &expint_ei_, 1},
+
+    // hypergeometric_functions.cpp
+    {"hypergeometric_1F0_", (DL_FUNC) &hypergeometric_1F0_, 2},
+    {"hypergeometric_0F1_", (DL_FUNC) &hypergeometric_0F1_, 2},
+    {"hypergeometric_2F0_", (DL_FUNC) &hypergeometric_2F0_, 3},
+    {"hypergeometric_1F1_", (DL_FUNC) &hypergeometric_1F1_, 3},
+    {"hypergeometric_1F1_regularized_", (DL_FUNC) &hypergeometric_1F1_regularized_, 3},
+    {"log_hypergeometric_1F1_", (DL_FUNC) &log_hypergeometric_1F1_, 3},
+    {"hypergeometric_pFq_", (DL_FUNC) &hypergeometric_pFq_, 3},
 
     {NULL, NULL, 0}
   };
