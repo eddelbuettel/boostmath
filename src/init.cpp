@@ -188,6 +188,29 @@ extern "C" {
   SEXP log_hypergeometric_1F1_(SEXP a_, SEXP b_, SEXP z_);
   SEXP hypergeometric_pFq_(SEXP a_, SEXP b_, SEXP z_);
 
+  // basic_functions.cpp
+  SEXP sin_pi_(SEXP x_);
+  SEXP cos_pi_(SEXP x_);
+  SEXP log1p_(SEXP x_);
+  SEXP expm1_(SEXP x_);
+  SEXP cbrt_(SEXP x_);
+  SEXP sqrt1pm1_(SEXP x_);
+  SEXP powm1_(SEXP x_, SEXP y_);
+  SEXP hypot_(SEXP x_, SEXP y_);
+  SEXP rsqrt_(SEXP x_);
+
+  // sinus_cardinal_hyperbolic_functions.cpp
+  SEXP sinc_pi_(SEXP x_);
+  SEXP sinhc_pi_(SEXP x_);
+
+  // inverse_hyperbolic_functions.cpp
+  SEXP asinh_(SEXP x_);
+  SEXP acosh_(SEXP x_);
+  SEXP atanh_(SEXP x_);
+
+  // owens_t_function.cpp
+  SEXP owens_t_(SEXP h_, SEXP a_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -359,6 +382,29 @@ extern "C" {
     {"hypergeometric_1F1_regularized_", (DL_FUNC) &hypergeometric_1F1_regularized_, 3},
     {"log_hypergeometric_1F1_", (DL_FUNC) &log_hypergeometric_1F1_, 3},
     {"hypergeometric_pFq_", (DL_FUNC) &hypergeometric_pFq_, 3},
+
+    // basic_functions.cpp
+    {"sin_pi_", (DL_FUNC) &sin_pi_, 1},
+    {"cos_pi_", (DL_FUNC) &cos_pi_, 1},
+    {"log1p_", (DL_FUNC) &log1p_, 1},
+    {"expm1_", (DL_FUNC) &expm1_, 1},
+    {"cbrt_", (DL_FUNC) &cbrt_, 1},
+    {"sqrt1pm1_", (DL_FUNC) &sqrt1pm1_, 1},
+    {"powm1_", (DL_FUNC) &powm1_, 2},
+    {"hypot_", (DL_FUNC) &hypot_, 2},
+    {"rsqrt_", (DL_FUNC) &rsqrt_, 1},
+
+    // sinus_cardinal_hyperbolic_functions.cpp
+    {"sinc_pi_", (DL_FUNC) &sinc_pi_, 1},
+    {"sinhc_pi_", (DL_FUNC) &sinhc_pi_, 1},
+
+    // inverse_hyperbolic_functions.cpp
+    {"asinh_", (DL_FUNC) &asinh_, 1},
+    {"acosh_", (DL_FUNC) &acosh_, 1},
+    {"atanh_", (DL_FUNC) &atanh_, 1},
+
+    // owens_t_function.cpp
+    {"owens_t_", (DL_FUNC) &owens_t_, 2},
 
     {NULL, NULL, 0}
   };
