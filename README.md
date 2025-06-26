@@ -22,16 +22,10 @@ pak::pak("andrjohns/boostmath")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Functions can be used directly after loading the package:
 
 ``` r
 library(boostmath)
-#> 
-#> Attaching package: 'boostmath'
-#> The following objects are masked from 'package:base':
-#> 
-#>     acosh, asinh, atanh, beta, digamma, expm1, factorial, lgamma,
-#>     log1p, trigamma
 
 hypergeometric_pFq(c(1, 2.5), c(0.5, 2), 1)
 #> [1] 6.675991
@@ -39,4 +33,14 @@ ibeta_inv(2.1, 5.2, 0.7)
 #> [1] 0.361431
 owens_t(2.1, 4.2)
 #> [1] 0.00893221
+```
+
+Any Boost Math functions that share the same name as R functions are
+prefixed with `boost_` to avoid conflicts:
+
+``` r
+boost_beta(3, 2)
+#> [1] 0.08333333
+boost_lgamma(5)
+#> [1] 3.178054
 ```

@@ -6,7 +6,7 @@
 #' @param b Second parameter of the beta function
 #' @return The value of the Euler beta function B(a, b).
 #' @export
-beta <- function(a, b) {
+boost_beta <- function(a, b) {
   .Call(`beta_`, a, b)
 }
 

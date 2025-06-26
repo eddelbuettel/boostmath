@@ -31,7 +31,7 @@ pak::pak("andrjohns/boostmath")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Functions can be used directly after loading the package:
 
 ```{r example}
 library(boostmath)
@@ -41,3 +41,9 @@ ibeta_inv(2.1, 5.2, 0.7)
 owens_t(2.1, 4.2)
 ```
 
+Any Boost Math functions that share the same name as R functions are prefixed with `boost_` to avoid conflicts:
+
+```{r}
+boost_beta(3, 2)
+boost_lgamma(5)
+```

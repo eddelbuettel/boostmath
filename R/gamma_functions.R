@@ -27,7 +27,7 @@ tgamma1pm1 <- function(dz) {
 #' @param z Input numeric value
 #' @return The logarithm of the gamma function at z.
 #' @export
-lgamma <- function(z) {
+boost_lgamma <- function(z) {
   .Call(`lgamma_`, z)
 }
 
@@ -38,7 +38,7 @@ lgamma <- function(z) {
 #' @param z Input numeric value
 #' @return The value of the digamma function at z.
 #' @export
-digamma <- function(z) {
+boost_digamma <- function(z) {
   .Call(`digamma_`, z)
 }
 
@@ -49,7 +49,7 @@ digamma <- function(z) {
 #' @param z Input numeric value
 #' @return The value of the trigamma function at z.
 #' @export
-trigamma <- function(z) {
+boost_trigamma <- function(z) {
   .Call(`trigamma_`, z)
 }
 
