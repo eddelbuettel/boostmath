@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# boostmath
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Providing simple access to Boost's Math functions in R, no compilation required.
+
+## Installation
+
+You can install the development version of boostmath from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("andrjohns/boostmath")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(boostmath)
+
+hypergeometric_pFq(c(1, 2.5), c(0.5, 2), 1)
+ibeta_inv(2.1, 5.2, 0.7)
+owens_t(2.1, 4.2)
+```
+

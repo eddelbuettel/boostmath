@@ -1,0 +1,51 @@
+---
+title: "Boost Math: Special Functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Boost Math: Special Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include=FALSE}
+library(boostmath)
+```
+
+## Using Boost's Special Math Functions
+
+The [Special Functions](https://www.boost.org/doc/libs/1_85_0/libs/math/doc/html/special.html) section of the Boost Math library cover a broad range of areas:
+
+  - Number Series
+  - Gamma Functions
+  - Factorials and Binomial 
+  - Beta Functions
+  - Error Functions
+  - Polynomials
+  - Bessel Functions
+  - Airy Functions
+  - Elliptic Integrals
+  - Jacobi Elliptic Functions
+  - Jacobi Theta Functions
+  - Lambert W function
+  - Zeta Functions
+  - Exponential Integrals
+  - Hypergeometric Functions
+  - Basic Functions
+  - Sinus Cardinal and Hyperbolic Sinus Cardinal Functions
+  - Inverse Hyperbolic Functions
+  - Owen's T function
+  
+These are all exposed for direct use in `boostmath` without needing any additional compilation:
+
+```{r}
+hypergeometric_pFq(c(1, 2.5), c(0.5, 2), 1)
+ibeta_inv(2.1, 5.2, 0.7)
+owens_t(2.1, 4.2)
+```
