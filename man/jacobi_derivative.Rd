@@ -18,8 +18,8 @@ jacobi_derivative(n, alpha, beta, x, k)
 \item{k}{Order of the derivative}
 }
 \value{
-The value of the k-th derivative of the Jacobi polynomial \(P_n^{(\alpha, \beta)}(x)\).
+The value of the k-th derivative of the Jacobi polynomial \eqn{\(P_n^{(\alpha, \beta)}(x)\)}.
 }
 \description{
-Computes the k-th derivative of the Jacobi polynomial \(P_n^{(\alpha, \beta)}(x)\).
+Computes the k-th derivative of the Jacobi polynomial \eqn{\(P_n^{(\alpha, \beta)}(x)\)}.
 }

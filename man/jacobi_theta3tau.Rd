@@ -12,8 +12,8 @@ jacobi_theta3tau(x, tau)
 \item{tau}{The nome parameter of the Jacobi theta function}
 }
 \value{
-The value of the Jacobi theta function \(\theta_3(x; \tau)\).
+The value of the Jacobi theta function \eqn{\(\theta_3(x; \tau)\)}.
 }
 \description{
-Computes the Jacobi theta function \(\theta_3\) parameterised by \(\tau\).
+Computes the Jacobi theta function \eqn{\(\theta_3\)$ parameterised by $\(\tau\)}.
 }

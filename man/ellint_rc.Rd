@@ -10,8 +10,6 @@ ellint_rc(x, y)
 \item{x}{First parameter of the integral}
 
 \item{y}{Second parameter of the integral}
-
-\item{z}{Third parameter of the integral}
 }
 \value{
 The value of Carlson's elliptic integral Rc.

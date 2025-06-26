@@ -12,8 +12,8 @@ jacobi_theta1(x, q)
 \item{q}{The nome parameter of the Jacobi theta function}
 }
 \value{
-The value of the Jacobi theta function \(\theta_1(x; q)\).
+The value of the Jacobi theta function \eqn{\(\theta_1(x; q)\)}.
 }
 \description{
-Computes the Jacobi theta function \(\theta_1\) parameterised by \(q\).
+Computes the Jacobi theta function \eqn{\(\theta_1\)$ parameterised by $\(q\)}.
 }

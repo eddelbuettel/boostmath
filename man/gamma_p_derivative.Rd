@@ -4,10 +4,12 @@
 \alias{gamma_p_derivative}
 \title{Derivative of the Normalised Upper Incomplete Gamma Function}
 \usage{
-gamma_p_derivative(a)
+gamma_p_derivative(a, z)
 }
 \arguments{
 \item{a}{Shape parameter of the gamma function}
+
+\item{z}{Upper limit of integration}
 }
 \value{
 The value of the derivative of the normalised upper incomplete gamma function Q(a, z).

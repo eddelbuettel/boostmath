@@ -2,7 +2,7 @@
 % Please edit documentation in R/number_series.R
 \name{bernoulli_b2n_range}
 \alias{bernoulli_b2n_range}
-\title{Bernoulli Numbers (B_{2n}) Range}
+\title{Bernoulli Numbers \eqn{(B_{2n})} Range}
 \usage{
 bernoulli_b2n_range(start_index, number_of_bernoullis_b2n)
 }
@@ -12,8 +12,8 @@ bernoulli_b2n_range(start_index, number_of_bernoullis_b2n)
 \item{number_of_bernoullis_b2n}{The number of Bernoulli numbers to compute}
 }
 \value{
-A numeric vector containing the Bernoulli numbers \(B_{2n}\) for the specified range.
+A numeric vector containing the Bernoulli numbers \eqn{\(B_{2n}\)} for the specified range.
 }
 \description{
-Computes a range of Bernoulli numbers \(B_{2n}\) starting from a given index.
+Computes a range of Bernoulli numbers \eqn{\(B_{2n}\)} starting from a given index.
 }

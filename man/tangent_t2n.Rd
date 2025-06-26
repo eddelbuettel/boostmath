@@ -2,7 +2,7 @@
 % Please edit documentation in R/number_series.R
 \name{tangent_t2n}
 \alias{tangent_t2n}
-\title{Tangent Numbers (T_{2n})}
+\title{Tangent Numbers (\eqn{T_{2n}})}
 \usage{
 tangent_t2n(n)
 }
@@ -10,8 +10,8 @@ tangent_t2n(n)
 \item{n}{Index of the tangent number (must be a non-negative integer)}
 }
 \value{
-The value of the tangent number \(T_{2n}\).
+The value of the tangent number \eqn{\(T_{2n}\)}.
 }
 \description{
-Tangent Numbers (T_{2n})
+Tangent Numbers (\eqn{T_{2n}})
 }

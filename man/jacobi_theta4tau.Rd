@@ -12,8 +12,8 @@ jacobi_theta4tau(x, tau)
 \item{tau}{The nome parameter of the Jacobi theta function}
 }
 \value{
-The value of the Jacobi theta function \(\theta_4(x; \tau)\).
+The value of the Jacobi theta function \eqn{\(\theta_4(x; \tau)\)}.
 }
 \description{
-Computes the Jacobi theta function \(\theta_4\) parameterised by \(\tau\).
+Computes the Jacobi theta function \eqn{\(\theta_4\)$ parameterised by $\(\tau\)}.
 }

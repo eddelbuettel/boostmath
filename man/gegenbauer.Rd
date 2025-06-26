@@ -14,8 +14,8 @@ gegenbauer(n, lambda, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Gegenbauer polynomial \(C_n^{(\lambda)}(x)\).
+The value of the Gegenbauer polynomial \eqn{\(C_n^{(\lambda)}(x)\)}.
 }
 \description{
-Computes the Gegenbauer polynomial \(C_n^{(\lambda)}(x)\).
+Computes the Gegenbauer polynomial \eqn{\(C_n^{(\lambda)}(x)\)}.
 }

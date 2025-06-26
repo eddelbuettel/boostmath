@@ -192,8 +192,9 @@ gamma_p_inva <- function(z, p) {
 #' Computes the derivative of the normalised upper incomplete gamma function Q(a, z) with respect to z.
 #'
 #' @param a Shape parameter of the gamma function
+#' @param z Upper limit of integration
 #' @return The value of the derivative of the normalised upper incomplete gamma function Q(a, z).
 #' @export
-gamma_p_derivative <- function(a) {
-  .Call(`gamma_p_derivative_`, a)
+gamma_p_derivative <- function(a, z) {
+  .Call(`gamma_p_derivative_`, a, z)
 }

@@ -10,8 +10,8 @@ lambert_wm1(z)
 \item{z}{Argument of the Lambert W function}
 }
 \value{
-The value of the Lambert W function W_{-1}(z).
+The value of the Lambert W function \eqn{W_{-1}(z)}.
 }
 \description{
-Computes the Lambert W function for the branch -1 (W_{-1}).
+Computes the Lambert W function for the branch \eqn{(W_{-1})}.
 }

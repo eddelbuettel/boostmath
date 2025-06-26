@@ -12,6 +12,8 @@ ellint_rj(x, y, z, p)
 \item{y}{Second parameter of the integral}
 
 \item{z}{Third parameter of the integral}
+
+\item{p}{Fourth parameter of the integral}
 }
 \value{
 The value of Carlson's elliptic integral Rj.

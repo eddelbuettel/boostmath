@@ -4,7 +4,7 @@
 \alias{powm1}
 \title{Power of x raised to the power of y minus 1}
 \usage{
-powm1(x)
+powm1(x, y)
 }
 \arguments{
 \item{x}{Input numeric value}

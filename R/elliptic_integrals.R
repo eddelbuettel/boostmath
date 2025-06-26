@@ -31,6 +31,7 @@ ellint_rd <- function(x, y, z) {
 #' @param x First parameter of the integral
 #' @param y Second parameter of the integral
 #' @param z Third parameter of the integral
+#' @param p Fourth parameter of the integral
 #' @return The value of Carlson's elliptic integral Rj.
 #' @export
 ellint_rj <- function(x, y, z, p) {
@@ -43,7 +44,6 @@ ellint_rj <- function(x, y, z, p) {
 #'
 #' @param x First parameter of the integral
 #' @param y Second parameter of the integral
-#' @param z Third parameter of the integral
 #' @return The value of Carlson's elliptic integral Rc.
 #' @export
 ellint_rc <- function(x, y) {

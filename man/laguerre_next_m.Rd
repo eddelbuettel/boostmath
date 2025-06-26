@@ -13,13 +13,13 @@ laguerre_next_m(n, m, x, Ln, Lnm1)
 
 \item{x}{Argument of the polynomial}
 
-\item{Ln}{Value of the Laguerre polynomial \(L_n^m(x)\)}
+\item{Ln}{Value of the Laguerre polynomial \eqn{\(L_n^m(x)\)}}
 
-\item{Lnm1}{Value of the Laguerre polynomial \(L_{n-1}^m(x)\)}
+\item{Lnm1}{Value of the Laguerre polynomial \eqn{\(L_{n-1}^m(x)\)}}
 }
 \value{
-The value of the next Laguerre polynomial \(L_{n+1}^m(x)\).
+The value of the next Laguerre polynomial \eqn{\(L_{n+1}^m(x)\)}.
 }
 \description{
-Computes the next Laguerre polynomial \(L_{n+1}^m(x)\) using the previous two polynomials.
+Computes the next Laguerre polynomial \eqn{\(L_{n+1}^m(x)\)} using the previous two polynomials.
 }

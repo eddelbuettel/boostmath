@@ -11,13 +11,13 @@ legendre_next(l, x, Pl, Plm1)
 
 \item{x}{Argument of the polynomial}
 
-\item{Pl}{Value of the Legendre polynomial \(P_l(x)\)}
+\item{Pl}{Value of the Legendre polynomial \eqn{\(P_l(x)\)}}
 
-\item{Plm1}{Value of the Legendre polynomial \(P_{l-1}(x)\)}
+\item{Plm1}{Value of the Legendre polynomial \eqn{\(P_{l-1}(x)\)}}
 }
 \value{
-The value of the next Legendre polynomial \(P_{l+1}(x)\).
+The value of the next Legendre polynomial \eqn{\(P_{l+1}(x)\)}.
 }
 \description{
-Computes the next Legendre polynomial of the first kind \(P_{l+1}(x)\) using the previous two polynomials.
+Computes the next Legendre polynomial of the first kind \eqn{\(P_{l+1}(x)\)} using the previous two polynomials.
 }

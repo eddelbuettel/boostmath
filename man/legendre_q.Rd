@@ -12,8 +12,8 @@ legendre_q(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Legendre polynomial \(Q_n(x)\).
+The value of the Legendre polynomial \eqn{\(Q_n(x)\)}.
 }
 \description{
-Computes the Legendre polynomial of the second kind \(Q_n(x)\).
+Computes the Legendre polynomial of the second kind \eqn{\(Q_n(x)\)}.
 }

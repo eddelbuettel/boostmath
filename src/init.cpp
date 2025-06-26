@@ -154,7 +154,7 @@ extern "C" {
 
   // jacobi_theta_functions.cpp
   SEXP jacobi_theta1_(SEXP x_, SEXP q_);
-  SEXP jacobi_theta1tau_(SEXP x_, SEXP tau_);
+  SEXP jacobi_theta1tau_(SEXP x_, SEXP tau);
   SEXP jacobi_theta2_(SEXP x_, SEXP q_);
   SEXP jacobi_theta2tau_(SEXP x_, SEXP tau_);
   SEXP jacobi_theta3_(SEXP x_, SEXP q_);
@@ -262,6 +262,8 @@ extern "C" {
     {"ibetac_inv_", (DL_FUNC) &ibetac_inv_, 3},
     {"ibeta_inva_", (DL_FUNC) &ibeta_inva_, 3},
     {"ibetac_inva_", (DL_FUNC) &ibetac_invb_, 3},
+    {"ibeta_invb_", (DL_FUNC) &ibeta_invb_, 3},
+    {"ibetac_invb_", (DL_FUNC) &ibetac_invb_, 3},
     {"ibeta_derivative_", (DL_FUNC) &ibeta_derivative_, 3},
 
     // error_functions.cpp
@@ -296,9 +298,9 @@ extern "C" {
     {"gegenbauer_prime_", (DL_FUNC) &gegenbauer_prime_, 3},
     {"gegenbauer_derivative_", (DL_FUNC) &gegenbauer_derivative_, 4},
     {"jacobi_", (DL_FUNC) &jacobi_, 4},
-    {"jacobi_derivative_", (DL_FUNC) &jacobi_derivative_, 4},
-    {"jacobi_prime_", (DL_FUNC) &jacobi_prime_, 3},
-    {"jacobi_double_prime_", (DL_FUNC) &jacobi_double_prime_, 3},
+    {"jacobi_derivative_", (DL_FUNC) &jacobi_derivative_, 5},
+    {"jacobi_prime_", (DL_FUNC) &jacobi_prime_, 4},
+    {"jacobi_double_prime_", (DL_FUNC) &jacobi_double_prime_, 4},
 
     // bessel_functions.cpp
     {"cyl_bessel_j_", (DL_FUNC) &cyl_bessel_j_, 2},
@@ -321,6 +323,19 @@ extern "C" {
     // airy_functions.cpp
     {"airy_ai_", (DL_FUNC) &airy_ai_, 1},
     {"airy_bi_", (DL_FUNC) &airy_bi_, 1},
+    {"airy_ai_prime_", (DL_FUNC) &airy_ai_prime_, 1},
+    {"airy_bi_prime_", (DL_FUNC) &airy_bi_prime_, 1},
+    {"airy_ai_zero_", (DL_FUNC) &airy_ai_zero_, 1},
+    {"airy_bi_zero_", (DL_FUNC) &airy_bi_zero_, 1},
+    {"airy_ai_zero_multiple_", (DL_FUNC) &airy_ai_zero_multiple_, 2},
+    {"airy_bi_zero_multiple_", (DL_FUNC) &airy_bi_zero_multiple_, 2},
+
+    // elliptic_integrals.cpp
+    {"ellint_rf_", (DL_FUNC) &ellint_rf_, 3},
+    {"ellint_rd_", (DL_FUNC) &ellint_rd_, 3},
+    {"ellint_rj_", (DL_FUNC) &ellint_rj_, 4},
+    {"ellint_rc_", (DL_FUNC) &ellint_rc_, 2},
+    {"ellint_rg_", (DL_FUNC) &ellint_rg_, 3},
     {"ellint_1_incomplete_", (DL_FUNC) &ellint_1_incomplete_, 2},
     {"ellint_1_", (DL_FUNC) &ellint_1_, 1},
     {"ellint_2_incomplete_", (DL_FUNC) &ellint_2_incomplete_, 2},

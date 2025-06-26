@@ -16,8 +16,8 @@ spherical_harmonic_r(n, m, theta, phi)
 \item{phi}{Azimuthal angle (longitude)}
 }
 \value{
-The real part of the spherical harmonic function \(Y_{n}^{m}(\theta, \phi)\).
+The real part of the spherical harmonic function \eqn{\(Y_{n}^{m}(\theta, \phi)\)}.
 }
 \description{
-Computes the real part of the spherical harmonic function \(Y_{n}^{m}(\theta, \phi)\).
+Computes the real part of the spherical harmonic function \eqn{\(Y_{n}^{m}(\theta, \phi)\)}.
 }

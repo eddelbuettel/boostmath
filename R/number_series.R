@@ -1,65 +1,65 @@
-#' Bernoulli Numbers (B_{2n})
+#' Bernoulli Numbers \eqn{(B_{2n})}
 #'
-#' Computes the Bernoulli numbers \(B_{2n}\) for even indices.
+#' Computes the Bernoulli numbers \eqn{\(B_{2n}\)} for even indices.
 #'
 #' @param n Index of the Bernoulli number (must be a non-negative integer)
-#' @return The value of the Bernoulli number \(B_{2n}\).
+#' @return The value of the Bernoulli number \eqn{\(B_{2n}\)}.
 #' @export
 bernoulli_b2n <- function(n) {
   .Call(`bernoulli_b2n_`, n)
 }
 
-#' Maximum Bernoulli Number (B_{2n}) in Lookup Table
+#' Maximum Bernoulli Number \eqn{(B_{2n})} in Lookup Table
 #'
-#' Returns the maximum index \(n\) for which Bernoulli numbers \(B_{2n}\) are precomputed.
+#' Returns the maximum index \eqn{\(n\)$ for which Bernoulli numbers $\(B_{2n}\)} are precomputed.
 #'
-#' @return The maximum index \(n\) for which Bernoulli numbers \(B_{2n}\) can be computed.
+#' @return The maximum index \eqn{\(n\)$ for which Bernoulli numbers $\(B_{2n}\)} can be computed.
 #' @export
 max_bernoulli_b2n <- function() {
   .Call(`max_bernoulli_b2n_`)
 }
 
-#' Bernoulli Numbers (B_{2n}) Lookup Table (Unchecked)
+#' Bernoulli Numbers \eqn{(B_{2n})} Lookup Table (Unchecked)
 #'
-#' Computes the Bernoulli numbers \(B_{2n}\) for even indices without bounds checking.
+#' Computes the Bernoulli numbers \eqn{\(B_{2n}\)} for even indices without bounds checking.
 #'
 #' @param n Index of the Bernoulli number (must be a non-negative integer)
-#' @return The value of the Bernoulli number \(B_{2n}\).
+#' @return The value of the Bernoulli number \eqn{\(B_{2n}\)}.
 #' @export
 unchecked_bernoulli_b2n <- function(n) {
   .Call(`unchecked_bernoulli_b2n_`, n)
 }
 
-#' Bernoulli Numbers (B_{2n}) Range
+#' Bernoulli Numbers \eqn{(B_{2n})} Range
 #'
-#' Computes a range of Bernoulli numbers \(B_{2n}\) starting from a given index.
+#' Computes a range of Bernoulli numbers \eqn{\(B_{2n}\)} starting from a given index.
 #'
 #' @param start_index The starting index for the Bernoulli numbers (must be a non-negative integer)
 #' @param number_of_bernoullis_b2n The number of Bernoulli numbers to compute
-#' @return A numeric vector containing the Bernoulli numbers \(B_{2n}\) for the specified range.
+#' @return A numeric vector containing the Bernoulli numbers \eqn{\(B_{2n}\)} for the specified range.
 #' @export
 bernoulli_b2n_range <- function(start_index, number_of_bernoullis_b2n) {
   .Call(`bernoulli_b2n_range_`, start_index, number_of_bernoullis_b2n)
 }
 
-#' Tangent Numbers (T_{2n})
+#' Tangent Numbers (\eqn{T_{2n}})
 #'
-# Computes the tangent numbers \(T_{2n}\) for even indices.
+# Computes the tangent numbers \eqn{\(T_{2n}\)} for even indices.
 #'
 #' @param n Index of the tangent number (must be a non-negative integer)
-#' @return The value of the tangent number \(T_{2n}\).
+#' @return The value of the tangent number \eqn{\(T_{2n}\)}.
 #' @export
 tangent_t2n <- function(n) {
   .Call(`tangent_t2n_`, n)
 }
 
-#' Tangent Numbers (T_{2n}) Range
+#' Tangent Numbers (\eqn{T_{2n}}) Range
 #'
-#' Computes a range of tangent numbers \(T_{2n}\) starting from a given index.
+#' Computes a range of tangent numbers \eqn{\(T_{2n}\)} starting from a given index.
 #'
 #' @param start_index The starting index for the tangent numbers (must be a non-negative integer)
 #' @param number_of_tangent_t2n The number of tangent numbers to compute
-#' @return A numeric vector containing the tangent numbers \(T_{2n}\) for the specified range.
+#' @return A numeric vector containing the tangent numbers \eqn{\(T_{2n}\)} for the specified range.
 #' @export
 tangent_t2n_range <- function(start_index, number_of_tangent_t2n) {
   .Call(`tangent_t2n_range_`, start_index, number_of_tangent_t2n)

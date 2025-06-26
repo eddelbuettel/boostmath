@@ -12,8 +12,8 @@ laguerre(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Laguerre polynomial \(L_n(x)\).
+The value of the Laguerre polynomial \eqn{\(L_n(x)\)}.
 }
 \description{
-Computes the Laguerre polynomial \(L_n(x)\).
+Computes the Laguerre polynomial \eqn{\(L_n(x)\)}.
 }

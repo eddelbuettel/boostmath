@@ -12,8 +12,8 @@ legendre_p_prime(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the derivative of the Legendre polynomial \(P_n'(x)\).
+The value of the derivative of the Legendre polynomial \eqn{\(P_n'(x)\)}.
 }
 \description{
-Computes the derivative of the Legendre polynomial of the first kind \(P_n'(x)\).
+Computes the derivative of the Legendre polynomial of the first kind \eqn{\(P_n'(x)\)}.
 }

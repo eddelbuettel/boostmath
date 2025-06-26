@@ -10,8 +10,8 @@ lambert_w0(z)
 \item{z}{Argument of the Lambert W function}
 }
 \value{
-The value of the Lambert W function W_0(z).
+The value of the Lambert W function \eqn{W_0(z)}.
 }
 \description{
-Computes the Lambert W function for the principal branch (W_0).
+Computes the Lambert W function for the principal branch (\eqn{W_0}).
 }

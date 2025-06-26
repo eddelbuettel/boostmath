@@ -10,8 +10,8 @@ lambert_w0_prime(z)
 \item{z}{Argument of the Lambert W function}
 }
 \value{
-The value of the derivative of the Lambert W function W_0'(z).
+The value of the derivative of the Lambert W function \eqn{W_0'(z)}.
 }
 \description{
-Computes the derivative of the Lambert W function for the principal branch (W_0').
+Computes the derivative of the Lambert W function for the principal branch (\eqn{W_0'}).
 }

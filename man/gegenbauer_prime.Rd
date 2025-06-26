@@ -14,8 +14,8 @@ gegenbauer_prime(n, lambda, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the derivative of the Gegenbauer polynomial \(C_n^{(\lambda)}(x)\).
+The value of the derivative of the Gegenbauer polynomial \eqn{\(C_n^{(\lambda)}(x)\)}.
 }
 \description{
-Computes the derivative of the Gegenbauer polynomial \(C_n^{(\lambda)}(x)\).
+Computes the derivative of the Gegenbauer polynomial \eqn{\(C_n^{(\lambda)}(x)\)}.
 }

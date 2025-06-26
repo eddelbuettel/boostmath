@@ -4,10 +4,12 @@
 \alias{hypot}
 \title{Hypotenuse}
 \usage{
-hypot(x)
+hypot(x, y)
 }
 \arguments{
 \item{x}{Input numeric value representing one side of the triangle}
+
+\item{y}{Input numeric value representing the other side of the triangle}
 }
 \value{
 The length of the hypotenuse.

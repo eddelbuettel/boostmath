@@ -12,8 +12,8 @@ chebyshev_clenshaw_recurrence(c, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the next Chebyshev polynomial \(T_{n+1}(x)\).
+The value of the next Chebyshev polynomial \eqn{\(T_{n+1}(x)\)}.
 }
 \description{
-Computes the next Chebyshev polynomial of the first kind \(T_{n+1}(x)\) using Clenshaw's recurrence relation.
+Computes the next Chebyshev polynomial of the first kind \eqn{\(T_{n+1}(x)\)} using Clenshaw's recurrence relation.
 }

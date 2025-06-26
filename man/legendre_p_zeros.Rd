@@ -10,8 +10,8 @@ legendre_p_zeros(l)
 \item{l}{Degree of the polynomial}
 }
 \value{
-A numeric vector containing the zeros of the Legendre polynomial \(P_l(x)\).
+A numeric vector containing the zeros of the Legendre polynomial \eqn{\(P_l(x)\)}.
 }
 \description{
-Computes the zeros of the Legendre polynomial of the first kind \(P_l(x)\).
+Computes the zeros of the Legendre polynomial of the first kind \eqn{\(P_l(x)\)}.
 }

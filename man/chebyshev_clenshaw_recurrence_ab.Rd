@@ -2,7 +2,7 @@
 % Please edit documentation in R/polynomials.R
 \name{chebyshev_clenshaw_recurrence_ab}
 \alias{chebyshev_clenshaw_recurrence_ab}
-\title{Chebyshev Polynomial of the First Kind using Clenshaw's Recurrence with Interval \link{a, b}}
+\title{Chebyshev Polynomial of the First Kind using Clenshaw's Recurrence with Interval \eqn{[a, b]}}
 \usage{
 chebyshev_clenshaw_recurrence_ab(c, a, b, x)
 }
@@ -16,8 +16,8 @@ chebyshev_clenshaw_recurrence_ab(c, a, b, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Chebyshev polynomial \(T_n(x)\) evaluated at \(x\) in the interval \(\link{a, b}\).
+The value of the Chebyshev polynomial \eqn{\(T_n(x)\)} evaluated at \eqn{\(x\)} in the interval \eqn{\([a, b]\)}.
 }
 \description{
-Computes the Chebyshev polynomial of the first kind \(T_n(x)\) using Clenshaw's recurrence relation with a specified interval \(\link{a, b}\).
+Computes the Chebyshev polynomial of the first kind \eqn{\(T_n(x)\)} using Clenshaw's recurrence relation with a specified interval \eqn{\([a, b]\)}.
 }

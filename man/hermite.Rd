@@ -12,8 +12,8 @@ hermite(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Hermite polynomial \(H_n(x)\).
+The value of the Hermite polynomial \eqn{\(H_n(x)\)}.
 }
 \description{
-Computes the Hermite polynomial \(H_n(x)\).
+Computes the Hermite polynomial \eqn{\(H_n(x)\)}.
 }

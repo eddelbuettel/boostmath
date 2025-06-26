@@ -9,13 +9,13 @@ chebyshev_next(x, Tn, Tn_1)
 \arguments{
 \item{x}{Argument of the polynomial}
 
-\item{Tn}{Value of the Chebyshev polynomial \(T_n(x)\)}
+\item{Tn}{Value of the Chebyshev polynomial \eqn{\(T_n(x)\)}}
 
-\item{Tn_1}{Value of the Chebyshev polynomial \(T_{n-1}(x)\)}
+\item{Tn_1}{Value of the Chebyshev polynomial \eqn{\(T_{n-1}(x)\)}}
 }
 \value{
-The value of the next Chebyshev polynomial \(T_{n+1}(x)\).
+The value of the next Chebyshev polynomial \eqn{\(T_{n+1}(x)\)}.
 }
 \description{
-Computes the next Chebyshev polynomial of the first kind \(T_{n+1}(x)\) using the previous two polynomials.
+Computes the next Chebyshev polynomial of the first kind \eqn{\(T_{n+1}(x)\)} using the previous two polynomials.
 }

@@ -72,8 +72,8 @@ sqrt1pm1 <- function(x) {
 #' @param y Exponent value
 #' @return The value of x raised to the power of y minus 1.
 #' @export
-powm1 <- function(x) {
-  .Call(`powm1_`, x)
+powm1 <- function(x, y) {
+  .Call(`powm1_`, x, y)
 }
 
 #' Hypotenuse
@@ -81,10 +81,11 @@ powm1 <- function(x) {
 #' Computes the hypotenuse of a right triangle given the lengths of the two sides.
 #'
 #' @param x Input numeric value representing one side of the triangle
+#' @param y Input numeric value representing the other side of the triangle
 #' @return The length of the hypotenuse.
 #' @export
-hypot <- function(x) {
-  .Call(`hypot_`, x)
+hypot <- function(x, y) {
+  .Call(`hypot_`, x, y)
 }
 
 #' Inverse square root
