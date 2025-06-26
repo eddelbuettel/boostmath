@@ -120,6 +120,19 @@ extern "C" {
   SEXP airy_ai_zero_multiple_(SEXP start_index_, SEXP number_of_zeros_);
   SEXP airy_bi_zero_multiple_(SEXP start_index_, SEXP number_of_zeros_);
 
+  //  elliptic_integrals.cpp
+  SEXP ellint_rf_(SEXP x_, SEXP y_, SEXP z_);
+  SEXP ellint_rd_(SEXP x_, SEXP y_, SEXP z_);
+  SEXP ellint_rj_(SEXP x_, SEXP y_, SEXP z_, SEXP p_);
+  SEXP ellint_rc_(SEXP x_, SEXP y_);
+  SEXP ellint_rg_(SEXP x_, SEXP y_, SEXP z_);
+  SEXP ellint_1_incomplete_(SEXP k_, SEXP phi_);
+  SEXP ellint_1_(SEXP k_);
+  SEXP ellint_2_incomplete_(SEXP k_, SEXP phi_);
+  SEXP ellint_2_(SEXP k_);
+  SEXP ellint_3_incomplete_(SEXP k_, SEXP n_, SEXP phi_);
+  SEXP ellint_3_(SEXP k_, SEXP n_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -238,6 +251,20 @@ extern "C" {
     {"airy_bi_zero_", (DL_FUNC) &airy_bi_zero_, 1},
     {"airy_ai_zero_multiple_", (DL_FUNC) &airy_ai_zero_multiple_, 2},
     {"airy_bi_zero_multiple_", (DL_FUNC) &airy_bi_zero_multiple_, 2},
+
+    // elliptic_integrals.cpp
+    {"ellint_rf_", (DL_FUNC) &ellint_rf_, 3},
+    {"ellint_rd_", (DL_FUNC) &ellint_rd_, 3},
+    {"ellint_rj_", (DL_FUNC) &ellint_rj_, 4},
+    {"ellint_rc_", (DL_FUNC) &ellint_rc_, 2},
+    {"ellint_rg_", (DL_FUNC) &ellint_rg_, 3},
+    {"ellint_1_incomplete_", (DL_FUNC) &ellint_1_incomplete_, 2},
+    {"ellint_1_", (DL_FUNC) &ellint_1_, 1},
+    {"ellint_2_incomplete_", (DL_FUNC) &ellint_2_incomplete_, 2},
+    {"ellint_2_", (DL_FUNC) &ellint_2_, 1},
+    {"ellint_3_incomplete_", (DL_FUNC) &ellint_3_incomplete_, 3},
+    {"ellint_3_", (DL_FUNC) &ellint_3_, 2},
+
     {NULL, NULL, 0}
   };
 
