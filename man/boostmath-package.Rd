@@ -4,12 +4,20 @@
 \name{boostmath-package}
 \alias{boostmath}
 \alias{boostmath-package}
-\title{boostmath: What the Package Does (One Line, Title Case)}
+\title{boostmath: Exposing Boost's Math Functions for R}
 \description{
-What the package does (one paragraph).
+'R' bindings for the various functions and statistical distributions provided by the Boost Math library.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/andrjohns/boostmath}
+  \item Report bugs at \url{https://github.com/andrjohns/boostmath/issues}
+}
+
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com}
+\strong{Maintainer}: Andrew R. Johnson \email{andrew.johnson@arjohnsonau.com} (\href{https://orcid.org/0000-0001-7000-8065}{ORCID})
 
 }
 \keyword{internal}
