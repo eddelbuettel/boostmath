@@ -49,11 +49,11 @@ owens_t(2.1, 4.2)
 ```
 
 Any Boost Math functions that share the same name as R functions are
-prefixed with `boost_` to avoid conflicts:
+sufffixed with `_boost` to avoid conflicts:
 
 ``` r
-boost_beta(3, 2)
+beta_boost(3, 2)
 #> [1] 0.08333333
-boost_lgamma(5)
+lgamma_boost(5)
 #> [1] 3.178054
 ```

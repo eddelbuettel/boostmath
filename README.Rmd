@@ -52,9 +52,9 @@ ibeta_inv(2.1, 5.2, 0.7)
 owens_t(2.1, 4.2)
 ```
 
-Any Boost Math functions that share the same name as R functions are prefixed with `boost_` to avoid conflicts:
+Any Boost Math functions that share the same name as R functions are sufffixed with `_boost` to avoid conflicts:
 
 ```{r}
-boost_beta(3, 2)
-boost_lgamma(5)
+beta_boost(3, 2)
+lgamma_boost(5)
 ```

@@ -27,7 +27,7 @@ cos_pi <- function(x) {
 #' @param x Input numeric value
 #' @return The natural logarithm of 1 plus x.
 #' @export
-boost_log1p <- function(x) {
+log1p_boost <- function(x) {
   .Call(`log1p_`, x)
 }
 
@@ -38,7 +38,7 @@ boost_log1p <- function(x) {
 #' @param x Input numeric value
 #' @return The exponential of x minus 1.
 #' @export
-boost_expm1 <- function(x) {
+expm1_boost <- function(x) {
   .Call(`expm1_`, x)
 }
 

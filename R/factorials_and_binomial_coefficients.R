@@ -5,7 +5,7 @@
 #' @param i Non-negative integer input
 #' @return The factorial of the input integer.
 #' @export
-boost_factorial <- function(i) {
+factorial_boost <- function(i) {
   .Call(`factorial_`, i)
 }
 

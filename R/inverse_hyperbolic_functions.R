@@ -5,7 +5,7 @@
 #' @param x Input numeric value
 #' @return The value of the inverse hyperbolic cosine function acosh at x.
 #' @export
-boost_acosh <- function(x) {
+acosh_boost <- function(x) {
   .Call(`acosh_`, x)
 }
 
@@ -16,7 +16,7 @@ boost_acosh <- function(x) {
 #' @param x Input numeric value
 #' @return The value of the inverse hyperbolic sine function asinh at x.
 #' @export
-boost_asinh <- function(x) {
+asinh_boost <- function(x) {
   .Call(`asinh_`, x)
 }
 
@@ -27,6 +27,6 @@ boost_asinh <- function(x) {
 #' @param x Input numeric value
 #' @return The value of the inverse hyperbolic tangent function atanh at x.
 #' @export
-boost_atanh <- function(x) {
+atanh_boost <- function(x) {
   .Call(`atanh_`, x)
 }
