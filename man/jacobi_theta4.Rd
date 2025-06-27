@@ -15,5 +15,5 @@ jacobi_theta4(x, q)
 The value of the Jacobi theta function \eqn{\(\theta_4(x; q)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_4\)$ parameterised by $\(q\)}.
+Computes the Jacobi theta function \eqn{\(\theta_4\)} parameterised by \eqn{\(q\)}.
 }

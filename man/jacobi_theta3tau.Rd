@@ -15,5 +15,5 @@ jacobi_theta3tau(x, tau)
 The value of the Jacobi theta function \eqn{\(\theta_3(x; \tau)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_3\)$ parameterised by $\(\tau\)}.
+Computes the Jacobi theta function \eqn{\(\theta_3\)} parameterised by \eqn{\(\tau\)}.
 }

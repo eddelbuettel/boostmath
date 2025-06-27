@@ -15,5 +15,5 @@ jacobi_theta2(x, q)
 The value of the Jacobi theta function \eqn{\(\theta_2(x; q)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_2\)$ parameterised by $\(q\)}.
+Computes the Jacobi theta function \eqn{\(\theta_2\)} parameterised by \eqn{\(q\)}.
 }

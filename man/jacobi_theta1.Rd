@@ -15,5 +15,5 @@ jacobi_theta1(x, q)
 The value of the Jacobi theta function \eqn{\(\theta_1(x; q)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_1\)$ parameterised by $\(q\)}.
+Computes the Jacobi theta function \eqn{\(\theta_1\)} parameterised by \eqn{\(q\)}.
 }

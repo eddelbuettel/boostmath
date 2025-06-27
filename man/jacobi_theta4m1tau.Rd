@@ -15,5 +15,5 @@ jacobi_theta4m1tau(x, tau)
 The value of the Jacobi theta function \eqn{\(\theta_4(x; \tau) - 1\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_4\)$ parameterised by $\(\tau\)} with a shift of -1.
+Computes the Jacobi theta function \eqn{\(\theta_4\)} parameterised by \eqn{\(\tau\)} with a shift of -1.
 }

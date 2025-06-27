@@ -15,5 +15,5 @@ jacobi_theta4tau(x, tau)
 The value of the Jacobi theta function \eqn{\(\theta_4(x; \tau)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_4\)$ parameterised by $\(\tau\)}.
+Computes the Jacobi theta function \eqn{\(\theta_4\)} parameterised by \eqn{\(\tau\)}.
 }

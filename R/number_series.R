@@ -11,9 +11,9 @@ bernoulli_b2n <- function(n) {
 
 #' Maximum Bernoulli Number \eqn{(B_{2n})} in Lookup Table
 #'
-#' Returns the maximum index \eqn{\(n\)$ for which Bernoulli numbers $\(B_{2n}\)} are precomputed.
+#' Returns the maximum index \eqn{\(n\)} for which Bernoulli numbers \eqn{\(B_{2n}\)} are precomputed.
 #'
-#' @return The maximum index \eqn{\(n\)$ for which Bernoulli numbers $\(B_{2n}\)} can be computed.
+#' @return The maximum index \eqn{\(n\)} for which Bernoulli numbers \eqn{\(B_{2n}\)} can be computed.
 #' @export
 max_bernoulli_b2n <- function() {
   .Call(`max_bernoulli_b2n_`)

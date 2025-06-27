@@ -15,5 +15,5 @@ jacobi_theta4m1(x, q)
 The value of the Jacobi theta function \eqn{\(\theta_4(x; q) - 1\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_4\)$ parameterised by $\(q\)} with a shift of -1.
+Computes the Jacobi theta function \eqn{\(\theta_4\)} parameterised by \eqn{\(q\)} with a shift of -1.
 }

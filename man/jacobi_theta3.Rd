@@ -15,5 +15,5 @@ jacobi_theta3(x, q)
 The value of the Jacobi theta function \eqn{\(\theta_3(x; q)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_3\)$ parameterised by $\(q\)}.
+Computes the Jacobi theta function \eqn{\(\theta_3\)} parameterised by \eqn{\(q\)}.
 }

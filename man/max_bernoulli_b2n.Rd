@@ -7,8 +7,8 @@
 max_bernoulli_b2n()
 }
 \value{
-The maximum index \eqn{\(n\)$ for which Bernoulli numbers $\(B_{2n}\)} can be computed.
+The maximum index \eqn{\(n\)} for which Bernoulli numbers \eqn{\(B_{2n}\)} can be computed.
 }
 \description{
-Returns the maximum index \eqn{\(n\)$ for which Bernoulli numbers $\(B_{2n}\)} are precomputed.
+Returns the maximum index \eqn{\(n\)} for which Bernoulli numbers \eqn{\(B_{2n}\)} are precomputed.
 }

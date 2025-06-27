@@ -15,5 +15,5 @@ jacobi_theta2tau(x, tau)
 The value of the Jacobi theta function \eqn{\(\theta_2(x; \tau)\)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_2\)$ parameterised by $\(\tau\)}.
+Computes the Jacobi theta function \eqn{\(\theta_2\)} parameterised by \eqn{\(\tau\)}.
 }
