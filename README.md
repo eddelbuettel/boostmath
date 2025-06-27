@@ -89,10 +89,14 @@ ooura_fourier_cos(function(x) { 1 / (x * x + 1)})
 #> [1] 0.5778637
 ```
 
-As well as numerical differentiation by finite-differences:
+As well as numerical differentiation by finite-differencing or the
+complex-step method:
 
 ``` r
 finite_difference_derivative(exp, 1.7)
+#> [1] 5.473947
+
+complex_step_derivative(exp, 1.7)
 #> [1] 5.473947
 ```
 

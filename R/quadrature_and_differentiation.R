@@ -145,9 +145,26 @@ ooura_fourier_cos <- function(f, omega = 1, relative_error_tolerance = sqrt(.Mac
 #' @param order The order of accuracy of the derivative to compute. Default is 1.
 #' @return The approximate value of the derivative at the point `x`.
 #' @export
+#' @examples
+#' finite_difference_derivative(sin, pi / 4)
 finite_difference_derivative <- function(f, x, order = 1) {
   if (!(order %in% c(1, 2, 4, 6, 8))) {
     stop("order must be one of: 1, 2, 4, 6, 8", call. = FALSE)
   }
   .Call(`finite_difference_derivative_`, f, x, order)
+}
+
+#' Complex Step Numerical Differentiation
+#'
+#' This function computes the numerical derivative of a function using the complex step method.
+#'
+#' @param f A function to differentiate. It should accept a single complex value and
+#'          return a single complex value.
+#' @param x The point at which to evaluate the derivative, as a numeric (not complex) value.
+#' @return The approximate value of the derivative at the point `x`.
+#' @export
+#' @examples
+#' complex_step_derivative(exp, 1.7)
+complex_step_derivative <- function(f, x) {
+  .Call(`complex_step_derivative_`, f, x)
 }

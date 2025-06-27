@@ -19,3 +19,6 @@ The approximate value of the derivative at the point \code{x}.
 \description{
 This function computes the numerical derivative of a function using finite differences.
 }
+\examples{
+finite_difference_derivative(sin, pi / 4)
+}

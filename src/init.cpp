@@ -231,6 +231,7 @@ extern "C" {
 
   // quadrature_and_differentiation/numerical_differentiation.cpp
   SEXP finite_difference_derivative_(SEXP f_, SEXP x_, SEXP order_);
+  SEXP complex_step_derivative_(SEXP f_, SEXP x_);
 
   // statistical_distributions/arcsine.cpp
   SEXP arcsine_pdf_(SEXP x_, SEXP x_min_, SEXP x_max_);
@@ -483,6 +484,7 @@ extern "C" {
 
     // quadrature_and_differentiation/numerical_differentiation.cpp
     {"finite_difference_derivative_", (DL_FUNC) &finite_difference_derivative_, 3},
+    {"complex_step_derivative_", (DL_FUNC) &complex_step_derivative_, 2},
 
     // statistical_distributions/arcsine.cpp
     {"arcsine_pdf_", (DL_FUNC) &arcsine_pdf_, 3},

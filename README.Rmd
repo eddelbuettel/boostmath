@@ -81,10 +81,12 @@ ooura_fourier_sin(function(x) { 1 / x})
 ooura_fourier_cos(function(x) { 1 / (x * x + 1)})
 ```
 
-As well as numerical differentiation by finite-differences:
+As well as numerical differentiation by finite-differencing or the complex-step method:
 
 ```{r}
 finite_difference_derivative(exp, 1.7)
+
+complex_step_derivative(exp, 1.7)
 ```
 
 
