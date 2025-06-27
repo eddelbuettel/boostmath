@@ -12,8 +12,8 @@ jacobi_theta1tau(x, tau)
 \item{tau}{The nome parameter of the Jacobi theta function}
 }
 \value{
-The value of the Jacobi theta function \eqn{\(\theta_1(x; \tau)\)}.
+The value of the Jacobi theta function \eqn{(\theta_1(x; \tau))}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_1\)} parameterised by \eqn{\(\tau\)}.
+Computes the Jacobi theta function \eqn{(\theta_1)} parameterised by \eqn{(\tau)}.
 }

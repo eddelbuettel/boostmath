@@ -14,8 +14,8 @@ laguerre_m(n, m, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Laguerre polynomial \eqn{\(L_n^m(x)\)}.
+The value of the Laguerre polynomial \eqn{(L_n^m(x))}.
 }
 \description{
-Computes the Laguerre polynomial \eqn{\(L_n^m(x)\)}.
+Computes the Laguerre polynomial \eqn{(L_n^m(x))}.
 }

@@ -16,8 +16,8 @@ jacobi_double_prime(n, alpha, beta, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the second derivative of the Jacobi polynomial \eqn{\(P_n^{(\alpha, \beta)}(x)\)}.
+The value of the second derivative of the Jacobi polynomial \eqn{(P_n^{(\alpha, \beta)}(x))}.
 }
 \description{
-Computes the second derivative of the Jacobi polynomial \eqn{\(P_n^{(\alpha, \beta)}(x)\)}.
+Computes the second derivative of the Jacobi polynomial \eqn{(P_n^{(\alpha, \beta)}(x))}.
 }

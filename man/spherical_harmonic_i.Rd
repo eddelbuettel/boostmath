@@ -16,8 +16,8 @@ spherical_harmonic_i(n, m, theta, phi)
 \item{phi}{Azimuthal angle (longitude)}
 }
 \value{
-The imaginary part of the spherical harmonic function \eqn{\(Y_{n}^{m}(\theta, \phi)\)}.
+The imaginary part of the spherical harmonic function \eqn{(Y_{n}^{m}(\theta, \phi))}.
 }
 \description{
-Computes the imaginary part of the spherical harmonic function \eqn{\(Y_{n}^{m}(\theta, \phi)\)}.
+Computes the imaginary part of the spherical harmonic function \eqn{(Y_{n}^{m}(\theta, \phi))}.
 }

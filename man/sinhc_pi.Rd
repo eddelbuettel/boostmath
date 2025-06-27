@@ -10,8 +10,8 @@ sinhc_pi(x)
 \item{x}{Input value}
 }
 \value{
-The value of the hyperbolic sinus cardinal function \eqn{\(\text{sinhc}(x)\)}.
+The value of the hyperbolic sinus cardinal function \eqn{(\text{sinhc}(x))}.
 }
 \description{
-Computes the hyperbolic sinus cardinal function \eqn{\(\text{sinhc}(x) = \frac{\sinh(x)}{x}\)}.
+Computes the hyperbolic sinus cardinal function \eqn{(\text{sinhc}(x) = \frac{\sinh(x)}{x})}.
 }

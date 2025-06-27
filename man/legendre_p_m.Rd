@@ -14,8 +14,8 @@ legendre_p_m(n, m, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Legendre polynomial \eqn{\(P_n^m(x)\)}.
+The value of the Legendre polynomial \eqn{(P_n^m(x))}.
 }
 \description{
-Computes the Legendre polynomial of the first kind \eqn{\(P_n^m(x)\)}.
+Computes the Legendre polynomial of the first kind \eqn{(P_n^m(x))}.
 }

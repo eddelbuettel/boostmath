@@ -10,7 +10,7 @@ tangent_t2n(n)
 \item{n}{Index of the tangent number (must be a non-negative integer)}
 }
 \value{
-The value of the tangent number \eqn{\(T_{2n}\)}.
+The value of the tangent number \eqn{(T_{2n})}.
 }
 \description{
 Tangent Numbers (\eqn{T_{2n}})

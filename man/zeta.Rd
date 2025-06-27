@@ -10,8 +10,8 @@ zeta(z)
 \item{z}{Real number input}
 }
 \value{
-The value of the Riemann zeta function \eqn{\(\zeta(z)\)}.
+The value of the Riemann zeta function \eqn{(\zeta(z))}.
 }
 \description{
-Computes the Riemann zeta function \eqn{\(\zeta(s)\)} for argument \eqn{\(z\)}.
+Computes the Riemann zeta function \eqn{(\zeta(s))} for argument \eqn{(z)}.
 }

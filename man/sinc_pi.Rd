@@ -10,8 +10,8 @@ sinc_pi(x)
 \item{x}{Input value}
 }
 \value{
-The value of the sinus cardinal function \eqn{\(\text{sinc}(x)\)}.
+The value of the sinus cardinal function \eqn{(\text{sinc}(x))}.
 }
 \description{
-Computes the sinus cardinal function \eqn{\(\text{sinc}(x) = \frac{\sin(x)}{x}\)}.
+Computes the sinus cardinal function \eqn{(\text{sinc}(x) = \frac{\sin(x)}{x})}.
 }

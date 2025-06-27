@@ -16,8 +16,8 @@ chebyshev_clenshaw_recurrence_ab(c, a, b, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Chebyshev polynomial \eqn{\(T_n(x)\)} evaluated at \eqn{\(x\)} in the interval \eqn{\([a, b]\)}.
+The value of the Chebyshev polynomial \eqn{(T_n(x))} evaluated at \eqn{(x)} in the interval \eqn{([a, b])}.
 }
 \description{
-Computes the Chebyshev polynomial of the first kind \eqn{\(T_n(x)\)} using Clenshaw's recurrence relation with a specified interval \eqn{\([a, b]\)}.
+Computes the Chebyshev polynomial of the first kind \eqn{(T_n(x))} using Clenshaw's recurrence relation with a specified interval \eqn{([a, b])}.
 }

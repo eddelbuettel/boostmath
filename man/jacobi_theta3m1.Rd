@@ -12,8 +12,8 @@ jacobi_theta3m1(x, q)
 \item{q}{The nome parameter of the Jacobi theta function}
 }
 \value{
-The value of the Jacobi theta function \eqn{\(\theta_3(x; q) - 1\)}.
+The value of the Jacobi theta function \eqn{(\theta_3(x; q) - 1)}.
 }
 \description{
-Computes the Jacobi theta function \eqn{\(\theta_3\)} parameterised by \eqn{\(q\)} with a shift of -1.
+Computes the Jacobi theta function \eqn{(\theta_3)} parameterised by \eqn{(q)} with a shift of -1.
 }

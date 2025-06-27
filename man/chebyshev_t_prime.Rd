@@ -12,8 +12,8 @@ chebyshev_t_prime(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the derivative of the Chebyshev polynomial \eqn{\(T_n'(x)\)}.
+The value of the derivative of the Chebyshev polynomial \eqn{(T_n'(x))}.
 }
 \description{
-Computes the derivative of the Chebyshev polynomial of the first kind \eqn{\(T_n'(x)\)}.
+Computes the derivative of the Chebyshev polynomial of the first kind \eqn{(T_n'(x))}.
 }

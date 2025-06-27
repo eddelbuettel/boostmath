@@ -16,8 +16,8 @@ gegenbauer_derivative(n, lambda, x, k)
 \item{k}{Order of the derivative}
 }
 \value{
-The value of the k-th derivative of the Gegenbauer polynomial \eqn{\(C_n^{(\lambda)}(x)\)}.
+The value of the k-th derivative of the Gegenbauer polynomial \eqn{(C_n^{(\lambda)}(x))}.
 }
 \description{
-Computes the k-th derivative of the Gegenbauer polynomial \eqn{\(C_n^{(\lambda)}(x)\)}.
+Computes the k-th derivative of the Gegenbauer polynomial \eqn{(C_n^{(\lambda)}(x))}.
 }

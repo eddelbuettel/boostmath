@@ -11,13 +11,13 @@ hermite_next(n, x, Hn, Hnm1)
 
 \item{x}{Argument of the polynomial}
 
-\item{Hn}{Value of the Hermite polynomial \eqn{\(H_n(x)\)}}
+\item{Hn}{Value of the Hermite polynomial \eqn{(H_n(x))}}
 
-\item{Hnm1}{Value of the Hermite polynomial \eqn{\(H_{n-1}(x)\)}}
+\item{Hnm1}{Value of the Hermite polynomial \eqn{(H_{n-1}(x))}}
 }
 \value{
-The value of the next Hermite polynomial \eqn{\(H_{n+1}(x)\)}.
+The value of the next Hermite polynomial \eqn{(H_{n+1}(x))}.
 }
 \description{
-Computes the next Hermite polynomial \eqn{\(H_{n+1}(x)\)} using the previous two polynomials.
+Computes the next Hermite polynomial \eqn{(H_{n+1}(x))} using the previous two polynomials.
 }

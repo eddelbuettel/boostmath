@@ -12,8 +12,8 @@ legendre_p(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Legendre polynomial \eqn{\(P_n(x)\)}.
+The value of the Legendre polynomial \eqn{(P_n(x))}.
 }
 \description{
-Computes the Legendre polynomial of the first kind \eqn{\(P_n(x)\)}.
+Computes the Legendre polynomial of the first kind \eqn{(P_n(x))}.
 }

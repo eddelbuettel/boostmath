@@ -10,8 +10,8 @@ unchecked_bernoulli_b2n(n)
 \item{n}{Index of the Bernoulli number (must be a non-negative integer)}
 }
 \value{
-The value of the Bernoulli number \eqn{\(B_{2n}\)}.
+The value of the Bernoulli number \eqn{(B_{2n})}.
 }
 \description{
-Computes the Bernoulli numbers \eqn{\(B_{2n}\)} for even indices without bounds checking.
+Computes the Bernoulli numbers \eqn{(B_{2n})} for even indices without bounds checking.
 }

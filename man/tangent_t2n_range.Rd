@@ -12,8 +12,8 @@ tangent_t2n_range(start_index, number_of_tangent_t2n)
 \item{number_of_tangent_t2n}{The number of tangent numbers to compute}
 }
 \value{
-A numeric vector containing the tangent numbers \eqn{\(T_{2n}\)} for the specified range.
+A numeric vector containing the tangent numbers \eqn{(T_{2n})} for the specified range.
 }
 \description{
-Computes a range of tangent numbers \eqn{\(T_{2n}\)} starting from a given index.
+Computes a range of tangent numbers \eqn{(T_{2n})} starting from a given index.
 }

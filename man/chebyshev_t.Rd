@@ -12,8 +12,8 @@ chebyshev_t(n, x)
 \item{x}{Argument of the polynomial}
 }
 \value{
-The value of the Chebyshev polynomial \eqn{\(T_n(x)\)}.
+The value of the Chebyshev polynomial \eqn{(T_n(x))}.
 }
 \description{
-Computes the Chebyshev polynomial of the first kind \eqn{\(T_n(x)\)}.
+Computes the Chebyshev polynomial of the first kind \eqn{(T_n(x))}.
 }

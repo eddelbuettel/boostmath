@@ -11,13 +11,13 @@ laguerre_next(n, x, Ln, Lnm1)
 
 \item{x}{Argument of the polynomial}
 
-\item{Ln}{Value of the Laguerre polynomial \eqn{\(L_n(x)\)}}
+\item{Ln}{Value of the Laguerre polynomial \eqn{(L_n(x))}}
 
-\item{Lnm1}{Value of the Laguerre polynomial \eqn{\(L_{n-1}(x)\)}}
+\item{Lnm1}{Value of the Laguerre polynomial \eqn{(L_{n-1}(x))}}
 }
 \value{
-The value of the next Laguerre polynomial \eqn{\(L_{n+1}(x)\)}.
+The value of the next Laguerre polynomial \eqn{(L_{n+1}(x))}.
 }
 \description{
-Computes the next Laguerre polynomial \eqn{\(L_{n+1}(x)\)} using the previous two polynomials.
+Computes the next Laguerre polynomial \eqn{(L_{n+1}(x))} using the previous two polynomials.
 }
