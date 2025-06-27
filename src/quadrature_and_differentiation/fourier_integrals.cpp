@@ -17,6 +17,9 @@ extern "C" {
 
     boost::math::quadrature::ooura_fourier_sin<double> integrator(relative_error_tolerance, levels);
     std::pair<double, double> result = integrator.integrate(func, omega);
+    // Manually call destructor to avoid rchk warnings
+    integrator.~ooura_fourier_sin();
+
     return cpp11::as_sexp(result.first);
 #else
     cpp11::stop("Ooura Fourier integrals are not supported on WASM as they require long double precision");
@@ -38,6 +41,9 @@ extern "C" {
 
     boost::math::quadrature::ooura_fourier_cos<double> integrator(relative_error_tolerance, levels);
     std::pair<double, double> result = integrator.integrate(func, omega);
+    // Manually call destructor to avoid rchk warnings
+    integrator.~ooura_fourier_cos();
+
     return cpp11::as_sexp(result.first);
 #else
     cpp11::stop("Ooura Fourier integrals are not supported on WASM as they require long double precision");

@@ -18,8 +18,10 @@ extern "C" {
     };
 
     boost::math::quadrature::tanh_sinh<double> integrator(max_refinements);
-
     double result = integrator.integrate(func, a, b, tol);
+    // Manually call destructor to avoid rchk warnings
+    integrator.~tanh_sinh();
+
     return cpp11::as_sexp(result);
     END_CPP11
   }
@@ -35,8 +37,10 @@ extern "C" {
     };
 
     boost::math::quadrature::sinh_sinh<double> integrator(max_refinements);
-
     double result = integrator.integrate(func, tol);
+    // Manually call destructor to avoid rchk warnings
+    integrator.~sinh_sinh();
+
     return cpp11::as_sexp(result);
     END_CPP11
   }
@@ -54,8 +58,10 @@ extern "C" {
     };
 
     boost::math::quadrature::exp_sinh<double> integrator(max_refinements);
-
     double result = integrator.integrate(func, a, b, tol);
+    // Manually call destructor to avoid rchk warnings
+    integrator.~exp_sinh();
+
     return cpp11::as_sexp(result);
     END_CPP11
   }
