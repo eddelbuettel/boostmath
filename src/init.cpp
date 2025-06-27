@@ -211,6 +211,20 @@ extern "C" {
   // owens_t_function.cpp
   SEXP owens_t_(SEXP h_, SEXP a_);
 
+  // quadrature/trapezoidal.cpp
+  SEXP trapezoidal_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
+
+  // quadrature/gauss_legendre.cpp
+  SEXP gauss_legendre_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
+
+  // quadrature/gauss_kronrod.cpp
+  SEXP gauss_kronrod_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
+
+  // quadrature/double_exponential.cpp
+  SEXP tanh_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
+  SEXP sinh_sinh_(SEXP f_, SEXP tol_, SEXP max_refinements_);
+  SEXP exp_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -420,6 +434,20 @@ extern "C" {
 
     // owens_t_function.cpp
     {"owens_t_", (DL_FUNC) &owens_t_, 2},
+
+    // quadrature/trapezoidal.cpp
+    {"trapezoidal_", (DL_FUNC) &trapezoidal_, 5},
+
+    // quadrature/gauss_legendre.cpp
+    {"gauss_legendre_", (DL_FUNC) &gauss_legendre_, 4},
+
+    // quadrature/gauss_kronrod.cpp
+    {"gauss_kronrod_", (DL_FUNC) &gauss_kronrod_, 4},
+
+    // quadrature/double_exponential.cpp
+    {"tanh_sinh_", (DL_FUNC) &tanh_sinh_, 5},
+    {"sinh_sinh_", (DL_FUNC) &sinh_sinh_, 3},
+    {"exp_sinh_", (DL_FUNC) &exp_sinh_, 5},
 
     {NULL, NULL, 0}
   };
