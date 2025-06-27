@@ -52,7 +52,7 @@ owens_t(2.1, 4.2)
 
 ## Quadrature and Differentiation
 
-Boost's integration and (numerical) differentiation routines are also available for use with R functions:
+Boost's integration routines are also available for use with R functions:
 
 ```{r}
 trapezoidal(function(x) { 1/(5 - 4*cos(x)) }, a = 0, b = 2*pi)
@@ -66,4 +66,15 @@ tanh_sinh(function(x) { log(x)*log1p(-x) }, a = 0, b = 1)
 sinh_sinh(function(x) { exp(-x*x) })
 
 exp_sinh(function(x) { exp(-3*x) }, a = 0, b = Inf)
+
+ooura_fourier_sin(function(x) { 1 / x})
+
+ooura_fourier_cos(function(x) { 1 / (x * x + 1)})
 ```
+
+As well as numerical differentiation by finite-differences:
+
+```{r}
+finite_difference_derivative(exp, 1.7)
+```
+

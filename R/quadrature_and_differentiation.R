@@ -102,3 +102,52 @@ sinh_sinh <- function(f, tol = .Machine$double.eps, max_refinements = 9) {
 exp_sinh <- function(f, a, b, tol = .Machine$double.eps, max_refinements = 9) {
   .Call(`exp_sinh_`, f, a, b, tol, max_refinements)
 }
+
+#' Ooura Fourier Sine Integral
+#'
+#' This function computes the Fourier sine integral using Ooura's method.
+#'
+#' @param f A function to integrate. It should accept a single numeric value and
+#'          return a single numeric value.
+#' @param omega The frequency parameter for the sine integral.
+#' @param relative_error_tolerance The relative error tolerance for the approximation.
+#' @param levels The number of levels of refinement to apply. Default is 8.
+#'
+#' @return The approximate value of the Fourier sine integral.
+#' @export
+ooura_fourier_sin <- function(f, omega = 1, relative_error_tolerance = sqrt(.Machine$double.eps), levels = 8) {
+  .Call(`ooura_fourier_sin_`, f, omega, relative_error_tolerance, levels)
+}
+
+#' Ooura Fourier Cosine Integral
+#'
+#' This function computes the Fourier cosine integral using Ooura's method.
+#'
+#' @param f A function to integrate. It should accept a single numeric value and
+#'          return a single numeric value.
+#' @param omega The frequency parameter for the cosine integral.
+#' @param relative_error_tolerance The relative error tolerance for the approximation.
+#' @param levels The number of levels of refinement to apply. Default is 8.
+#'
+#' @return The approximate value of the Fourier cosine integral.
+#' @export
+ooura_fourier_cos <- function(f, omega = 1, relative_error_tolerance = sqrt(.Machine$double.eps), levels = 8) {
+  .Call(`ooura_fourier_cos_`, f, omega, relative_error_tolerance, levels)
+}
+
+#' Finite Difference Numerical Differentiation
+#'
+#' This function computes the numerical derivative of a function using finite differences.
+#'
+#' @param f A function to differentiate. It should accept a single numeric value and
+#          return a single numeric value.
+#' @param x The point at which to evaluate the derivative.
+#' @param order The order of accuracy of the derivative to compute. Default is 1.
+#' @return The approximate value of the derivative at the point `x`.
+#' @export
+finite_difference_derivative <- function(f, x, order = 1) {
+  if (!(order %in% c(1, 2, 4, 6, 8))) {
+    stop("order must be one of: 1, 2, 4, 6, 8", call. = FALSE)
+  }
+  .Call(`finite_difference_derivative_`, f, x, order)
+}

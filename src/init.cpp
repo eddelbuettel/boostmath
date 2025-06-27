@@ -211,19 +211,26 @@ extern "C" {
   // owens_t_function.cpp
   SEXP owens_t_(SEXP h_, SEXP a_);
 
-  // quadrature/trapezoidal.cpp
+  // quadrature_and_differentiation/trapezoidal.cpp
   SEXP trapezoidal_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
 
-  // quadrature/gauss_legendre.cpp
+  // quadrature_and_differentiation/gauss_legendre.cpp
   SEXP gauss_legendre_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
 
-  // quadrature/gauss_kronrod.cpp
+  // quadrature_and_differentiation/gauss_kronrod.cpp
   SEXP gauss_kronrod_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
 
-  // quadrature/double_exponential.cpp
+  // quadrature_and_differentiation/double_exponential.cpp
   SEXP tanh_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
   SEXP sinh_sinh_(SEXP f_, SEXP tol_, SEXP max_refinements_);
   SEXP exp_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
+
+  // quadrature_and_differentiation/fourier_integrals.cpp
+  SEXP ooura_fourier_sin_(SEXP f_, SEXP omega_, SEXP relative_error_tolerance_, SEXP levels_);
+  SEXP ooura_fourier_cos_(SEXP f_, SEXP omega_, SEXP relative_error_tolerance_, SEXP levels_);
+
+  // quadrature_and_differentiation/numerical_differentiation.cpp
+  SEXP finite_difference_derivative_(SEXP f_, SEXP x_, SEXP order_);
 
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
@@ -435,19 +442,26 @@ extern "C" {
     // owens_t_function.cpp
     {"owens_t_", (DL_FUNC) &owens_t_, 2},
 
-    // quadrature/trapezoidal.cpp
+    // quadrature_and_differentiation/trapezoidal.cpp
     {"trapezoidal_", (DL_FUNC) &trapezoidal_, 5},
 
-    // quadrature/gauss_legendre.cpp
+    // quadrature_and_differentiation/gauss_legendre.cpp
     {"gauss_legendre_", (DL_FUNC) &gauss_legendre_, 4},
 
-    // quadrature/gauss_kronrod.cpp
+    // quadrature_and_differentiation/gauss_kronrod.cpp
     {"gauss_kronrod_", (DL_FUNC) &gauss_kronrod_, 4},
 
-    // quadrature/double_exponential.cpp
+    // quadrature_and_differentiation/double_exponential.cpp
     {"tanh_sinh_", (DL_FUNC) &tanh_sinh_, 5},
     {"sinh_sinh_", (DL_FUNC) &sinh_sinh_, 3},
     {"exp_sinh_", (DL_FUNC) &exp_sinh_, 5},
+
+    // quadrature_and_differentiation/fourier_integrals.cpp
+    {"ooura_fourier_sin_", (DL_FUNC) &ooura_fourier_sin_, 4},
+    {"ooura_fourier_cos_", (DL_FUNC) &ooura_fourier_cos_, 4},
+
+    // quadrature_and_differentiation/numerical_differentiation.cpp
+    {"finite_difference_derivative_", (DL_FUNC) &finite_difference_derivative_, 3},
 
     {NULL, NULL, 0}
   };
