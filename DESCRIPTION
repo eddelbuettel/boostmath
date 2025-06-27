@@ -17,9 +17,8 @@ LinkingTo:
     BH
 NeedsCompilation: yes
 SystemRequirements: GNU make
-Suggests: 
+Suggests:
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    tinytest
 VignetteBuilder: knitr
-Config/testthat/edition: 3
