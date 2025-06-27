@@ -24,7 +24,7 @@ The [Special Functions](https://www.boost.org/doc/libs/1_85_0/libs/math/doc/html
 
   - Number Series
   - Gamma Functions
-  - Factorials and Binomial 
+  - Factorials and Binomial
   - Beta Functions
   - Error Functions
   - Polynomials
@@ -41,7 +41,7 @@ The [Special Functions](https://www.boost.org/doc/libs/1_85_0/libs/math/doc/html
   - Sinus Cardinal and Hyperbolic Sinus Cardinal Functions
   - Inverse Hyperbolic Functions
   - Owen's T function
-  
+
 These are all exposed for direct use in `boostmath` without needing any additional compilation:
 
 ```{r}
@@ -55,15 +55,15 @@ owens_t(2.1, 4.2)
 Boost's integration and (numerical) differentiation routines are also available for use with R functions:
 
 ```{r}
-trapezoidal(\(x) { 1/(5 - 4*cos(x)) }, a = 0, b = 2*pi)
+trapezoidal(function(x) { 1/(5 - 4*cos(x)) }, a = 0, b = 2*pi)
 
-gauss_legendre(\(x) { x * x * atan(x) }, a = 0, b = 1, points = 20)
+gauss_legendre(function(x) { x * x * atan(x) }, a = 0, b = 1, points = 20)
 
-gauss_kronrod(\(x) { exp(-x * x / 2) }, a = 0, b = Inf, points = 15)
+gauss_kronrod(function(x) { exp(-x * x / 2) }, a = 0, b = Inf, points = 15)
 
-tanh_sinh(\(x) { log(x)*log1p(-x) }, a = 0, b = 1)
+tanh_sinh(function(x) { log(x)*log1p(-x) }, a = 0, b = 1)
 
-sinh_sinh(\(x) { exp(-x*x) })
+sinh_sinh(function(x) { exp(-x*x) })
 
-exp_sinh(\(x) { exp(-3*x) }, a = 0, b = Inf)
+exp_sinh(function(x) { exp(-3*x) }, a = 0, b = Inf)
 ```
