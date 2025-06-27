@@ -232,6 +232,27 @@ extern "C" {
   // quadrature_and_differentiation/numerical_differentiation.cpp
   SEXP finite_difference_derivative_(SEXP f_, SEXP x_, SEXP order_);
 
+  // statistical_distributions/arcsine.cpp
+  SEXP arcsine_pdf_(SEXP x_, SEXP x_min_, SEXP x_max_);
+  SEXP arcsine_lpdf_(SEXP x_, SEXP x_min_, SEXP x_max_);
+  SEXP arcsine_cdf_(SEXP x_, SEXP x_min_, SEXP x_max_);
+  SEXP arcsine_lcdf_(SEXP x_, SEXP x_min_, SEXP x_max_);
+  SEXP arcsine_quantile_(SEXP p_, SEXP x_min_, SEXP x_max_);
+
+  // statistical_distributions/bernoulli.cpp
+  SEXP bernoulli_pdf_(SEXP x_, SEXP p_);
+  SEXP bernoulli_lpdf_(SEXP x_, SEXP p_);
+  SEXP bernoulli_cdf_(SEXP x_, SEXP p_);
+  SEXP bernoulli_lcdf_(SEXP x_, SEXP p_);
+  SEXP bernoulli_quantile_(SEXP p_, SEXP q_);
+
+  // statistical_distributions/beta.cpp
+  SEXP beta_pdf_(SEXP x_, SEXP alpha_, SEXP beta_);
+  SEXP beta_lpdf_(SEXP x_, SEXP alpha_, SEXP beta_);
+  SEXP beta_cdf_(SEXP x_, SEXP alpha_, SEXP beta_);
+  SEXP beta_lcdf_(SEXP x_, SEXP alpha_, SEXP beta_);
+  SEXP beta_quantile_(SEXP p_, SEXP alpha_, SEXP beta_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -462,6 +483,27 @@ extern "C" {
 
     // quadrature_and_differentiation/numerical_differentiation.cpp
     {"finite_difference_derivative_", (DL_FUNC) &finite_difference_derivative_, 3},
+
+    // statistical_distributions/arcsine.cpp
+    {"arcsine_pdf_", (DL_FUNC) &arcsine_pdf_, 3},
+    {"arcsine_lpdf_", (DL_FUNC) &arcsine_lpdf_, 3},
+    {"arcsine_cdf_", (DL_FUNC) &arcsine_cdf_, 3},
+    {"arcsine_lcdf_", (DL_FUNC) &arcsine_lcdf_, 3},
+    {"arcsine_quantile_", (DL_FUNC) &arcsine_quantile_, 3},
+
+    // statistical_distributions/bernoulli.cpp
+    {"bernoulli_pdf_", (DL_FUNC) &bernoulli_pdf_, 2},
+    {"bernoulli_lpdf_", (DL_FUNC) &bernoulli_lpdf_, 2},
+    {"bernoulli_cdf_", (DL_FUNC) &bernoulli_cdf_, 2},
+    {"bernoulli_lcdf_", (DL_FUNC) &bernoulli_lcdf_, 2},
+    {"bernoulli_quantile_", (DL_FUNC) &bernoulli_quantile_, 2},
+
+    // statistical_distributions/beta.cpp
+    {"beta_pdf_", (DL_FUNC) &beta_pdf_, 3},
+    {"beta_lpdf_", (DL_FUNC) &beta_lpdf_, 3},
+    {"beta_cdf_", (DL_FUNC) &beta_cdf_, 3},
+    {"beta_lcdf_", (DL_FUNC) &beta_lcdf_, 3},
+    {"beta_quantile_", (DL_FUNC) &beta_quantile_, 3},
 
     {NULL, NULL, 0}
   };

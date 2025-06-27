@@ -24,3 +24,7 @@
 #include "quadrature_and_differentiation/double_exponential.cpp"
 #include "quadrature_and_differentiation/fourier_integrals.cpp"
 #include "quadrature_and_differentiation/numerical_differentiation.cpp"
+
+#include "statistical_distributions/arcsine.cpp"
+#include "statistical_distributions/bernoulli.cpp"
+#include "statistical_distributions/beta.cpp"

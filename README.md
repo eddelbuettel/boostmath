@@ -95,3 +95,25 @@ As well as numerical differentiation by finite-differences:
 finite_difference_derivative(exp, 1.7)
 #> [1] 5.473947
 ```
+
+## Distribution Functions
+
+The PDF, CDF, log-PDF, log-CDF, and quantile functions for statistical
+distributions are also exposed:
+
+``` r
+beta_pdf(0.1, 1.2, 2.1)
+#> [1] 1.569287
+
+beta_lpdf(0.1, 1.2, 2.1)
+#> [1] 0.4506213
+
+beta_cdf(0.1, 1.2, 2.1)
+#> [1] 0.1380638
+
+beta_lcdf(0.1, 1.2, 2.1)
+#> [1] -1.98004
+
+beta_quantile(0.5, 1.2, 2.1)
+#> [1] 0.3335097
+```
