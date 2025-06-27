@@ -58,3 +58,21 @@ Any Boost Math functions that share the same name as R functions are sufffixed w
 beta_boost(3, 2)
 lgamma_boost(5)
 ```
+
+### Quadrature and Differentiation
+
+Boost's integration and (numerical) differentiation routines are also available for use with R functions:
+
+```{r}
+trapezoidal(\(x) { 1/(5 - 4*cos(x)) }, a = 0, b = 2*pi)
+
+gauss_legendre(\(x) { x * x * atan(x) }, a = 0, b = 1, points = 20)
+
+gauss_kronrod(\(x) { exp(-x * x / 2) }, a = 0, b = Inf, points = 15)
+
+tanh_sinh(\(x) { log(x)*log1p(-x) }, a = 0, b = 1)
+
+sinh_sinh(\(x) { exp(-x*x) })
+
+exp_sinh(\(x) { exp(-3*x) }, a = 0, b = Inf)
+```

@@ -57,3 +57,28 @@ beta_boost(3, 2)
 lgamma_boost(5)
 #> [1] 3.178054
 ```
+
+### Quadrature and Differentiation
+
+Boost’s integration and (numerical) differentiation routines are also
+available for use with R functions:
+
+``` r
+trapezoidal(\(x) { 1/(5 - 4*cos(x)) }, a = 0, b = 2*pi)
+#> [1] 2.094395
+
+gauss_legendre(\(x) { x * x * atan(x) }, a = 0, b = 1, points = 20)
+#> [1] 0.2106573
+
+gauss_kronrod(\(x) { exp(-x * x / 2) }, a = 0, b = Inf, points = 15)
+#> [1] 1.253314
+
+tanh_sinh(\(x) { log(x)*log1p(-x) }, a = 0, b = 1)
+#> [1] 0.3550659
+
+sinh_sinh(\(x) { exp(-x*x) })
+#> [1] 1.772454
+
+exp_sinh(\(x) { exp(-3*x) }, a = 0, b = Inf)
+#> [1] 0.3333333
+```
