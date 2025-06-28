@@ -220,15 +220,6 @@ extern "C" {
   // quadrature_and_differentiation/gauss_kronrod.cpp
   SEXP gauss_kronrod_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
 
-  // quadrature_and_differentiation/double_exponential.cpp
-  SEXP tanh_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
-  SEXP sinh_sinh_(SEXP f_, SEXP tol_, SEXP max_refinements_);
-  SEXP exp_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
-
-  // quadrature_and_differentiation/fourier_integrals.cpp
-  SEXP ooura_fourier_sin_(SEXP f_, SEXP omega_, SEXP relative_error_tolerance_, SEXP levels_);
-  SEXP ooura_fourier_cos_(SEXP f_, SEXP omega_, SEXP relative_error_tolerance_, SEXP levels_);
-
   // quadrature_and_differentiation/numerical_differentiation.cpp
   SEXP finite_difference_derivative_(SEXP f_, SEXP x_, SEXP order_);
   SEXP complex_step_derivative_(SEXP f_, SEXP x_);
@@ -472,15 +463,6 @@ extern "C" {
 
     // quadrature_and_differentiation/gauss_kronrod.cpp
     {"gauss_kronrod_", (DL_FUNC) &gauss_kronrod_, 4},
-
-    // quadrature_and_differentiation/double_exponential.cpp
-    {"tanh_sinh_", (DL_FUNC) &tanh_sinh_, 5},
-    {"sinh_sinh_", (DL_FUNC) &sinh_sinh_, 3},
-    {"exp_sinh_", (DL_FUNC) &exp_sinh_, 5},
-
-    // quadrature_and_differentiation/fourier_integrals.cpp
-    {"ooura_fourier_sin_", (DL_FUNC) &ooura_fourier_sin_, 4},
-    {"ooura_fourier_cos_", (DL_FUNC) &ooura_fourier_cos_, 4},
 
     // quadrature_and_differentiation/numerical_differentiation.cpp
     {"finite_difference_derivative_", (DL_FUNC) &finite_difference_derivative_, 3},
