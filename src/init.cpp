@@ -245,6 +245,48 @@ extern "C" {
   SEXP beta_lcdf_(SEXP x_, SEXP alpha_, SEXP beta_);
   SEXP beta_quantile_(SEXP p_, SEXP alpha_, SEXP beta_);
 
+  // statistical_distributions/binomial.cpp
+  SEXP binomial_pdf_(SEXP k_, SEXP n_, SEXP prob_);
+  SEXP binomial_lpdf_(SEXP k_, SEXP n_, SEXP prob_);
+  SEXP binomial_cdf_(SEXP k_, SEXP n_, SEXP prob_);
+  SEXP binomial_lcdf_(SEXP k_, SEXP n_, SEXP prob_);
+  SEXP binomial_quantile_(SEXP p_, SEXP n_, SEXP prob_);
+
+  // statistical_distributions/cauchy.cpp
+  SEXP cauchy_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP cauchy_lpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP cauchy_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP cauchy_lcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP cauchy_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
+  // statistical_distributions/chi_squared.cpp
+  SEXP chi_squared_pdf_(SEXP x_, SEXP df_);
+  SEXP chi_squared_lpdf_(SEXP x_, SEXP df_);
+  SEXP chi_squared_cdf_(SEXP x_, SEXP df_);
+  SEXP chi_squared_lcdf_(SEXP x_, SEXP df_);
+  SEXP chi_squared_quantile_(SEXP p_, SEXP df_);
+
+  // statistical_distributions/exponential.cpp
+  SEXP exponential_pdf_(SEXP x_, SEXP rate_);
+  SEXP exponential_lpdf_(SEXP x_, SEXP rate_);
+  SEXP exponential_cdf_(SEXP x_, SEXP rate_);
+  SEXP exponential_lcdf_(SEXP x_, SEXP rate_);
+  SEXP exponential_quantile_(SEXP p_, SEXP rate_);
+
+  // statistical_distributions/extreme_value.cpp
+  SEXP extreme_value_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP extreme_value_lpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP extreme_value_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP extreme_value_lcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP extreme_value_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
+  // statistical_distributions/fisher_f.cpp
+  SEXP fisher_f_pdf_(SEXP x_, SEXP df1_, SEXP df2_);
+  SEXP fisher_f_lpdf_(SEXP x_, SEXP df1_, SEXP df2_);
+  SEXP fisher_f_cdf_(SEXP x_, SEXP df1_, SEXP df2_);
+  SEXP fisher_f_lcdf_(SEXP x_, SEXP df1_, SEXP df2_);
+  SEXP fisher_f_quantile_(SEXP p_, SEXP df1_, SEXP df2_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -488,6 +530,48 @@ extern "C" {
     {"beta_cdf_", (DL_FUNC) &beta_cdf_, 3},
     {"beta_lcdf_", (DL_FUNC) &beta_lcdf_, 3},
     {"beta_quantile_", (DL_FUNC) &beta_quantile_, 3},
+
+    // statistical_distributions/binomial.cpp
+    {"binomial_pdf_", (DL_FUNC) &binomial_pdf_, 3},
+    {"binomial_lpdf_", (DL_FUNC) &binomial_lpdf_, 3},
+    {"binomial_cdf_", (DL_FUNC) &binomial_cdf_, 3},
+    {"binomial_lcdf_", (DL_FUNC) &binomial_lcdf_, 3},
+    {"binomial_quantile_", (DL_FUNC) &binomial_quantile_, 3},
+
+    // statistical_distributions/cauchy.cpp
+    {"cauchy_pdf_", (DL_FUNC) &cauchy_pdf_, 3},
+    {"cauchy_lpdf_", (DL_FUNC) &cauchy_lpdf_, 3},
+    {"cauchy_cdf_", (DL_FUNC) &cauchy_cdf_, 3},
+    {"cauchy_lcdf_", (DL_FUNC) &cauchy_lcdf_, 3},
+    {"cauchy_quantile_", (DL_FUNC) &cauchy_quantile_, 3},
+
+    // statistical_distributions/chi_squared.cpp
+    {"chi_squared_pdf_", (DL_FUNC) &chi_squared_pdf_, 2},
+    {"chi_squared_lpdf_", (DL_FUNC) &chi_squared_lpdf_, 2},
+    {"chi_squared_cdf_", (DL_FUNC) &chi_squared_cdf_, 2},
+    {"chi_squared_lcdf_", (DL_FUNC) &chi_squared_lcdf_, 2},
+    {"chi_squared_quantile_", (DL_FUNC) &chi_squared_quantile_, 2},
+
+    // statistical_distributions/exponential.cpp
+    {"exponential_pdf_", (DL_FUNC) &exponential_pdf_, 2},
+    {"exponential_lpdf_", (DL_FUNC) &exponential_lpdf_, 2},
+    {"exponential_cdf_", (DL_FUNC) &exponential_cdf_, 2},
+    {"exponential_lcdf_", (DL_FUNC) &exponential_lcdf_, 2},
+    {"exponential_quantile_", (DL_FUNC) &exponential_quantile_, 2},
+
+    // statistical_distributions/extreme_value.cpp
+    {"extreme_value_pdf_", (DL_FUNC) &extreme_value_pdf_, 3},
+    {"extreme_value_lpdf_", (DL_FUNC) &extreme_value_lpdf_, 3},
+    {"extreme_value_cdf_", (DL_FUNC) &extreme_value_cdf_, 3},
+    {"extreme_value_lcdf_", (DL_FUNC) &extreme_value_lcdf_, 3},
+    {"extreme_value_quantile_", (DL_FUNC) &extreme_value_quantile_, 3},
+
+    // statistical_distributions/fisher_f.cpp
+    {"fisher_f_pdf_", (DL_FUNC) &fisher_f_pdf_, 3},
+    {"fisher_f_lpdf_", (DL_FUNC) &fisher_f_lpdf_, 3},
+    {"fisher_f_cdf_", (DL_FUNC) &fisher_f_cdf_, 3},
+    {"fisher_f_lcdf_", (DL_FUNC) &fisher_f_lcdf_, 3},
+    {"fisher_f_quantile_", (DL_FUNC) &fisher_f_quantile_, 3},
 
     {NULL, NULL, 0}
   };
