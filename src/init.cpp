@@ -287,6 +287,34 @@ extern "C" {
   SEXP fisher_f_lcdf_(SEXP x_, SEXP df1_, SEXP df2_);
   SEXP fisher_f_quantile_(SEXP p_, SEXP df1_, SEXP df2_);
 
+  // statistical_distributions/gamma.cpp
+  SEXP gamma_pdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP gamma_lpdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP gamma_cdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP gamma_lcdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP gamma_quantile_(SEXP p_, SEXP shape_, SEXP scale_);
+
+  // statistical_distributions/geometric.cpp
+  SEXP geometric_pdf_(SEXP x_, SEXP prob_);
+  SEXP geometric_lpdf_(SEXP x_, SEXP prob_);
+  SEXP geometric_cdf_(SEXP x_, SEXP prob_);
+  SEXP geometric_lcdf_(SEXP x_, SEXP prob_);
+  SEXP geometric_quantile_(SEXP p_, SEXP prob_);
+
+  // statistical_distributions/hyperexponential.cpp
+  SEXP hyperexponential_pdf_(SEXP x_, SEXP probabilities_, SEXP rates_);
+  SEXP hyperexponential_lpdf_(SEXP x_, SEXP probabilities_, SEXP rates_);
+  SEXP hyperexponential_cdf_(SEXP x_, SEXP probabilities_, SEXP rates_);
+  SEXP hyperexponential_lcdf_(SEXP x_, SEXP probabilities_, SEXP rates_);
+  SEXP hyperexponential_quantile_(SEXP p_, SEXP probabilities_, SEXP rates_);
+
+  // statistical_distributions/hypergeometric.cpp
+  SEXP hypergeometric_pdf_(SEXP x_, SEXP r_, SEXP n_, SEXP N_);
+  SEXP hypergeometric_lpdf_(SEXP x_, SEXP r_, SEXP n_, SEXP N_);
+  SEXP hypergeometric_cdf_(SEXP x_, SEXP r_, SEXP n_, SEXP N_);
+  SEXP hypergeometric_lcdf_(SEXP x_, SEXP r_, SEXP n_, SEXP N_);
+  SEXP hypergeometric_quantile_(SEXP p_, SEXP r_, SEXP n_, SEXP N_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -572,6 +600,34 @@ extern "C" {
     {"fisher_f_cdf_", (DL_FUNC) &fisher_f_cdf_, 3},
     {"fisher_f_lcdf_", (DL_FUNC) &fisher_f_lcdf_, 3},
     {"fisher_f_quantile_", (DL_FUNC) &fisher_f_quantile_, 3},
+
+    // statistical_distributions/gamma.cpp
+    {"gamma_pdf_", (DL_FUNC) &gamma_pdf_, 3},
+    {"gamma_lpdf_", (DL_FUNC) &gamma_lpdf_, 3},
+    {"gamma_cdf_", (DL_FUNC) &gamma_cdf_, 3},
+    {"gamma_lcdf_", (DL_FUNC) &gamma_lcdf_, 3},
+    {"gamma_quantile_", (DL_FUNC) &gamma_quantile_, 3},
+
+    // statistical_distributions/geometric.cpp
+    {"geometric_pdf_", (DL_FUNC) &geometric_pdf_, 2},
+    {"geometric_lpdf_", (DL_FUNC) &geometric_lpdf_, 2},
+    {"geometric_cdf_", (DL_FUNC) &geometric_cdf_, 2},
+    {"geometric_lcdf_", (DL_FUNC) &geometric_lcdf_, 2},
+    {"geometric_quantile_", (DL_FUNC) &geometric_quantile_, 2},
+
+    // statistical_distributions/hyperexponential.cpp
+    {"hyperexponential_pdf_", (DL_FUNC) &hyperexponential_pdf_, 3},
+    {"hyperexponential_lpdf_", (DL_FUNC) &hyperexponential_lpdf_, 3},
+    {"hyperexponential_cdf_", (DL_FUNC) &hyperexponential_cdf_, 3},
+    {"hyperexponential_lcdf_", (DL_FUNC) &hyperexponential_lcdf_, 3},
+    {"hyperexponential_quantile_", (DL_FUNC) &hyperexponential_quantile_, 3},
+
+    // statistical_distributions/hypergeometric.cpp
+    {"hypergeometric_pdf_", (DL_FUNC) &hypergeometric_pdf_, 4},
+    {"hypergeometric_lpdf_", (DL_FUNC) &hypergeometric_lpdf_, 4},
+    {"hypergeometric_cdf_", (DL_FUNC) &hypergeometric_cdf_, 4},
+    {"hypergeometric_lcdf_", (DL_FUNC) &hypergeometric_lcdf_, 4},
+    {"hypergeometric_quantile_", (DL_FUNC) &hypergeometric_quantile_, 4},
 
     {NULL, NULL, 0}
   };

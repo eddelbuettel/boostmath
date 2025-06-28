@@ -32,3 +32,7 @@
 #include "statistical_distributions/exponential.cpp"
 #include "statistical_distributions/extreme_value.cpp"
 #include "statistical_distributions/fisher_f.cpp"
+#include "statistical_distributions/gamma.cpp"
+#include "statistical_distributions/geometric.cpp"
+#include "statistical_distributions/hyperexponential.cpp"
+#include "statistical_distributions/hypergeometric.cpp"
