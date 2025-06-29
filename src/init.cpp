@@ -494,6 +494,9 @@ extern "C" {
   // rootfinding_and_minimisation/quartic_roots.cpp
   SEXP quartic_roots_(SEXP a_, SEXP b_, SEXP c_, SEXP d_, SEXP e_);
 
+  // rootfinding_and_minimisation/minima.cpp
+  SEXP brent_find_minima_(SEXP f_, SEXP a_, SEXP b_, SEXP digits_, SEXP max_iter_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -987,6 +990,9 @@ extern "C" {
 
     // rootfinding_and_minimisation/quartic_roots.cpp
     {"quartic_roots_", (DL_FUNC) &quartic_roots_, 5},
+
+    // rootfinding_and_minimisation/minima.cpp
+    {"brent_find_minima_", (DL_FUNC) &brent_find_minima_, 5},
 
     {NULL, NULL, 0}
   };

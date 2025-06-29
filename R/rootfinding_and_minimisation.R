@@ -175,3 +175,22 @@ cubic_root_condition_number <- function(a, b, c, d, root) {
 quartic_roots <- function(a, b, c, d, e) {
   .Call(`quartic_roots_`, a, b, c, d, e)
 }
+
+#' Finding Minima using Brent's Method
+#'
+#' @param f A function to find the minimum of. It should take and return a single numeric value.
+#' @param a The lower bound of the interval to search for the minimum.
+#' @param b The upper bound of the interval to search for the minimum.
+#' @param digits The number of significant digits to which the minimum should be found. Defaults to double precision.
+#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
+#' @return A three-element list containing:
+#'   - `minimum`: The value which minimises the function.
+#'   - `value`: The value of the function at the minimum.
+#'   - `iterations`: The number of iterations performed.
+#' @export
+#' @examples
+#' f <- function(x) (x - 2)^2 + 1
+#' brent_find_minima(f, a = 0, b = 4)
+brent_find_minima <- function(f, a, b, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
+  .Call(`brent_find_minima_`, f, a, b, digits, max_iter)
+}
