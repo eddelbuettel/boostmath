@@ -491,6 +491,9 @@ extern "C" {
   SEXP cubic_root_residual_(SEXP a_, SEXP b_, SEXP c_, SEXP d_, SEXP root_);
   SEXP cubic_root_condition_number_(SEXP a_, SEXP b_, SEXP c_, SEXP d_, SEXP root_);
 
+  // rootfinding_and_minimisation/quartic_roots.cpp
+  SEXP quartic_roots_(SEXP a_, SEXP b_, SEXP c_, SEXP d_, SEXP e_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -980,6 +983,10 @@ extern "C" {
     {"cubic_roots_", (DL_FUNC) &cubic_roots_, 4},
     {"cubic_root_residual_", (DL_FUNC) &cubic_root_residual_, 5},
     {"cubic_root_condition_number_", (DL_FUNC) &cubic_root_condition_number_, 5},
+
+
+    // rootfinding_and_minimisation/quartic_roots.cpp
+    {"quartic_roots_", (DL_FUNC) &quartic_roots_, 5},
 
     {NULL, NULL, 0}
   };

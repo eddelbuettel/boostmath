@@ -160,3 +160,18 @@ cubic_root_residual <- function(a, b, c, d, root) {
 cubic_root_condition_number <- function(a, b, c, d, root) {
   .Call(`cubic_root_condition_number_`, a, b, c, d, root)
 }
+
+#' Finding Quartic Roots
+#'
+#' @param a Coefficient of the quartic term.
+#' @param b Coefficient of the cubic term.
+#' @param c Coefficient of the quadratic term.
+#' @param d Coefficient of the linear term.
+#' @param e Constant term.
+#' @return A numeric vector containing the four roots of the quartic equation.
+#' @export
+#' @examples
+#' quartic_roots(1, -10, 35, -50, 24)
+quartic_roots <- function(a, b, c, d, e) {
+  .Call(`quartic_roots_`, a, b, c, d, e)
+}
