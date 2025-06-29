@@ -57,3 +57,5 @@
 #include "statistical_distributions/triangular.cpp"
 #include "statistical_distributions/uniform.cpp"
 #include "statistical_distributions/weibull.cpp"
+
+#include "vector_functionals/norms.cpp"

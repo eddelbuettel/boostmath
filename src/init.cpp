@@ -462,6 +462,19 @@ extern "C" {
   SEXP weibull_lcdf_(SEXP x_, SEXP shape_, SEXP scale_);
   SEXP weibull_quantile_(SEXP p_, SEXP shape_, SEXP scale_);
 
+  // vector_functionals/norms.cpp
+  SEXP l0_pseudo_norm_(SEXP x_);
+  SEXP hamming_distance_(SEXP x_, SEXP y_);
+  SEXP l1_norm_(SEXP x_);
+  SEXP l1_distance_(SEXP x_, SEXP y_);
+  SEXP l2_norm_(SEXP x_);
+  SEXP l2_distance_(SEXP x_, SEXP y_);
+  SEXP sup_norm_(SEXP x_);
+  SEXP sup_distance_(SEXP x_, SEXP y_);
+  SEXP lp_norm_(SEXP x_, SEXP p_);
+  SEXP lp_distance_(SEXP x_, SEXP y_, SEXP p_);
+  SEXP total_variation_(SEXP x_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -922,6 +935,19 @@ extern "C" {
     {"weibull_cdf_", (DL_FUNC) &weibull_cdf_, 3},
     {"weibull_lcdf_", (DL_FUNC) &weibull_lcdf_, 3},
     {"weibull_quantile_", (DL_FUNC) &weibull_quantile_, 3},
+
+    // vector_functions/norms.cpp
+    {"l0_pseudo_norm_", (DL_FUNC) &l0_pseudo_norm_, 1},
+    {"hamming_distance_", (DL_FUNC) &hamming_distance_, 2},
+    {"l1_norm_", (DL_FUNC) &l1_norm_, 1},
+    {"l1_distance_", (DL_FUNC) &l1_distance_, 2},
+    {"l2_norm_", (DL_FUNC) &l2_norm_, 1},
+    {"l2_distance_", (DL_FUNC) &l2_distance_, 2},
+    {"sup_norm_", (DL_FUNC) &sup_norm_, 1},
+    {"sup_distance_", (DL_FUNC) &sup_distance_, 2},
+    {"lp_norm_", (DL_FUNC) &lp_norm_, 1},
+    {"lp_distance_", (DL_FUNC) &lp_distance_, 3},
+    {"total_variation_", (DL_FUNC) &total_variation_, 1},
 
     {NULL, NULL, 0}
   };
