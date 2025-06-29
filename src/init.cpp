@@ -475,6 +475,17 @@ extern "C" {
   SEXP lp_distance_(SEXP x_, SEXP y_, SEXP p_);
   SEXP total_variation_(SEXP x_);
 
+  // rootfinding_and_minimisation/without_derivatives.cpp
+  SEXP bisect_(SEXP f_, SEXP a_, SEXP b_, SEXP eps_, SEXP max_iter_);
+  SEXP bracket_and_solve_root_(SEXP f_, SEXP guess_, SEXP factor_, SEXP rising_, SEXP eps_, SEXP max_iter_);
+  SEXP toms748_solve_(SEXP f_, SEXP a_, SEXP b_, SEXP eps_, SEXP max_iter_);
+
+  // rootfinding_and_minimisation/with_derivatives.cpp
+  SEXP newton_raphson_iterate_(SEXP f_, SEXP guess_, SEXP min_, SEXP max_, SEXP digits_, SEXP max_iter_);
+  SEXP halley_iterate_(SEXP f_, SEXP guess_, SEXP min_, SEXP max_, SEXP digits_, SEXP max_iter_);
+  SEXP schroder_iterate_(SEXP f_, SEXP guess_, SEXP min_, SEXP max_, SEXP digits_, SEXP max_iter_);
+  SEXP quadratic_roots_(SEXP a_, SEXP b_, SEXP c_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -948,6 +959,17 @@ extern "C" {
     {"lp_norm_", (DL_FUNC) &lp_norm_, 2},
     {"lp_distance_", (DL_FUNC) &lp_distance_, 3},
     {"total_variation_", (DL_FUNC) &total_variation_, 1},
+
+    // rootfinding_and_minimisation/without_derivatives.cpp
+    {"bisect_", (DL_FUNC) &bisect_, 5},
+    {"bracket_and_solve_root_", (DL_FUNC) &bracket_and_solve_root_, 6},
+    {"toms748_solve_", (DL_FUNC) &toms748_solve_, 5},
+
+    // rootfinding_and_minimisation/with_derivatives.cpp
+    {"newton_raphson_iterate_", (DL_FUNC) &newton_raphson_iterate_, 6},
+    {"halley_iterate_", (DL_FUNC) &halley_iterate_, 6},
+    {"schroder_iterate_", (DL_FUNC) &schroder_iterate_, 6},
+    {"quadratic_roots_", (DL_FUNC) &quadratic_roots_, 3},
 
     {NULL, NULL, 0}
   };

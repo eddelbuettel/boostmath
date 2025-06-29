@@ -59,3 +59,6 @@
 #include "statistical_distributions/weibull.cpp"
 
 #include "vector_functionals/norms.cpp"
+
+#include "rootfinding_and_minimisation/without_derivatives.cpp"
+#include "rootfinding_and_minimisation/with_derivatives.cpp"

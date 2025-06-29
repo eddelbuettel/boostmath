@@ -62,7 +62,8 @@ extern "C" {
     double z = cpp11::as_cpp<double>(z_);
     int value_sign;
     double value = boost::math::log_hypergeometric_1F1(a, b, z, &value_sign);
-    cpp11::writable::doubles result(value);
+    cpp11::writable::doubles result;
+    result.push_back(value);
     result.attr("sign") = value_sign;
 
     return cpp11::as_sexp(result);
