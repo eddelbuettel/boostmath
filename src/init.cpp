@@ -486,6 +486,11 @@ extern "C" {
   SEXP schroder_iterate_(SEXP f_, SEXP guess_, SEXP min_, SEXP max_, SEXP digits_, SEXP max_iter_);
   SEXP quadratic_roots_(SEXP a_, SEXP b_, SEXP c_);
 
+  // rootfinding_and_minimisation/cubic_roots.cpp
+  SEXP cubic_roots_(SEXP a_, SEXP b_, SEXP c_, SEXP d_);
+  SEXP cubic_root_residual_(SEXP a_, SEXP b_, SEXP c_, SEXP d_, SEXP root_);
+  SEXP cubic_root_condition_number_(SEXP a_, SEXP b_, SEXP c_, SEXP d_, SEXP root_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -970,6 +975,11 @@ extern "C" {
     {"halley_iterate_", (DL_FUNC) &halley_iterate_, 6},
     {"schroder_iterate_", (DL_FUNC) &schroder_iterate_, 6},
     {"quadratic_roots_", (DL_FUNC) &quadratic_roots_, 3},
+
+    // rootfinding_and_minimisation/cubic_roots.cpp
+    {"cubic_roots_", (DL_FUNC) &cubic_roots_, 4},
+    {"cubic_root_residual_", (DL_FUNC) &cubic_root_residual_, 5},
+    {"cubic_root_condition_number_", (DL_FUNC) &cubic_root_condition_number_, 5},
 
     {NULL, NULL, 0}
   };

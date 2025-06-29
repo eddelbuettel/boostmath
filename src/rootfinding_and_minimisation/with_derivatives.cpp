@@ -1,7 +1,6 @@
 #include <cpp11.hpp>
 #include <cpp11/declarations.hpp>
 #include <boost/math/tools/roots.hpp>
-#include <iostream>
 
 extern "C" {
   SEXP newton_raphson_iterate_(SEXP f_, SEXP guess_, SEXP min_, SEXP max_, SEXP digits_, SEXP max_iter_) {

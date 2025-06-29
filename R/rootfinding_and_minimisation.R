@@ -116,3 +116,47 @@ schroder_iterate <- function(f, guess, min, max, digits = .Machine$double.digits
 quadratic_roots <- function(a, b, c) {
   .Call(`quadratic_roots_`, a, b, c)
 }
+
+#' Finding Cubic Roots
+#'
+#' @param a Coefficient of the cubic term.
+#' @param b Coefficient of the quadratic term.
+#' @param c Coefficient of the linear term.
+#' @param d Constant term.
+#' @return A numeric vector containing the three roots of the cubic equation.
+#' @export
+#' @examples
+#' cubic_roots(1, -6, 11, -6)
+cubic_roots <- function(a, b, c, d) {
+  .Call(`cubic_roots_`, a, b, c, d)
+}
+
+#' Finding Residual of a Cubic Root
+#'
+#' @param a Coefficient of the cubic term.
+#' @param b Coefficient of the quadratic term.
+#' @param c Coefficient of the linear term.
+#' @param d Constant term.
+#' @param root The root to evaluate the residual at.
+#' @return The residual of the cubic equation at the specified root.
+#' @export
+#' @examples
+#' cubic_root_residual(1, -6, 11, -6, 1)
+cubic_root_residual <- function(a, b, c, d, root) {
+  .Call(`cubic_root_residual_`, a, b, c, d, root)
+}
+
+#' Finding Condition Number of a Cubic Root
+#'
+#' @param a Coefficient of the cubic term.
+#' @param b Coefficient of the quadratic term.
+#' @param c Coefficient of the linear term.
+#' @param d Constant term.
+#' @param root The root to evaluate the condition number at.
+#' @return The condition number of the cubic equation at the specified root.
+#' @export
+#' @examples
+#' cubic_root_condition_number(1, -6, 11, -6, 1)
+cubic_root_condition_number <- function(a, b, c, d, root) {
+  .Call(`cubic_root_condition_number_`, a, b, c, d, root)
+}
