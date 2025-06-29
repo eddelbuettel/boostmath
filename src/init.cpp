@@ -350,6 +350,55 @@ extern "C" {
   SEXP laplace_lcdf_(SEXP x_, SEXP location_, SEXP scale_);
   SEXP laplace_quantile_(SEXP p_, SEXP location_, SEXP scale_);
 
+  // statistical_distributions/logistic.cpp
+  SEXP logistic_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP logistic_lpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP logistic_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP logistic_lcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP logistic_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
+  // statistical_distributions/lognormal.cpp
+  SEXP lognormal_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP lognormal_lpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP lognormal_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP lognormal_lcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP lognormal_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
+  // statistical_distributions/negative_binomial.cpp
+  SEXP negative_binomial_pdf(SEXP x_, SEXP successes_, SEXP success_fraction_);
+  SEXP negative_binomial_lpdf(SEXP x_, SEXP successes_, SEXP success_fraction_);
+  SEXP negative_binomial_cdf(SEXP x_, SEXP successes_, SEXP success_fraction_);
+  SEXP negative_binomial_lcdf(SEXP x_, SEXP successes_, SEXP success_fraction_);
+  SEXP negative_binomial_quantile(SEXP p_, SEXP successes_, SEXP success_fraction_);
+
+  // statistical_distributions/non_central_beta.cpp
+  SEXP non_central_beta_pdf_(SEXP x_, SEXP alpha_, SEXP beta_, SEXP lambda_);
+  SEXP non_central_beta_lpdf_(SEXP x_, SEXP alpha_, SEXP beta_, SEXP lambda_);
+  SEXP non_central_beta_cdf_(SEXP x_, SEXP alpha_, SEXP beta_, SEXP lambda_);
+  SEXP non_central_beta_lcdf_(SEXP x_, SEXP alpha_, SEXP beta_, SEXP lambda_);
+  SEXP non_central_beta_quantile_(SEXP p_, SEXP alpha_, SEXP beta_, SEXP lambda_);
+
+  // statistical_distributions/non_central_chi_squared.cpp
+  SEXP non_central_chi_squared_pdf_(SEXP x_, SEXP df_, SEXP lambda_);
+  SEXP non_central_chi_squared_lpdf_(SEXP x_, SEXP df_, SEXP lambda_);
+  SEXP non_central_chi_squared_cdf_(SEXP x_, SEXP df_, SEXP lambda_);
+  SEXP non_central_chi_squared_lcdf_(SEXP x_, SEXP df_, SEXP lambda_);
+  SEXP non_central_chi_squared_quantile_(SEXP p_, SEXP df_, SEXP lambda_);
+
+  // statistical_distributions/non_central_f.cpp
+  SEXP non_central_f_pdf_(SEXP x_, SEXP df1_, SEXP df2_, SEXP lambda_);
+  SEXP non_central_f_lpdf_(SEXP x_, SEXP df1_, SEXP df2_, SEXP lambda_);
+  SEXP non_central_f_cdf_(SEXP x_, SEXP df1_, SEXP df2_, SEXP lambda_);
+  SEXP non_central_f_lcdf_(SEXP x_, SEXP df1_, SEXP df2_, SEXP lambda_);
+  SEXP non_central_f_quantile_(SEXP p_, SEXP df1_, SEXP df2_, SEXP lambda_);
+
+  // statistical_distributions/non_central_t.cpp
+  SEXP non_central_t_pdf_(SEXP x_, SEXP df_, SEXP delta_);
+  SEXP non_central_t_lpdf_(SEXP x_, SEXP df_, SEXP delta_);
+  SEXP non_central_t_cdf_(SEXP x_, SEXP df_, SEXP delta_);
+  SEXP non_central_t_lcdf_(SEXP x_, SEXP df_, SEXP delta_);
+  SEXP non_central_t_quantile_(SEXP p_, SEXP df_, SEXP delta_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -698,6 +747,55 @@ extern "C" {
     {"laplace_cdf_", (DL_FUNC) &laplace_cdf_, 3},
     {"laplace_lcdf_", (DL_FUNC) &laplace_lcdf_, 3},
     {"laplace_quantile_", (DL_FUNC) &laplace_quantile_, 3},
+
+    // statistical_distributions/logistic.cpp
+    {"logistic_pdf_", (DL_FUNC) &logistic_pdf_, 3},
+    {"logistic_lpdf_", (DL_FUNC) &logistic_lpdf_, 3},
+    {"logistic_cdf_", (DL_FUNC) &logistic_cdf_, 3},
+    {"logistic_lcdf_", (DL_FUNC) &logistic_lcdf_, 3},
+    {"logistic_quantile_", (DL_FUNC) &logistic_quantile_, 3},
+
+    // statistical_distributions/lognormal.cpp
+    {"lognormal_pdf_", (DL_FUNC) &lognormal_pdf_, 3},
+    {"lognormal_lpdf_", (DL_FUNC) &lognormal_lpdf_, 3},
+    {"lognormal_cdf_", (DL_FUNC) &lognormal_cdf_, 3},
+    {"lognormal_lcdf_", (DL_FUNC) &lognormal_lcdf_, 3},
+    {"lognormal_quantile_", (DL_FUNC) &lognormal_quantile_, 3},
+
+    // statistical_distributions/negative_binomial.cpp
+    {"negative_binomial_pdf_", (DL_FUNC) &negative_binomial_pdf, 3},
+    {"negative_binomial_lpdf_", (DL_FUNC) &negative_binomial_lpdf, 3},
+    {"negative_binomial_cdf_", (DL_FUNC) &negative_binomial_cdf, 3},
+    {"negative_binomial_lcdf_", (DL_FUNC) &negative_binomial_lcdf, 3},
+    {"negative_binomial_quantile_", (DL_FUNC) &negative_binomial_quantile, 3},
+
+    // statistical_distributions/noncentral_beta.cpp
+    {"non_central_beta_pdf_", (DL_FUNC) &non_central_beta_pdf_, 4},
+    {"non_central_beta_lpdf_", (DL_FUNC) &non_central_beta_lpdf_, 4},
+    {"non_central_beta_cdf_", (DL_FUNC) &non_central_beta_cdf_, 4},
+    {"non_central_beta_lcdf_", (DL_FUNC) &non_central_beta_lcdf_, 4},
+    {"non_central_beta_quantile_", (DL_FUNC) &non_central_beta_quantile_, 4},
+
+    // statistical_distributions/noncentral_chi_squared.cpp
+    {"non_central_chi_squared_pdf_", (DL_FUNC) &non_central_chi_squared_pdf_, 3},
+    {"non_central_chi_squared_lpdf_", (DL_FUNC) &non_central_chi_squared_lpdf_, 3},
+    {"non_central_chi_squared_cdf_", (DL_FUNC) &non_central_chi_squared_cdf_, 3},
+    {"non_central_chi_squared_lcdf_", (DL_FUNC) &non_central_chi_squared_lcdf_, 3},
+    {"non_central_chi_squared_quantile_", (DL_FUNC) &non_central_chi_squared_quantile_, 3},
+
+    // statistical_distributions/noncentral_f.cpp
+    {"non_central_f_pdf_", (DL_FUNC) &non_central_f_pdf_, 4},
+    {"non_central_f_lpdf_", (DL_FUNC) &non_central_f_lpdf_, 4},
+    {"non_central_f_cdf_", (DL_FUNC) &non_central_f_cdf_, 4},
+    {"non_central_f_lcdf_", (DL_FUNC) &non_central_f_lcdf_, 4},
+    {"non_central_f_quantile_", (DL_FUNC) &non_central_f_quantile_, 4},
+
+    // statistical_distributions/noncentral_t.cpp
+    {"non_central_t_pdf_", (DL_FUNC) &non_central_t_pdf_, 3},
+    {"non_central_t_lpdf_", (DL_FUNC) &non_central_t_lpdf_, 3},
+    {"non_central_t_cdf_", (DL_FUNC) &non_central_t_cdf_, 3},
+    {"non_central_t_lcdf_", (DL_FUNC) &non_central_t_lcdf_, 3},
+    {"non_central_t_quantile_", (DL_FUNC) &non_central_t_quantile_, 3},
 
     {NULL, NULL, 0}
   };
