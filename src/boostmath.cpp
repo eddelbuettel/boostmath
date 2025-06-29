@@ -36,3 +36,8 @@
 #include "statistical_distributions/geometric.cpp"
 #include "statistical_distributions/hyperexponential.cpp"
 #include "statistical_distributions/hypergeometric.cpp"
+#include "statistical_distributions/inverse_chi_squared.cpp"
+#include "statistical_distributions/inverse_gamma.cpp"
+#include "statistical_distributions/inverse_gaussian.cpp"
+#include "statistical_distributions/kolmogorov_smirnov.cpp"
+#include "statistical_distributions/laplace.cpp"

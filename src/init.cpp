@@ -315,6 +315,41 @@ extern "C" {
   SEXP hypergeometric_lcdf_(SEXP x_, SEXP r_, SEXP n_, SEXP N_);
   SEXP hypergeometric_quantile_(SEXP p_, SEXP r_, SEXP n_, SEXP N_);
 
+  // statistical_distributions/inverse_chi_squared.cpp
+  SEXP inverse_chi_squared_pdf_(SEXP x_, SEXP df_, SEXP scale_);
+  SEXP inverse_chi_squared_lpdf_(SEXP x_, SEXP df_, SEXP scale_);
+  SEXP inverse_chi_squared_cdf_(SEXP x_, SEXP df_, SEXP scale_);
+  SEXP inverse_chi_squared_lcdf_(SEXP x_, SEXP df_, SEXP scale_);
+  SEXP inverse_chi_squared_quantile_(SEXP p_, SEXP df_, SEXP scale_);
+
+  // statistical_distributions/inverse_gamma.cpp
+  SEXP inverse_gamma_pdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP inverse_gamma_lpdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP inverse_gamma_cdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP inverse_gamma_lcdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP inverse_gamma_quantile_(SEXP p_, SEXP shape_, SEXP scale_);
+
+  // statistical_distributions/inverse_gaussian.cpp
+  SEXP inverse_gaussian_pdf_(SEXP x_, SEXP mu_, SEXP lambda_);
+  SEXP inverse_gaussian_lpdf_(SEXP x_, SEXP mu_, SEXP lambda_);
+  SEXP inverse_gaussian_cdf_(SEXP x_, SEXP mu_, SEXP lambda_);
+  SEXP inverse_gaussian_lcdf_(SEXP x_, SEXP mu_, SEXP lambda_);
+  SEXP inverse_gaussian_quantile_(SEXP p_, SEXP mu_, SEXP lambda_);
+
+  // statistical_distributions/kolmogorov_smirnov.cpp
+  SEXP kolmogorov_smirnov_pdf_(SEXP x_, SEXP n_);
+  SEXP kolmogorov_smirnov_lpdf_(SEXP x_, SEXP n_);
+  SEXP kolmogorov_smirnov_cdf_(SEXP x_, SEXP n_);
+  SEXP kolmogorov_smirnov_lcdf_(SEXP x_, SEXP n_);
+  SEXP kolmogorov_smirnov_quantile_(SEXP p_, SEXP n_);
+
+  // statistical_distributions/laplace.cpp
+  SEXP laplace_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP laplace_lpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP laplace_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP laplace_lcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP laplace_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -628,6 +663,41 @@ extern "C" {
     {"hypergeometric_cdf_", (DL_FUNC) &hypergeometric_cdf_, 4},
     {"hypergeometric_lcdf_", (DL_FUNC) &hypergeometric_lcdf_, 4},
     {"hypergeometric_quantile_", (DL_FUNC) &hypergeometric_quantile_, 4},
+
+    // statistical_distributions/inverse_chi_squared.cpp
+    {"inverse_chi_squared_pdf_", (DL_FUNC) &inverse_chi_squared_pdf_, 3},
+    {"inverse_chi_squared_lpdf_", (DL_FUNC) &inverse_chi_squared_lpdf_, 3},
+    {"inverse_chi_squared_cdf_", (DL_FUNC) &inverse_chi_squared_cdf_, 3},
+    {"inverse_chi_squared_lcdf_", (DL_FUNC) &inverse_chi_squared_lcdf_, 3},
+    {"inverse_chi_squared_quantile_", (DL_FUNC) &inverse_chi_squared_quantile_, 3},
+
+    // statistical_distributions/inverse_gamma.cpp
+    {"inverse_gamma_pdf_", (DL_FUNC) &inverse_gamma_pdf_, 3},
+    {"inverse_gamma_lpdf_", (DL_FUNC) &inverse_gamma_lpdf_, 3},
+    {"inverse_gamma_cdf_", (DL_FUNC) &inverse_gamma_cdf_, 3},
+    {"inverse_gamma_lcdf_", (DL_FUNC) &inverse_gamma_lcdf_, 3},
+    {"inverse_gamma_quantile_", (DL_FUNC) &inverse_gamma_quantile_, 3},
+
+    // statistical_distributions/inverse_gaussian.cpp
+    {"inverse_gaussian_pdf_", (DL_FUNC) &inverse_gaussian_pdf_, 3},
+    {"inverse_gaussian_lpdf_", (DL_FUNC) &inverse_gaussian_lpdf_, 3},
+    {"inverse_gaussian_cdf_", (DL_FUNC) &inverse_gaussian_cdf_, 3},
+    {"inverse_gaussian_lcdf_", (DL_FUNC) &inverse_gaussian_lcdf_, 3},
+    {"inverse_gaussian_quantile_", (DL_FUNC) &inverse_gaussian_quantile_, 3},
+
+    // statistical_distributions/kolmogorov_smirnov.cpp
+    {"kolmogorov_smirnov_pdf_", (DL_FUNC) &kolmogorov_smirnov_pdf_, 2},
+    {"kolmogorov_smirnov_lpdf_", (DL_FUNC) &kolmogorov_smirnov_lpdf_, 2},
+    {"kolmogorov_smirnov_cdf_", (DL_FUNC) &kolmogorov_smirnov_cdf_, 2},
+    {"kolmogorov_smirnov_lcdf_", (DL_FUNC) &kolmogorov_smirnov_lcdf_, 2},
+    {"kolmogorov_smirnov_quantile_", (DL_FUNC) &kolmogorov_smirnov_quantile_, 2},
+
+    // statistical_distributions/laplace.cpp
+    {"laplace_pdf_", (DL_FUNC) &laplace_pdf_, 3},
+    {"laplace_lpdf_", (DL_FUNC) &laplace_lpdf_, 3},
+    {"laplace_cdf_", (DL_FUNC) &laplace_cdf_, 3},
+    {"laplace_lcdf_", (DL_FUNC) &laplace_lcdf_, 3},
+    {"laplace_quantile_", (DL_FUNC) &laplace_quantile_, 3},
 
     {NULL, NULL, 0}
   };
