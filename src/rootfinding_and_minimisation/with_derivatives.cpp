@@ -11,7 +11,7 @@ extern "C" {
     double min = cpp11::as_cpp<double>(min_);
     double max = cpp11::as_cpp<double>(max_);
     int digits = cpp11::as_cpp<int>(digits_);
-    boost::math::uintmax_t max_iter = cpp11::as_cpp<boost::math::uintmax_t>(max_iter_);
+    std::uintmax_t max_iter = cpp11::as_cpp<std::uintmax_t>(max_iter_);
 
     auto func = [&f](double x) {
       std::vector<double> fx_dx = cpp11::as_cpp<std::vector<double>>(f(x));
@@ -33,7 +33,7 @@ extern "C" {
     double min = cpp11::as_cpp<double>(min_);
     double max = cpp11::as_cpp<double>(max_);
     int digits = cpp11::as_cpp<int>(digits_);
-    boost::math::uintmax_t max_iter = cpp11::as_cpp<boost::math::uintmax_t>(max_iter_);
+    std::uintmax_t max_iter = cpp11::as_cpp<std::uintmax_t>(max_iter_);
 
     auto func = [&f](double x) {
       std::vector<double> fx_dx = cpp11::as_cpp<std::vector<double>>(f(x));
@@ -55,7 +55,7 @@ extern "C" {
     double min = cpp11::as_cpp<double>(min_);
     double max = cpp11::as_cpp<double>(max_);
     int digits = cpp11::as_cpp<int>(digits_);
-    boost::math::uintmax_t max_iter = cpp11::as_cpp<boost::math::uintmax_t>(max_iter_);
+    std::uintmax_t max_iter = cpp11::as_cpp<std::uintmax_t>(max_iter_);
 
     auto func = [&f](double x) {
       std::vector<double> fx_dx = cpp11::as_cpp<std::vector<double>>(f(x));

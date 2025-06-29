@@ -9,7 +9,7 @@ extern "C" {
     double a = cpp11::as_cpp<double>(a_);
     double b = cpp11::as_cpp<double>(b_);
     double digits = cpp11::as_cpp<int>(digits_);
-    boost::math::uintmax_t max_iter = cpp11::as_cpp<boost::math::uintmax_t>(max_iter_);
+    std::uintmax_t max_iter = cpp11::as_cpp<std::uintmax_t>(max_iter_);
 
     auto func = [&f](double x) { return cpp11::as_cpp<double>(f(x)); };
 
@@ -32,7 +32,7 @@ extern "C" {
     double factor = cpp11::as_cpp<double>(factor_);
     bool rising = cpp11::as_cpp<bool>(rising_);
     double digits = cpp11::as_cpp<int>(digits_);
-    boost::math::uintmax_t max_iter = cpp11::as_cpp<boost::math::uintmax_t>(max_iter_);
+    std::uintmax_t max_iter = cpp11::as_cpp<std::uintmax_t>(max_iter_);
 
     auto func = [&f](double x) { return cpp11::as_cpp<double>(f(x)); };
 
@@ -54,7 +54,7 @@ extern "C" {
     double a = cpp11::as_cpp<double>(a_);
     double b = cpp11::as_cpp<double>(b_);
     double digits = cpp11::as_cpp<int>(digits_);
-    boost::math::uintmax_t max_iter = cpp11::as_cpp<boost::math::uintmax_t>(max_iter_);
+    std::uintmax_t max_iter = cpp11::as_cpp<std::uintmax_t>(max_iter_);
 
     auto func = [&f](double x) { return cpp11::as_cpp<double>(f(x)); };
 
