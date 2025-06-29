@@ -20,5 +20,5 @@ Quantile function value at \code{p}
 Noncentral Chi-Squared Quantile Function
 }
 \examples{
-non_central_chi_squared_quantile(0.5, 3, 1)
+non_central_chi_squared_quantile(0.5, 1, 1)
 }

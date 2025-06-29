@@ -58,7 +58,7 @@ non_central_chi_squared_lcdf <- function(x, df, lambda) {
 #' @return Quantile function value at `p`
 #' @export
 #' @examples
-#' non_central_chi_squared_quantile(0.5, 3, 1)
+#' non_central_chi_squared_quantile(0.5, 1, 1)
 non_central_chi_squared_quantile <- function(p, df, lambda) {
   .Call(`non_central_chi_squared_quantile_`, p, df, lambda)
 }

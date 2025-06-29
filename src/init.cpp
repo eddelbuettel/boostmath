@@ -399,6 +399,69 @@ extern "C" {
   SEXP non_central_t_lcdf_(SEXP x_, SEXP df_, SEXP delta_);
   SEXP non_central_t_quantile_(SEXP p_, SEXP df_, SEXP delta_);
 
+  // statistical_distributions/normal.cpp
+  SEXP normal_pdf_(SEXP x_, SEXP mean_, SEXP sd_);
+  SEXP normal_lpdf_(SEXP x_, SEXP mean_, SEXP sd_);
+  SEXP normal_cdf_(SEXP x_, SEXP mean_, SEXP sd_);
+  SEXP normal_lcdf_(SEXP x_, SEXP mean_, SEXP sd_);
+  SEXP normal_quantile_(SEXP p_, SEXP mean_, SEXP sd_);
+
+  // statistical_distributions/pareto.cpp
+  SEXP pareto_pdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP pareto_lpdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP pareto_cdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP pareto_lcdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP pareto_quantile_(SEXP p_, SEXP shape_, SEXP scale_);
+
+  // statistical_distributions/poisson.cpp
+  SEXP poisson_pdf_(SEXP x_, SEXP lambda_);
+  SEXP poisson_lpdf_(SEXP x_, SEXP lambda_);
+  SEXP poisson_cdf_(SEXP x_, SEXP lambda_);
+  SEXP poisson_lcdf_(SEXP x_, SEXP lambda_);
+  SEXP poisson_quantile_(SEXP p_, SEXP lambda_);
+
+  // statistical_distributions/rayleigh.cpp
+  SEXP rayleigh_pdf_(SEXP x_, SEXP scale_);
+  SEXP rayleigh_lpdf_(SEXP x_, SEXP scale_);
+  SEXP rayleigh_cdf_(SEXP x_, SEXP scale_);
+  SEXP rayleigh_lcdf_(SEXP x_, SEXP scale_);
+  SEXP rayleigh_quantile_(SEXP p_, SEXP scale_);
+
+  // statistical_distributions/skew_normal.cpp
+  SEXP skew_normal_pdf_(SEXP x_, SEXP location_, SEXP scale_, SEXP shape_);
+  SEXP skew_normal_lpdf_(SEXP x_, SEXP location_, SEXP scale_, SEXP shape_);
+  SEXP skew_normal_cdf_(SEXP x_, SEXP location_, SEXP scale_, SEXP shape_);
+  SEXP skew_normal_lcdf_(SEXP x_, SEXP location_, SEXP scale_, SEXP shape_);
+  SEXP skew_normal_quantile_(SEXP p_, SEXP location_, SEXP scale_, SEXP shape_);
+
+  // statistical_distributions/students_t.cpp
+  SEXP students_t_pdf_(SEXP x_, SEXP df_);
+  SEXP students_t_lpdf_(SEXP x_, SEXP df_);
+  SEXP students_t_cdf_(SEXP x_, SEXP df_);
+  SEXP students_t_lcdf_(SEXP x_, SEXP df_);
+  SEXP students_t_quantile_(SEXP p_, SEXP df_);
+
+  // statistical_distributions/triangular.cpp
+  SEXP triangular_pdf_(SEXP x_, SEXP lower_, SEXP mode_, SEXP upper_);
+  SEXP triangular_lpdf_(SEXP x_, SEXP lower_, SEXP mode_, SEXP upper_);
+  SEXP triangular_cdf_(SEXP x_, SEXP lower_, SEXP mode_, SEXP upper_);
+  SEXP triangular_lcdf_(SEXP x_, SEXP lower_, SEXP mode_, SEXP upper_);
+  SEXP triangular_quantile_(SEXP p_, SEXP lower_, SEXP mode_, SEXP upper_);
+
+  // statistical_distributions/uniform.cpp
+  SEXP uniform_pdf_(SEXP x_, SEXP lower_, SEXP upper_);
+  SEXP uniform_lpdf_(SEXP x_, SEXP lower_, SEXP upper_);
+  SEXP uniform_cdf_(SEXP x_, SEXP lower_, SEXP upper_);
+  SEXP uniform_lcdf_(SEXP x_, SEXP lower_, SEXP upper_);
+  SEXP uniform_quantile_(SEXP p_, SEXP lower_, SEXP upper_);
+
+  // statistical_distributions/weibull.cpp
+  SEXP weibull_pdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP weibull_lpdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP weibull_cdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP weibull_lcdf_(SEXP x_, SEXP shape_, SEXP scale_);
+  SEXP weibull_quantile_(SEXP p_, SEXP shape_, SEXP scale_);
+
   static const R_CallMethodDef CallEntries[] = {
     // gamma_functions.cpp
     {"tgamma_",     (DL_FUNC) &tgamma_,     1},
@@ -769,33 +832,96 @@ extern "C" {
     {"negative_binomial_lcdf_", (DL_FUNC) &negative_binomial_lcdf, 3},
     {"negative_binomial_quantile_", (DL_FUNC) &negative_binomial_quantile, 3},
 
-    // statistical_distributions/noncentral_beta.cpp
+    // statistical_distributions/non_central_beta.cpp
     {"non_central_beta_pdf_", (DL_FUNC) &non_central_beta_pdf_, 4},
     {"non_central_beta_lpdf_", (DL_FUNC) &non_central_beta_lpdf_, 4},
     {"non_central_beta_cdf_", (DL_FUNC) &non_central_beta_cdf_, 4},
     {"non_central_beta_lcdf_", (DL_FUNC) &non_central_beta_lcdf_, 4},
     {"non_central_beta_quantile_", (DL_FUNC) &non_central_beta_quantile_, 4},
 
-    // statistical_distributions/noncentral_chi_squared.cpp
+    // statistical_distributions/non_central_chi_squared.cpp
     {"non_central_chi_squared_pdf_", (DL_FUNC) &non_central_chi_squared_pdf_, 3},
     {"non_central_chi_squared_lpdf_", (DL_FUNC) &non_central_chi_squared_lpdf_, 3},
     {"non_central_chi_squared_cdf_", (DL_FUNC) &non_central_chi_squared_cdf_, 3},
     {"non_central_chi_squared_lcdf_", (DL_FUNC) &non_central_chi_squared_lcdf_, 3},
     {"non_central_chi_squared_quantile_", (DL_FUNC) &non_central_chi_squared_quantile_, 3},
 
-    // statistical_distributions/noncentral_f.cpp
+    // statistical_distributions/non_central_f.cpp
     {"non_central_f_pdf_", (DL_FUNC) &non_central_f_pdf_, 4},
     {"non_central_f_lpdf_", (DL_FUNC) &non_central_f_lpdf_, 4},
     {"non_central_f_cdf_", (DL_FUNC) &non_central_f_cdf_, 4},
     {"non_central_f_lcdf_", (DL_FUNC) &non_central_f_lcdf_, 4},
     {"non_central_f_quantile_", (DL_FUNC) &non_central_f_quantile_, 4},
 
-    // statistical_distributions/noncentral_t.cpp
+    // statistical_distributions/non_central_t.cpp
     {"non_central_t_pdf_", (DL_FUNC) &non_central_t_pdf_, 3},
     {"non_central_t_lpdf_", (DL_FUNC) &non_central_t_lpdf_, 3},
     {"non_central_t_cdf_", (DL_FUNC) &non_central_t_cdf_, 3},
     {"non_central_t_lcdf_", (DL_FUNC) &non_central_t_lcdf_, 3},
     {"non_central_t_quantile_", (DL_FUNC) &non_central_t_quantile_, 3},
+
+    // statistical_distributions/normal.cpp
+    {"normal_pdf_", (DL_FUNC) &normal_pdf_, 3},
+    {"normal_lpdf_", (DL_FUNC) &normal_lpdf_, 3},
+    {"normal_cdf_", (DL_FUNC) &normal_cdf_, 3},
+    {"normal_lcdf_", (DL_FUNC) &normal_lcdf_, 3},
+    {"normal_quantile_", (DL_FUNC) &normal_quantile_, 3},
+
+    // statistical_distributions/pareto.cpp
+    {"pareto_pdf_", (DL_FUNC) &pareto_pdf_, 3},
+    {"pareto_lpdf_", (DL_FUNC) &pareto_lpdf_, 3},
+    {"pareto_cdf_", (DL_FUNC) &pareto_cdf_, 3},
+    {"pareto_lcdf_", (DL_FUNC) &pareto_lcdf_, 3},
+    {"pareto_quantile_", (DL_FUNC) &pareto_quantile_, 3},
+
+    // statistical_distributions/poisson.cpp
+    {"poisson_pdf_", (DL_FUNC) &poisson_pdf_, 2},
+    {"poisson_lpdf_", (DL_FUNC) &poisson_lpdf_, 2},
+    {"poisson_cdf_", (DL_FUNC) &poisson_cdf_, 2},
+    {"poisson_lcdf_", (DL_FUNC) &poisson_lcdf_, 2},
+    {"poisson_quantile_", (DL_FUNC) &poisson_quantile_, 2},
+
+    // statistical_distributions/rayleigh.cpp
+    {"rayleigh_pdf_", (DL_FUNC) &rayleigh_pdf_, 2},
+    {"rayleigh_lpdf_", (DL_FUNC) &rayleigh_lpdf_, 2},
+    {"rayleigh_cdf_", (DL_FUNC) &rayleigh_cdf_, 2},
+    {"rayleigh_lcdf_", (DL_FUNC) &rayleigh_lcdf_, 2},
+    {"rayleigh_quantile_", (DL_FUNC) &rayleigh_quantile_, 2},
+
+    // statistical_distributions/skew_normal.cpp
+    {"skew_normal_pdf_", (DL_FUNC) &skew_normal_pdf_, 4},
+    {"skew_normal_lpdf_", (DL_FUNC) &skew_normal_lpdf_, 4},
+    {"skew_normal_cdf_", (DL_FUNC) &skew_normal_cdf_, 4},
+    {"skew_normal_lcdf_", (DL_FUNC) &skew_normal_lcdf_, 4},
+    {"skew_normal_quantile_", (DL_FUNC) &skew_normal_quantile_, 4},
+
+    // statistical_distributions/students_t.cpp
+    {"students_t_pdf_", (DL_FUNC) &students_t_pdf_, 2},
+    {"students_t_lpdf_", (DL_FUNC) &students_t_lpdf_, 2},
+    {"students_t_cdf_", (DL_FUNC) &students_t_cdf_, 2},
+    {"students_t_lcdf_", (DL_FUNC) &students_t_lcdf_, 2},
+    {"students_t_quantile_", (DL_FUNC) &students_t_quantile_, 2},
+
+    // statistical_distributions/triangular.cpp
+    {"triangular_pdf_", (DL_FUNC) &triangular_pdf_, 4},
+    {"triangular_lpdf_", (DL_FUNC) &triangular_lpdf_, 4},
+    {"triangular_cdf_", (DL_FUNC) &triangular_cdf_, 4},
+    {"triangular_lcdf_", (DL_FUNC) &triangular_lcdf_, 4},
+    {"triangular_quantile_", (DL_FUNC) &triangular_quantile_, 4},
+
+    // statistical_distributions/uniform.cpp
+    {"uniform_pdf_", (DL_FUNC) &uniform_pdf_, 3},
+    {"uniform_lpdf_", (DL_FUNC) &uniform_lpdf_, 3},
+    {"uniform_cdf_", (DL_FUNC) &uniform_cdf_, 3},
+    {"uniform_lcdf_", (DL_FUNC) &uniform_lcdf_, 3},
+    {"uniform_quantile_", (DL_FUNC) &uniform_quantile_, 3},
+
+    // statistical_distributions/weibull.cpp
+    {"weibull_pdf_", (DL_FUNC) &weibull_pdf_, 3},
+    {"weibull_lpdf_", (DL_FUNC) &weibull_lpdf_, 3},
+    {"weibull_cdf_", (DL_FUNC) &weibull_cdf_, 3},
+    {"weibull_lcdf_", (DL_FUNC) &weibull_lcdf_, 3},
+    {"weibull_quantile_", (DL_FUNC) &weibull_quantile_, 3},
 
     {NULL, NULL, 0}
   };
