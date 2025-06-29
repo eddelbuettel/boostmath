@@ -1,6 +1,6 @@
 Package: boostmath
 Title: Exposing Boost's Math Functions for R
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R:
     person(c("Andrew", "R."), "Johnson", , "andrew.johnson@arjohnsonau.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7000-8065"))
@@ -16,7 +16,6 @@ LinkingTo:
     cpp11,
     BH
 NeedsCompilation: yes
-SystemRequirements: GNU make
 Suggests:
     knitr,
     rmarkdown,
