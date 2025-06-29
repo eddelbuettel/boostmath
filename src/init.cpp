@@ -945,7 +945,7 @@ extern "C" {
     {"l2_distance_", (DL_FUNC) &l2_distance_, 2},
     {"sup_norm_", (DL_FUNC) &sup_norm_, 1},
     {"sup_distance_", (DL_FUNC) &sup_distance_, 2},
-    {"lp_norm_", (DL_FUNC) &lp_norm_, 1},
+    {"lp_norm_", (DL_FUNC) &lp_norm_, 2},
     {"lp_distance_", (DL_FUNC) &lp_distance_, 3},
     {"total_variation_", (DL_FUNC) &total_variation_, 1},
 
