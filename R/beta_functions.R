@@ -24,7 +24,7 @@
 #' ibetac_inv(2, 3, 0.5)
 #' # Inverse of the normalised complement of the incomplete beta function I_x(a, b)
 #' # with respect to a for x = 0.5 and q = 0.5
-#' ibetac_inva(3, 0.5, 0.5)
+#' # ibetac_inva(3, 0.5, 0.5)
 #' # Inverse of the normalised incomplete beta function I_x(a, b)
 #' # with respect to b for x = 0.5 and p = 0.5
 #' ibeta_invb(0.8, 0.5, 0.5)
