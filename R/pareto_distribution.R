@@ -1,64 +1,46 @@
-#' Pareto Probability Density Function
-#'
+#' @title Pareto Distribution Functions
+#' @name pareto_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Pareto distribution.
 #' @param x quantile
 #' @param shape shape parameter (default is 1)
 #' @param scale scale parameter (default is 1)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/pareto.html) for more details on the mathematical background.
 #' @examples
+#' # Pareto distribution with shape = 1, scale = 1
 #' pareto_pdf(1)
+#' pareto_lpdf(1)
+#' pareto_cdf(1)
+#' pareto_lcdf(1)
+#' pareto_quantile(0.5)
+NULL
+
+#' @rdname pareto_distribution
+#' @export
 pareto_pdf <- function(x, shape = 1, scale = 1) {
   .Call(`pareto_pdf_`, x, shape, scale)
 }
 
-#' Pareto Log Probability Density Function
-#'
-#' @param x quantile
-#' @param shape shape parameter (default is 1)
-#' @param scale scale parameter (default is 1)
-#' @return Log probability density function value at `x`
+#' @rdname pareto_distribution
 #' @export
-#' @examples
-#' pareto_lpdf(1)
 pareto_lpdf <- function(x, shape = 1, scale = 1) {
   .Call(`pareto_lpdf_`, x, shape, scale)
 }
 
-#' Pareto Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param shape shape parameter (default is 1)
-#' @param scale scale parameter (default is 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname pareto_distribution
 #' @export
-#' @examples
-#' pareto_cdf(1)
 pareto_cdf <- function(x, shape = 1, scale = 1) {
   .Call(`pareto_cdf_`, x, shape, scale)
 }
 
-#' Pareto Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param shape shape parameter (default is 1)
-#' @param scale scale parameter (default is 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname pareto_distribution
 #' @export
-#' @examples
-#' pareto_lcdf(1)
 pareto_lcdf <- function(x, shape = 1, scale = 1) {
   .Call(`pareto_lcdf_`, x, shape, scale)
 }
 
-#' Pareto Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param shape shape parameter (default is 1)
-#' @param scale scale parameter (default is 1)
-#' @return Quantile function value at `p`
+#' @rdname pareto_distribution
 #' @export
-#' @examples
-#' pareto_quantile(0.5)
 pareto_quantile <- function(p, shape = 1, scale = 1) {
   .Call(`pareto_quantile_`, p, shape, scale)
 }

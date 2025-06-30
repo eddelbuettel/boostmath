@@ -1,64 +1,46 @@
-#' Logistic Probability Density Function
-#'
+#' @title Logistic Distribution Functions
+#' @name logistic_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Logistic distribution.
 #' @param x quantile
 #' @param location location parameter (default is 0)
 #' @param scale scale parameter (default is 1)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/logistic.html) for more details on the mathematical background.
 #' @examples
+#' # Logistic distribution with location = 0, scale = 1
 #' logistic_pdf(0)
+#' logistic_lpdf(0)
+#' logistic_cdf(0)
+#' logistic_lcdf(0)
+#' logistic_quantile(0.5)
+NULL
+
+#' @rdname logistic_distribution
+#' @export
 logistic_pdf <- function(x, location = 0, scale = 1) {
   .Call(`logistic_pdf_`, x, location, scale)
 }
 
-#' Logistic Log Probability Density Function
-#'
-#' @param x quantile
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @return Log probability density function value at `x`
+#' @rdname logistic_distribution
 #' @export
-#' @examples
-#' logistic_lpdf(0)
 logistic_lpdf <- function(x, location = 0, scale = 1) {
   .Call(`logistic_lpdf_`, x, location, scale)
 }
 
-#' Logistic Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname logistic_distribution
 #' @export
-#' @examples
-#' logistic_cdf(0)
 logistic_cdf <- function(x, location = 0, scale = 1) {
   .Call(`logistic_cdf_`, x, location, scale)
 }
 
-#' Logistic Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname logistic_distribution
 #' @export
-#' @examples
-#' logistic_lcdf(0)
 logistic_lcdf <- function(x, location = 0, scale = 1) {
   .Call(`logistic_lcdf_`, x, location, scale)
 }
 
-#' Logistic Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @return Quantile function value at `p`
+#' @rdname logistic_distribution
 #' @export
-#' @examples
-#' logistic_quantile(0.5)
 logistic_quantile <- function(p, location = 0, scale = 1) {
   .Call(`logistic_quantile_`, p, location, scale)
 }

@@ -1,64 +1,46 @@
-#' Inverse Gaussian Probability Density Function
-#'
+#' @title Inverse Gaussian Distribution Functions
+#' @name inverse_gaussian_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Inverse Gaussian distribution.
 #' @param x quantile
 #' @param mu mean parameter (mu > 0)
 #' @param lambda scale (precision) parameter (lambda > 0)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/inverse_gaussian.html) for more details on the mathematical background.
 #' @examples
+#' # Inverse Gaussian distribution with mu = 3, lambda = 4
 #' inverse_gaussian_pdf(2, 3, 4)
+#' inverse_gaussian_lpdf(2, 3, 4)
+#' inverse_gaussian_cdf(2, 3, 4)
+#' inverse_gaussian_lcdf(2, 3, 4)
+#' inverse_gaussian_quantile(0.5, 3, 4)
+NULL
+
+#' @rdname inverse_gaussian_distribution
+#' @export
 inverse_gaussian_pdf <- function(x, mu, lambda) {
   .Call(`inverse_gaussian_pdf_`, x, mu, lambda)
 }
 
-#' Inverse Gaussian Log Probability Density Function
-#'
-#' @param x quantile
-#' @param mu mean parameter (mu > 0)
-#' @param lambda scale (precision) parameter (lambda > 0)
-#' @return Log probability density function value at `x`
+#' @rdname inverse_gaussian_distribution
 #' @export
-#' @examples
-#' inverse_gaussian_lpdf(2, 3, 4)
 inverse_gaussian_lpdf <- function(x, mu, lambda) {
   .Call(`inverse_gaussian_lpdf_`, x, mu, lambda)
 }
 
-#' Inverse Gaussian Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param mu mean parameter (mu > 0)
-#' @param lambda scale (precision) parameter (lambda > 0)
-#' @return Cumulative distribution function value at `x`
+#' @rdname inverse_gaussian_distribution
 #' @export
-#' @examples
-#' inverse_gaussian_cdf(2, 3, 4)
 inverse_gaussian_cdf <- function(x, mu, lambda) {
   .Call(`inverse_gaussian_cdf_`, x, mu, lambda)
 }
 
-#' Inverse Gaussian Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param mu mean parameter (mu > 0)
-#' @param lambda scale (precision) parameter (lambda > 0)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname inverse_gaussian_distribution
 #' @export
-#' @examples
-#' inverse_gaussian_lcdf(2, 3, 4)
 inverse_gaussian_lcdf <- function(x, mu, lambda) {
   .Call(`inverse_gaussian_lcdf_`, x, mu, lambda)
 }
 
-#' Inverse Gaussian Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param mu mean parameter (mu > 0)
-#' @param lambda scale (precision) parameter (lambda > 0)
-#' @return Quantile function value at `p`
+#' @rdname inverse_gaussian_distribution
 #' @export
-#' @examples
-#' inverse_gaussian_quantile(0.5, 3, 4)
 inverse_gaussian_quantile <- function(p, mu, lambda) {
   .Call(`inverse_gaussian_quantile_`, p, mu, lambda)
 }

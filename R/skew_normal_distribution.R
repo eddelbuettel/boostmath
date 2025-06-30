@@ -1,69 +1,47 @@
-#' Skew Normal Probability Density Function
-#'
+#' @title Skew Normal Distribution Functions
+#' @name skew_normal_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Skew Normal distribution.
 #' @param x quantile
 #' @param location location parameter (default is 0)
 #' @param scale scale parameter (default is 1)
 #' @param shape shape parameter (default is 0)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/skew_normal.html) for more details on the mathematical background.
 #' @examples
+#' # Skew Normal distribution with location = 0, scale = 1, shape = 0
 #' skew_normal_pdf(0)
+#' skew_normal_lpdf(0)
+#' skew_normal_cdf(0)
+#' skew_normal_lcdf(0)
+#' skew_normal_quantile(0.5)
+NULL
+
+#' @rdname skew_normal_distribution
+#' @export
 skew_normal_pdf <- function(x, location = 0, scale = 1, shape = 0) {
   .Call(`skew_normal_pdf_`, x, location, scale, shape)
 }
 
-#' Skew Normal Log Probability Density Function
-#'
-#' @param x quantile
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @param shape shape parameter (default is 0)
-#' @return Log probability density function value at `x`
+#' @rdname skew_normal_distribution
 #' @export
-#' @examples
-#' skew_normal_lpdf(0)
 skew_normal_lpdf <- function(x, location = 0, scale = 1, shape = 0) {
   .Call(`skew_normal_lpdf_`, x, location, scale, shape)
 }
 
-#' Skew Normal Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @param shape shape parameter (default is 0)
-#' @return Cumulative distribution function value at `x`
+#' @rdname skew_normal_distribution
 #' @export
-#' @examples
-#' skew_normal_cdf(0)
 skew_normal_cdf <- function(x, location = 0, scale = 1, shape = 0) {
   .Call(`skew_normal_cdf_`, x, location, scale, shape)
 }
 
-#' Skew Normal Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @param shape shape parameter (default is 0)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname skew_normal_distribution
 #' @export
-#' @examples
-#' skew_normal_lcdf(0)
 skew_normal_lcdf <- function(x, location = 0, scale = 1, shape = 0) {
   .Call(`skew_normal_lcdf_`, x, location, scale, shape)
 }
 
-#' Skew Normal Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param location location parameter (default is 0)
-#' @param scale scale parameter (default is 1)
-#' @param shape shape parameter (default is 0)
-#' @return Quantile function value at `p`
+#' @rdname skew_normal_distribution
 #' @export
-#' @examples
-#' skew_normal_quantile(0.5)
 skew_normal_quantile <- function(p, location = 0, scale = 1, shape = 0) {
   .Call(`skew_normal_quantile_`, p, location, scale, shape)
 }

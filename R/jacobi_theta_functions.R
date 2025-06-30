@@ -1,142 +1,96 @@
-#' Jacobi Theta1 Function (q parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_1)} parameterised by \eqn{(q)}.
-#'
+#' @title Jacobi Theta Functions
+#' @name jacobi_theta_functions
+#' @description Functions to compute the Jacobi theta functions \eqn{(\theta_1, \theta_2, \theta_3, \theta_4)} parameterised by either \eqn{(q)} or \eqn{(\tau)}.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/jacobi_theta.html) for more details on the mathematical background.
 #' @param x Input value
-#' @param q The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_1(x; q))}.
+#' @param q The nome parameter of the Jacobi theta function (0 < q < 1)
+#' @param tau The nome parameter of the Jacobi theta function (tau = u + iv, where u and v are real numbers)
+#' @examples
+#' # Jacobi Theta Functions
+#' x <- 0.5
+#' q <- 0.9
+#' tau <- 1.5
+#' jacobi_theta1(x, q)
+#' jacobi_theta1tau(x, tau)
+#' jacobi_theta2(x, q)
+#' jacobi_theta2tau(x, tau)
+#' jacobi_theta3(x, q)
+#' jacobi_theta3tau(x, tau)
+#' jacobi_theta3m1(x, q)
+#' jacobi_theta3m1tau(x, tau)
+#' jacobi_theta4(x, q)
+#' jacobi_theta4tau(x, tau)
+#' jacobi_theta4m1(x, q)
+#' jacobi_theta4m1tau(x, tau)
+NULL
+
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta1 <- function(x, q) {
   .Call(`jacobi_theta1_`, x, q)
 }
 
-#' Jacobi Theta1 Function (tau parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_1)} parameterised by \eqn{(\tau)}.
-#'
-#' @param x Input value
-#' @param tau The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_1(x; \tau))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta1tau <- function(x, tau) {
   .Call(`jacobi_theta1tau_`, x, tau)
 }
 
-#' Jacobi Theta2 Function (q parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_2)} parameterised by \eqn{(q)}.
-#'
-#' @param x Input value
-#' @param q The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_2(x; q))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta2 <- function(x, q) {
   .Call(`jacobi_theta2_`, x, q)
 }
 
-#' Jacobi Theta2 Function (tau parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_2)} parameterised by \eqn{(\tau)}.
-#'
-#' @param x Input value
-#' @param tau The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_2(x; \tau))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta2tau <- function(x, tau) {
   .Call(`jacobi_theta2tau_`, x, tau)
 }
 
-#' Jacobi Theta3 Function (q parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_3)} parameterised by \eqn{(q)}.
-#'
-#' @param x Input value
-#' @param q The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_3(x; q))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta3 <- function(x, q) {
   .Call(`jacobi_theta3_`, x, q)
 }
 
-#' Jacobi Theta3 Function (tau parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_3)} parameterised by \eqn{(\tau)}.
-#'
-#' @param x Input value
-#' @param tau The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_3(x; \tau))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta3tau <- function(x, tau) {
   .Call(`jacobi_theta3tau_`, x, tau)
 }
 
-#' Jacobi Theta3 Function (q parameterisation, minus one)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_3)} parameterised by \eqn{(q)} with a shift of -1.
-#'
-#' @param x Input value
-#' @param q The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_3(x; q) - 1)}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta3m1 <- function(x, q) {
   .Call(`jacobi_theta3m1_`, x, q)
 }
 
-#' Jacobi Theta3 Function (tau parameterisation, minus one)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_3)} parameterised by \eqn{(\tau)} with a shift of -1.
-#'
-#' @param x Input value
-#' @param tau The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_3(x; \tau) - 1)}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta3m1tau <- function(x, tau) {
   .Call(`jacobi_theta3m1tau_`, x, tau)
 }
 
-#' Jacobi Theta4 Function (q parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_4)} parameterised by \eqn{(q)}.
-#'
-#' @param x Input value
-#' @param q The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_4(x; q))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta4 <- function(x, q) {
   .Call(`jacobi_theta4_`, x, q)
 }
 
-#' Jacobi Theta4 Function (tau parameterisation)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_4)} parameterised by \eqn{(\tau)}.
-#'
-#' @param x Input value
-#' @param tau The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_4(x; \tau))}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta4tau <- function(x, tau) {
   .Call(`jacobi_theta4tau_`, x, tau)
 }
 
-#' Jacobi Theta4 Function (q parameterisation, minus one)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_4)} parameterised by \eqn{(q)} with a shift of -1.
-#'
-#' @param x Input value
-#' @param q The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_4(x; q) - 1)}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta4m1 <- function(x, q) {
   .Call(`jacobi_theta4m1_`, x, q)
 }
 
-#' Jacobi Theta4 Function (tau parameterisation, minus one)
-#'
-#' Computes the Jacobi theta function \eqn{(\theta_4)} parameterised by \eqn{(\tau)} with a shift of -1.
-#'
-#' @param x Input value
-#' @param tau The nome parameter of the Jacobi theta function
-#' @return The value of the Jacobi theta function \eqn{(\theta_4(x; \tau) - 1)}.
+#' @rdname jacobi_theta_functions
 #' @export
 jacobi_theta4m1tau <- function(x, tau) {
   .Call(`jacobi_theta4m1tau_`, x, tau)

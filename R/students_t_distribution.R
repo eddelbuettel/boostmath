@@ -1,59 +1,45 @@
-#' Student's t Probability Density Function
-#'
+#' @title Student's T Distribution Functions
+#' @name students_t_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Student's t distribution.
 #' @param x quantile
 #' @param df degrees of freedom (default is 1)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/students_t.html) for more details on the mathematical background.
 #' @examples
+#' # Student's t distribution with 3 degrees of freedom
 #' students_t_pdf(0, 3)
+#' students_t_lpdf(0, 3)
+#' students_t_cdf(0, 3)
+#' students_t_lcdf(0, 3)
+#' students_t_quantile(0.5, 3)
+NULL
+
+#' @rdname students_t_distribution
+#' @export
 students_t_pdf <- function(x, df = 1) {
   .Call(`students_t_pdf_`, x, df)
 }
 
-#' Student's t Log Probability Density Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (default is 1)
-#' @return Log probability density function value at `x`
+#' @rdname students_t_distribution
 #' @export
-#' @examples
-#' students_t_lpdf(0, 3)
 students_t_lpdf <- function(x, df = 1) {
   .Call(`students_t_lpdf_`, x, df)
 }
 
-#' Student's t Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (default is 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname students_t_distribution
 #' @export
-#' @examples
-#' students_t_cdf(0, 3)
 students_t_cdf <- function(x, df = 1) {
   .Call(`students_t_cdf_`, x, df)
 }
 
-#' Student's t Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (default is 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname students_t_distribution
 #' @export
-#' @examples
-#' students_t_lcdf(0, 3)
 students_t_lcdf <- function(x, df = 1) {
   .Call(`students_t_lcdf_`, x, df)
 }
 
-#' Student's t Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param df degrees of freedom (default is 1)
-#' @return Quantile function value at `p`
+#' @rdname students_t_distribution
 #' @export
-#' @examples
-#' students_t_quantile(0.5, 3)
 students_t_quantile <- function(p, df = 1) {
   .Call(`students_t_quantile_`, p, df)
 }

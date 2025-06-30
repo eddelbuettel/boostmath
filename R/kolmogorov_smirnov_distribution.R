@@ -1,59 +1,45 @@
-#' Kolmogorov-Smirnov Probability Density Function
-#'
+#' @title Kolmogorov-Smirnov Distribution Functions
+#' @name kolmogorov_smirnov_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Kolmogorov-Smirnov distribution.
 #' @param x quantile
 #' @param n sample size (n > 0)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/kolmogorov_smirnov.html) for more details on the mathematical background.
 #' @examples
+#' # Kolmogorov-Smirnov distribution with sample size n = 10
 #' kolmogorov_smirnov_pdf(0.5, 10)
+#' kolmogorov_smirnov_lpdf(0.5, 10)
+#' kolmogorov_smirnov_cdf(0.5, 10)
+#' kolmogorov_smirnov_lcdf(0.5, 10)
+#' kolmogorov_smirnov_quantile(0.5, 10)
+NULL
+
+#' @rdname kolmogorov_smirnov_distribution
+#' @export
 kolmogorov_smirnov_pdf <- function(x, n) {
   .Call(`kolmogorov_smirnov_pdf_`, x, n)
 }
 
-#' Kolmogorov-Smirnov Log Probability Density Function
-#'
-#' @param x quantile
-#' @param n sample size (n > 0)
-#' @return Log probability density function value at `x`
+#' @rdname kolmogorov_smirnov_distribution
 #' @export
-#' @examples
-#' kolmogorov_smirnov_lpdf(0.5, 10)
 kolmogorov_smirnov_lpdf <- function(x, n) {
   .Call(`kolmogorov_smirnov_lpdf_`, x, n)
 }
 
-#' Kolmogorov-Smirnov Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param n sample size (n > 0)
-#' @return Cumulative distribution function value at `x`
+#' @rdname kolmogorov_smirnov_distribution
 #' @export
-#' @examples
-#' kolmogorov_smirnov_cdf(0.5, 10)
 kolmogorov_smirnov_cdf <- function(x, n) {
   .Call(`kolmogorov_smirnov_cdf_`, x, n)
 }
 
-#' Kolmogorov-Smirnov Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param n sample size (n > 0)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname kolmogorov_smirnov_distribution
 #' @export
-#' @examples
-#' kolmogorov_smirnov_lcdf(0.5, 10)
 kolmogorov_smirnov_lcdf <- function(x, n) {
   .Call(`kolmogorov_smirnov_lcdf_`, x, n)
 }
 
-#' Kolmogorov-Smirnov Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param n sample size (n > 0)
-#' @return Quantile function value at `p`
+#' @rdname kolmogorov_smirnov_distribution
 #' @export
-#' @examples
-#' kolmogorov_smirnov_quantile(0.5, 10)
 kolmogorov_smirnov_quantile <- function(p, n) {
   .Call(`kolmogorov_smirnov_quantile_`, p, n)
 }

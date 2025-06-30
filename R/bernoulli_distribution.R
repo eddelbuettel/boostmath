@@ -11,6 +11,7 @@
 #' bernoulli_cdf(1, 0.5)
 #' bernoulli_lcdf(1, 0.5)
 #' bernoulli_quantile(0.5, 0.5)
+NULL
 
 #' @rdname bernoulli_distribution
 #' @export

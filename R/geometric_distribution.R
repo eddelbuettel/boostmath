@@ -1,59 +1,45 @@
-#' Geometric Probability Density Function
-#'
+#' @title Geometric Distribution Functions
+#' @name geometric_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Geometric distribution.
 #' @param x quantile (non-negative integer)
 #' @param prob probability of success (0 < prob < 1)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/geometric.html) for more details on the mathematical background.
 #' @examples
+#' # Geometric distribution with probability of success prob = 0.5
 #' geometric_pdf(3, 0.5)
+#' geometric_lpdf(3, 0.5)
+#' geometric_cdf(3, 0.5)
+#' geometric_lcdf(3, 0.5)
+#' geometric_quantile(0.5, 0.5)
+NULL
+
+#' @rdname geometric_distribution
+#' @export
 geometric_pdf <- function(x, prob) {
   .Call(`geometric_pdf_`, x, prob)
 }
 
-#' Geometric Log Probability Density Function
-#'
-#' @param x quantile (non-negative integer)
-#' @param prob probability of success (0 < prob < 1)
-#' @return Log probability density function value at `x`
+#' @rdname geometric_distribution
 #' @export
-#' @examples
-#' geometric_lpdf(3, 0.5)
 geometric_lpdf <- function(x, prob) {
   .Call(`geometric_lpdf_`, x, prob)
 }
 
-#' Geometric Cumulative Distribution Function
-#'
-#' @param x quantile (non-negative integer)
-#' @param prob probability of success (0 < prob < 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname geometric_distribution
 #' @export
-#' @examples
-#' geometric_cdf(3, 0.5)
 geometric_cdf <- function(x, prob) {
   .Call(`geometric_cdf_`, x, prob)
 }
 
-#' Geometric Log Cumulative Distribution Function
-#'
-#' @param x quantile (non-negative integer)
-#' @param prob probability of success (0 < prob < 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname geometric_distribution
 #' @export
-#' @examples
-#' geometric_lcdf(3, 0.5)
 geometric_lcdf <- function(x, prob) {
   .Call(`geometric_lcdf_`, x, prob)
 }
 
-#' Geometric Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param prob probability of success (0 < prob < 1)
-#' @return Quantile function value at `p`
+#' @rdname geometric_distribution
 #' @export
-#' @examples
-#' geometric_quantile(0.5, 0.5)
 geometric_quantile <- function(p, prob) {
   .Call(`geometric_quantile_`, p, prob)
 }

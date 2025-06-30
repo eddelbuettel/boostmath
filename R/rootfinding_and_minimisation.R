@@ -1,196 +1,134 @@
-#' Root-Finding with Bisection
-#'
-#' @param f A function to find the root of. It should take and return a single numeric value.
-#' @param lower The lower bound of the interval to search for the root.
-#' @param upper The upper bound of the interval to search for the root.
-#' @param digits The number of significant digits to which the root should be found. Defaults to double precision.
+#' @title Root-Finding and Minimisation Functions
+#' @name rootfinding_and_minimisation
+#' @description Functions for root-finding and minimisation using various algorithms.
+#' @details This package provides a set of functions for finding roots of equations and minimising functions using different numerical methods. The methods include bisection, bracket and solve, TOMS
+#' 748, Newton-Raphson, Halley's method, Schroder's method, and Brent's method. It also includes functions for finding roots of polynomials (quadratic, cubic, quartic) and computing minima.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/roots_and_minima.html) for more details on the mathematical background.
+#' @param f A function to find the root of or to minimise. It should take and return a single numeric value for root-finding, or a numeric vector for minimisation.
+#' @param lower The lower bound of the interval to search for the root or minimum.
+#' @param upper The upper bound of the interval to search for the root or minimum.
+#' @param guess A numeric value that is a guess for the root or minimum.
+#' @param factor Size of steps to take when searching for the root.
+#' @param rising If TRUE, the function is assumed to be rising, otherwise it is assumed to be falling.
+#' @param digits The number of significant digits to which the root or minimum should be found. Defaults to double precision.
 #' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return A three-element list containing:
-#'   - `lower`: The lower bound of the interval containing the root.
-#'   - `upper`: The upper bound of the interval containing the root.
-#'   - `iterations`: The number of iterations performed.
+#' @return A list containing the root or minimum value, the value of the function at that point, and the number of iterations performed.
+#' @examples
+#' # Example of finding a root using bisection method
+#' f <- function(x) x^2 - 2
+#' bisect(f, lower = 0, upper = 2)
+#' #' # Example of finding a root using bracket and solve method
+#' f <- function(x) x^2 - 2
+#' bracket_and_solve_root(f, guess = 1, factor = 0.1, rising = TRUE)
+#' # Example of finding a root using TOMS 748 algorithm
+#' f <- function(x) x^2 - 2
+#' toms748_solve(f, lower = 0, upper = 2)
+#' # Example of finding a root using Newton-Raphson method
+#' f <- function(x) c(x^2 - 2, 2 * x)
+#' newton_raphson_iterate(f, guess = 1, lower = 0, upper = 2)
+#' # Example of finding a root using Halley's method
+#' f <- function(x) c(x^2 - 2, 2 * x, 2)
+#' halley_iterate(f, guess = 1, lower = 0, upper = 2)
+#' # Example of finding a root using Schroder's method
+#' f <- function(x) c(x^2 - 2, 2 * x, 2)
+#' schroder_iterate(f, guess = 1, lower = 0, upper = 2)
+#' # Example of finding a minimum using Brent's method
+#' f <- function(x) (x - 2)^2 + 1
+#' brent_find_minima(f, lower = 0, upper = 4)
+NULL
+
+#' @rdname rootfinding_and_minimisation
 #' @export
 bisect <- function(f, lower, upper, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
   .Call(`bisect_`, f, lower, upper, digits, max_iter)
 }
 
-#' Root-Finding with Bracket and Solve Method
-#'
-#' @param f A function to find the root of. It should take and return a single numeric value.
-#' @param guess A numeric value that is a guess for the root.
-#' @param factor Size of steps to take when searching
-#' @param rising If TRUE, the function is assumed to be rising, otherwise it is assumed to be falling.
-#' @param digits The number of significant digits to which the root should be found. Defaults to double precision.
-#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return A three-element list containing:
-#'   - `lower`: The lower bound of the interval containing the root.
-#'   - `upper`: The upper bound of the interval containing the root.
-#'   - `iterations`: The number of iterations performed.
+#' @rdname rootfinding_and_minimisation
 #' @export
-#' @examples
-#' f <- function(x) x^2 - 2
-#' bracket_and_solve_root(f, guess = 1, factor = 0.1, rising = TRUE)
 bracket_and_solve_root <- function(f, guess, factor, rising, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
   .Call(`bracket_and_solve_root_`, f, guess, factor, rising, digits, max_iter)
 }
 
-#' Root-Finding with the TOMS 748 Algorithm
-#'
-#' @param f A function to find the root of. It should take and return a single numeric value.
-#' @param lower The lower bound of the interval to search for the root.
-#' @param upper The upper bound of the interval to search for the root.
-#' @param digits The number of significant digits to which the root should be found. Defaults to double precision.
-#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return A three-element list containing:
-#'   - `lower`: The lower bound of the interval containing the root.
-#'   - `upper`: The upper bound of the interval containing the root.
-#'   - `iterations`: The number of iterations performed.
+#' @rdname rootfinding_and_minimisation
 #' @export
-#' @examples
-#' f <- function(x) x^2 - 2
-#' toms748_solve(f, lower = 0, upper = 2)
 toms748_solve <- function(f, lower, upper, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
   .Call(`toms748_solve_`, f, lower, upper, digits, max_iter)
 }
 
-#' Root-Finding with the Newton-Raphson Method
-#'
-#' @param f A function to find the root of. It should take a single numeric value and return a two-element numeric vector: the function value and its derivative.
-#' @param guess A numeric value that is a guess for the root.
-#' @param min The minimum value of the root.
-#' @param max The maximum value of the root.
-#' @param digits The number of significant digits to which the root should be found. Defaults to double precision.
-#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return The function root, with attribute `iterations` indicating the number of iterations performed.
+#' @rdname rootfinding_and_minimisation
 #' @export
-#' @examples
-#' f <- function(x) c(x^2 - 2, 2 * x)
-#' newton_raphson_iterate(f, guess = 1, min = 0, max = 2)
-newton_raphson_iterate <- function(f, guess, min, max, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
-  .Call(`newton_raphson_iterate_`, f, guess, min, max, digits, max_iter)
+newton_raphson_iterate <- function(f, guess, lower, upper, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
+  .Call(`newton_raphson_iterate_`, f, guess, lower, upper, digits, max_iter)
 }
 
-#' Root-Finding with Halley's Method
-#'
-#' @param f A function to find the root of. It should take a single numeric value and return a three-element numeric vector: the function value, its first derivative, and its second derivative.
-#' @param guess A numeric value that is a guess for the root.
-#' @param min The minimum value of the root.
-#' @param max The maximum value of the root.
-#' @param digits The number of significant digits to which the root should be found. Defaults to double precision.
-#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return The function root, with attribute `iterations` indicating the number of iterations performed.
+#' @rdname rootfinding_and_minimisation
 #' @export
-#' @examples
-#' f <- function(x) c(x^2 - 2, 2 * x, 2)
-#' halley_iterate(f, guess = 1, min = 0, max = 2)
-halley_iterate <- function(f, guess, min, max, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
-  .Call(`halley_iterate_`, f, guess, min, max, digits, max_iter)
+halley_iterate <- function(f, guess, lower, upper, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
+  .Call(`halley_iterate_`, f, guess, lower, upper, digits, max_iter)
 }
 
-#' Root-Finder with Schroder's Method
-#'
-#' @param f A function to find the root of. It should take a single numeric value and return a three-element numeric vector: the function value, its first derivative, and its second derivative.
-#' @param guess A numeric value that is a guess for the root.
-#' @param min The minimum value of the root.
-#' @param max The maximum value of the root.
-#' @param digits The number of significant digits to which the root should be found. Defaults to double precision.
-#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return The function root, with attribute `iterations` indicating the number of iterations performed.
+#' @rdname rootfinding_and_minimisation
 #' @export
-#' @examples
-#' f <- function(x) c(x^2 - 2, 2 * x, 2)
-#' schroder_iterate(f, guess = 1, min = 0, max = 2)
-schroder_iterate <- function(f, guess, min, max, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
-  .Call(`schroder_iterate_`, f, guess, min, max, digits, max_iter)
+schroder_iterate <- function(f, guess, lower, upper, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
+  .Call(`schroder_iterate_`, f, guess, lower, upper, digits, max_iter)
 }
 
-#' Finding Quadratic Roots
-#'
-#' @param a Coefficient of the quadratic term.
-#' @param b Coefficient of the linear term.
-#' @param c Constant term.
-#' @return A two-element numeric vector containing the two roots of the quadratic equation.
+#' @rdname rootfinding_and_minimisation
 #' @export
+brent_find_minima <- function(f, lower, upper, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
+  .Call(`brent_find_minima_`, f, lower, upper, digits, max_iter)
+}
+
+#' @title Polynomial Root-Finding
+#' @name polynomial_root_finding
+#' @description Functions for finding roots of polynomials of various degrees.
+#' @details This package provides functions to find roots of quadratic, cubic, and quartic polynomials. The functions return the roots as numeric vectors.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/polynomials.html) for more details on the mathematical background.
+#' @param a Coefficient of the polynomial term (e.g., for quadratic ax^2 + bx + c, a is the coefficient of x^2).
+#' @param b Coefficient of the linear term (e.g., for quadratic ax^2 + bx + c, b is the coefficient of x).
+#' @param c Constant term (e.g., for quadratic ax^2 + bx + c, c is the constant).
+#' @param d Coefficient of the cubic term (for cubic ax^3 + bx^2 + cx + d, d is the constant).
+#' @param e Coefficient of the quartic term (for quartic ax^4 + bx^3 + cx^2 + dx + e, e is the constant).
+#' @param root The root to evaluate the residual or condition number at.
 #' @examples
+#' # Example of finding quadratic roots
 #' quadratic_roots(1, -3, 2)
+#' # Example of finding cubic roots
+#' cubic_roots(1, -6, 11, -6)
+#' # Example of finding quartic roots
+#' quartic_roots(1, -10, 35, -50, 24)
+#' # Example of finding cubic root residual
+#' cubic_root_residual(1, -6, 11, -6, 1)
+#' # Example of finding cubic root condition number
+#' cubic_root_condition_number(1, -6, 11, -6, 1)
+NULL
+
+#' @rdname polynomial_root_finding
+#' @export
 quadratic_roots <- function(a, b, c) {
   .Call(`quadratic_roots_`, a, b, c)
 }
 
-#' Finding Cubic Roots
-#'
-#' @param a Coefficient of the cubic term.
-#' @param b Coefficient of the quadratic term.
-#' @param c Coefficient of the linear term.
-#' @param d Constant term.
-#' @return A numeric vector containing the three roots of the cubic equation.
+#' @rdname polynomial_root_finding
 #' @export
-#' @examples
-#' cubic_roots(1, -6, 11, -6)
 cubic_roots <- function(a, b, c, d) {
   .Call(`cubic_roots_`, a, b, c, d)
 }
 
-#' Finding Residual of a Cubic Root
-#'
-#' @param a Coefficient of the cubic term.
-#' @param b Coefficient of the quadratic term.
-#' @param c Coefficient of the linear term.
-#' @param d Constant term.
-#' @param root The root to evaluate the residual at.
-#' @return The residual of the cubic equation at the specified root.
+#' @rdname polynomial_root_finding
 #' @export
-#' @examples
-#' cubic_root_residual(1, -6, 11, -6, 1)
 cubic_root_residual <- function(a, b, c, d, root) {
   .Call(`cubic_root_residual_`, a, b, c, d, root)
 }
 
-#' Finding Condition Number of a Cubic Root
-#'
-#' @param a Coefficient of the cubic term.
-#' @param b Coefficient of the quadratic term.
-#' @param c Coefficient of the linear term.
-#' @param d Constant term.
-#' @param root The root to evaluate the condition number at.
-#' @return The condition number of the cubic equation at the specified root.
+#' @rdname polynomial_root_finding
 #' @export
-#' @examples
-#' cubic_root_condition_number(1, -6, 11, -6, 1)
 cubic_root_condition_number <- function(a, b, c, d, root) {
   .Call(`cubic_root_condition_number_`, a, b, c, d, root)
 }
 
-#' Finding Quartic Roots
-#'
-#' @param a Coefficient of the quartic term.
-#' @param b Coefficient of the cubic term.
-#' @param c Coefficient of the quadratic term.
-#' @param d Coefficient of the linear term.
-#' @param e Constant term.
-#' @return A numeric vector containing the four roots of the quartic equation.
+#' @rdname polynomial_root_finding
 #' @export
-#' @examples
-#' quartic_roots(1, -10, 35, -50, 24)
 quartic_roots <- function(a, b, c, d, e) {
   .Call(`quartic_roots_`, a, b, c, d, e)
-}
-
-#' Finding Minima using Brent's Method
-#'
-#' @param f A function to find the minimum of. It should take and return a single numeric value.
-#' @param a The lower bound of the interval to search for the minimum.
-#' @param b The upper bound of the interval to search for the minimum.
-#' @param digits The number of significant digits to which the minimum should be found. Defaults to double precision.
-#' @param max_iter The maximum number of iterations to perform. Defaults to the maximum integer value.
-#' @return A three-element list containing:
-#'   - `minimum`: The value which minimises the function.
-#'   - `value`: The value of the function at the minimum.
-#'   - `iterations`: The number of iterations performed.
-#' @export
-#' @examples
-#' f <- function(x) (x - 2)^2 + 1
-#' brent_find_minima(f, a = 0, b = 4)
-brent_find_minima <- function(f, a, b, digits = .Machine$double.digits, max_iter = .Machine$integer.max) {
-  .Call(`brent_find_minima_`, f, a, b, digits, max_iter)
 }

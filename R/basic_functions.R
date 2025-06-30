@@ -20,6 +20,7 @@
 #' powm1(2, 3)
 #' hypot(3, 4)
 #' rsqrt(4)
+NULL
 
 #' @rdname basic_functions
 #' @export

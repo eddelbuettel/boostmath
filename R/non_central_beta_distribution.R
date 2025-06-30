@@ -1,69 +1,48 @@
-#' Noncentral Beta Probability Density Function
-#'
-#' @param x quantile
+#' @title Noncentral Beta Distribution Functions
+#' @name non_central_beta_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Noncentral Beta distribution.
+#' @param x quantile (0 <= x <= 1)
 #' @param alpha first shape parameter (alpha > 0)
 #' @param beta second shape parameter (beta > 0)
 #' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_beta.html) for more details on the mathematical background.
 #' @examples
+#' # Noncentral Beta distribution with shape parameters alpha = 2, beta = 3
+#' # and noncentrality parameter lambda = 1
 #' non_central_beta_pdf(0.5, 2, 3, 1)
+#' non_central_beta_lpdf(0.5, 2, 3, 1)
+#' non_central_beta_cdf(0.5, 2, 3, 1)
+#' non_central_beta_lcdf(0.5, 2, 3, 1)
+#' non_central_beta_quantile(0.5, 2, 3, 1)
+NULL
+
+#' @rdname non_central_beta_distribution
+#' @export
 non_central_beta_pdf <- function(x, alpha, beta, lambda) {
   .Call(`non_central_beta_pdf_`, x, alpha, beta, lambda)
 }
 
-#' Noncentral Beta Log Probability Density Function
-#'
-#' @param x quantile
-#' @param alpha first shape parameter (alpha > 0)
-#' @param beta second shape parameter (beta > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Log probability density function value at `x`
+#' @rdname non_central_beta_distribution
 #' @export
-#' @examples
-#' non_central_beta_lpdf(0.5, 2, 3, 1)
 non_central_beta_lpdf <- function(x, alpha, beta, lambda) {
   .Call(`non_central_beta_lpdf_`, x, alpha, beta, lambda)
 }
 
-#' Noncentral Beta Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param alpha first shape parameter (alpha > 0)
-#' @param beta second shape parameter (beta > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Cumulative distribution function value at `x`
+#' @rdname non_central_beta_distribution
 #' @export
-#' @examples
-#' non_central_beta_cdf(0.5, 2, 3, 1)
 non_central_beta_cdf <- function(x, alpha, beta, lambda) {
   .Call(`non_central_beta_cdf_`, x, alpha, beta, lambda)
 }
 
-#' Noncentral Beta Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param alpha first shape parameter (alpha > 0)
-#' @param beta second shape parameter (beta > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname non_central_beta_distribution
 #' @export
-#' @examples
-#' non_central_beta_lcdf(0.5, 2, 3, 1)
 non_central_beta_lcdf <- function(x, alpha, beta, lambda) {
   .Call(`non_central_beta_lcdf_`, x, alpha, beta, lambda)
 }
 
-#' Noncentral Beta Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param alpha first shape parameter (alpha > 0)
-#' @param beta second shape parameter (beta > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Quantile function value at `p`
+#' @rdname non_central_beta_distribution
 #' @export
-#' @examples
-#' non_central_beta_quantile(0.5, 2, 3, 1)
 non_central_beta_quantile <- function(p, alpha, beta, lambda) {
   .Call(`non_central_beta_quantile_`, p, alpha, beta, lambda)
 }

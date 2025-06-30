@@ -1,20 +1,22 @@
-#' Sinus Cardinal Function
-#'
-#' Computes the sinus cardinal function \eqn{(\text{sinc}(x) = \frac{\sin(x)}{x})}.
-#'
+#' @title Sinus Cardinal and Hyperbolic Functions
+#' @name sinus_cardinal_hyperbolic_functions
+#' @description Functions to compute the sinus cardinal function and hyperbolic sinus cardinal function.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/sinus_cardinal_hyperbolic_functions.html) for more details on the mathematical background.
 #' @param x Input value
-#' @return The value of the sinus cardinal function \eqn{(\text{sinc}(x))}.
+#' @examples
+#' # Sinus cardinal function
+#' sinc_pi(0.5)
+#' # Hyperbolic sinus cardinal function
+#' sinhc_pi(0.5)
+NULL
+
+#' @rdname sinus_cardinal_hyperbolic_functions
 #' @export
 sinc_pi <- function(x) {
   .Call(`sinc_pi_`, x)
 }
 
-#' Hyperbolic Sinus Cardinal Function
-#'
-#' Computes the hyperbolic sinus cardinal function \eqn{(\text{sinhc}(x) = \frac{\sinh(x)}{x})}.
-#'
-#' @param x Input value
-#' @return The value of the hyperbolic sinus cardinal function \eqn{(\text{sinhc}(x))}.
+#' @rdname sinus_cardinal_hyperbolic_functions
 #' @export
 sinhc_pi <- function(x) {
   .Call(`sinhc_pi_`, x)

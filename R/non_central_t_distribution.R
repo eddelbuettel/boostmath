@@ -1,64 +1,46 @@
-#' Noncentral T Probability Density Function
-#'
+#' @title Noncentral T Distribution Functions
+#' @name non_central_t_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Noncentral T distribution.
 #' @param x quantile
 #' @param df degrees of freedom (df > 0)
 #' @param delta noncentrality parameter (delta >= 0)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_t.html) for more details on the mathematical background.
 #' @examples
+#' # Noncentral T distribution with 3 degrees of freedom and noncentrality parameter 1
 #' non_central_t_pdf(0, 3, 1)
+#' non_central_t_lpdf(0, 3, 1)
+#' non_central_t_cdf(0, 3, 1)
+#' non_central_t_lcdf(0, 3, 1)
+#' non_central_t_quantile(0.5, 3, 1)
+NULL
+
+#' @rdname non_central_t_distribution
+#' @export
 non_central_t_pdf <- function(x, df, delta) {
   .Call(`non_central_t_pdf_`, x, df, delta)
 }
 
-#' Noncentral T Log Probability Density Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (df > 0)
-#' @param delta noncentrality parameter (delta >= 0)
-#' @return Log probability density function value at `x`
+#' @rdname non_central_t_distribution
 #' @export
-#' @examples
-#' non_central_t_lpdf(0, 3, 1)
 non_central_t_lpdf <- function(x, df, delta) {
   .Call(`non_central_t_lpdf_`, x, df, delta)
 }
 
-#' Noncentral T Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (df > 0)
-#' @param delta noncentrality parameter (delta >= 0)
-#' @return Cumulative distribution function value at `x`
+#' @rdname non_central_t_distribution
 #' @export
-#' @examples
-#' non_central_t_cdf(0, 3, 1)
 non_central_t_cdf <- function(x, df, delta) {
   .Call(`non_central_t_cdf_`, x, df, delta)
 }
 
-#' Noncentral T Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (df > 0)
-#' @param delta noncentrality parameter (delta >= 0)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname non_central_t_distribution
 #' @export
-#' @examples
-#' non_central_t_lcdf(0, 3, 1)
 non_central_t_lcdf <- function(x, df, delta) {
   .Call(`non_central_t_lcdf_`, x, df, delta)
 }
 
-#' Noncentral T Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param df degrees of freedom (df > 0)
-#' @param delta noncentrality parameter (delta >= 0)
-#' @return Quantile function value at `p`
+#' @rdname non_central_t_distribution
 #' @export
-#' @examples
-#' non_central_t_quantile(0.5, 3, 1)
 non_central_t_quantile <- function(p, df, delta) {
   .Call(`non_central_t_quantile_`, p, df, delta)
 }

@@ -12,6 +12,7 @@
 #' arcsine_cdf(0.5)
 #' arcsine_lcdf(0.5)
 #' arcsine_quantile(0.5)
+NULL
 
 #' @rdname arcsine_distribution
 #' @export

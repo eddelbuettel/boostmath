@@ -1,21 +1,23 @@
-#' Exponential Integral En
-#'
-#' Computes the exponential integral En.
-#'
-#' @param n Order of the integral
-#' @param z Argument of the integral
-#' @return The value of the exponential integral En.
+#' @title Exponential Integrals
+#' @name exponential_integrals
+#' @description Functions to compute various exponential integrals, including En and Ei.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/exponential_integrals.html) for
+#' @param n Order of the integral (for En)
+#' @param z Argument of the integral (for En and Ei)
+#' @examples
+#' # Exponential integral En with n = 1 and z = 2
+#' expint_en(1, 2)
+#' # Exponential integral Ei with z = 2
+#' expint_ei(2)
+NULL
+
+#' @rdname exponential_integrals
 #' @export
 expint_en <- function(n, z) {
   .Call(`expint_en_`, n, z)
 }
 
-#' Exponential Integral Ei
-#'
-#' Computes the exponential integral Ei.
-#'
-#' @param z Argument of the integral
-#' @return The value of the exponential integral Ei.
+#' @rdname exponential_integrals
 #' @export
 expint_ei <- function(z) {
   .Call(`expint_ei_`, z)

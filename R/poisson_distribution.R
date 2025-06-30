@@ -1,59 +1,45 @@
-#' Poisson Probability Density Function
-#'
+#' @title Poisson Distribution Functions
+#' @name poisson_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Poisson distribution.
 #' @param x quantile
 #' @param lambda rate parameter (default is 1)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/poisson.html) for more details on the mathematical background.
 #' @examples
+#' # Poisson distribution with lambda = 1
 #' poisson_pdf(0, 1)
+#' poisson_lpdf(0, 1)
+#' poisson_cdf(0, 1)
+#' poisson_lcdf(0, 1)
+#' poisson_quantile(0.5, 1)
+NULL
+
+#' @rdname poisson_distribution
+#' @export
 poisson_pdf <- function(x, lambda = 1) {
   .Call(`poisson_pdf_`, x, lambda)
 }
 
-#' Poisson Log Probability Density Function
-#'
-#' @param x quantile
-#' @param lambda rate parameter (default is 1)
-#' @return Log probability density function value at `x`
+#' @rdname poisson_distribution
 #' @export
-#' @examples
-#' poisson_lpdf(0, 1)
 poisson_lpdf <- function(x, lambda = 1) {
   .Call(`poisson_lpdf_`, x, lambda)
 }
 
-#' Poisson Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param lambda rate parameter (default is 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname poisson_distribution
 #' @export
-#' @examples
-#' poisson_cdf(0, 1)
 poisson_cdf <- function(x, lambda = 1) {
   .Call(`poisson_cdf_`, x, lambda)
 }
 
-#' Poisson Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param lambda rate parameter (default is 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname poisson_distribution
 #' @export
-#' @examples
-#' poisson_lcdf(0, 1)
 poisson_lcdf <- function(x, lambda = 1) {
   .Call(`poisson_lcdf_`, x, lambda)
 }
 
-#' Poisson Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param lambda rate parameter (default is 1)
-#' @return Quantile function value at `p`
+#' @rdname poisson_distribution
 #' @export
-#' @examples
-#' poisson_quantile(0.5, 1)
 poisson_quantile <- function(p, lambda = 1) {
   .Call(`poisson_quantile_`, p, lambda)
 }

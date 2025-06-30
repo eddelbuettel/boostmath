@@ -1,64 +1,47 @@
-#' Noncentral Chi-Squared Probability Density Function
-#'
+#' @title Noncentral Chi-Squared Distribution Functions
+#' @name non_central_chi_squared_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Noncentral Chi-Squared distribution.
 #' @param x quantile
 #' @param df degrees of freedom (df > 0)
 #' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_chi_squared.html) for more details on the mathematical background.
 #' @examples
+#' # Noncentral Chi-Squared distribution with 3 degrees of freedom and noncentrality
+#' # parameter 1
 #' non_central_chi_squared_pdf(2, 3, 1)
+#' non_central_chi_squared_lpdf(2, 3, 1)
+#' non_central_chi_squared_cdf(2, 3, 1)
+#' non_central_chi_squared_lcdf(2, 3, 1)
+#' non_central_chi_squared_quantile(0.5, 3, 1)
+NULL
+
+#' @rdname non_central_chi_squared_distribution
+#' @export
 non_central_chi_squared_pdf <- function(x, df, lambda) {
   .Call(`non_central_chi_squared_pdf_`, x, df, lambda)
 }
 
-#' Noncentral Chi-Squared Log Probability Density Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (df > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Log probability density function value at `x`
+#' @rdname non_central_chi_squared_distribution
 #' @export
-#' @examples
-#' non_central_chi_squared_lpdf(2, 3, 1)
 non_central_chi_squared_lpdf <- function(x, df, lambda) {
   .Call(`non_central_chi_squared_lpdf_`, x, df, lambda)
 }
 
-#' Noncentral Chi-Squared Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (df > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Cumulative distribution function value at `x`
+#' @rdname non_central_chi_squared_distribution
 #' @export
-#' @examples
-#' non_central_chi_squared_cdf(2, 3, 1)
 non_central_chi_squared_cdf <- function(x, df, lambda) {
   .Call(`non_central_chi_squared_cdf_`, x, df, lambda)
 }
 
-#' Noncentral Chi-Squared Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param df degrees of freedom (df > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname non_central_chi_squared_distribution
 #' @export
-#' @examples
-#' non_central_chi_squared_lcdf(2, 3, 1)
 non_central_chi_squared_lcdf <- function(x, df, lambda) {
   .Call(`non_central_chi_squared_lcdf_`, x, df, lambda)
 }
 
-#' Noncentral Chi-Squared Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param df degrees of freedom (df > 0)
-#' @param lambda noncentrality parameter (lambda >= 0)
-#' @return Quantile function value at `p`
+#' @rdname non_central_chi_squared_distribution
 #' @export
-#' @examples
-#' non_central_chi_squared_quantile(0.5, 1, 1)
 non_central_chi_squared_quantile <- function(p, df, lambda) {
   .Call(`non_central_chi_squared_quantile_`, p, df, lambda)
 }

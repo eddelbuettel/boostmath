@@ -1,64 +1,46 @@
-#' Normal Probability Density Function
-#'
+#' @title Normal Distribution Functions
+#' @name normal_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the Normal distribution.
 #' @param x quantile
 #' @param mean mean parameter (default is 0)
 #' @param sd standard deviation parameter (default is 1)
-#' @return Probability density function value at `x`
-#' @export
+#' @param p probability (0 <= p <= 1)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/normal.html) for more details on the mathematical background.
 #' @examples
+#' # Normal distribution with mean = 0, sd = 1
 #' normal_pdf(0)
+#' normal_lpdf(0)
+#' normal_cdf(0)
+#' normal_lcdf(0)
+#' normal_quantile(0.5)
+NULL
+
+#' @rdname normal_distribution
+#' @export
 normal_pdf <- function(x, mean = 0, sd = 1) {
   .Call(`normal_pdf_`, x, mean, sd)
 }
 
-#' Normal Log Probability Density Function
-#'
-#' @param x quantile
-#' @param mean mean parameter (default is 0)
-#' @param sd standard deviation parameter (default is 1)
-#' @return Log probability density function value at `x`
+#' @rdname normal_distribution
 #' @export
-#' @examples
-#' normal_lpdf(0)
 normal_lpdf <- function(x, mean = 0, sd = 1) {
   .Call(`normal_lpdf_`, x, mean, sd)
 }
 
-#' Normal Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param mean mean parameter (default is 0)
-#' @param sd standard deviation parameter (default is 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname normal_distribution
 #' @export
-#' @examples
-#' normal_cdf(0)
 normal_cdf <- function(x, mean = 0, sd = 1) {
   .Call(`normal_cdf_`, x, mean, sd)
 }
 
-#' Normal Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param mean mean parameter (default is 0)
-#' @param sd standard deviation parameter (default is 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname normal_distribution
 #' @export
-#' @examples
-#' normal_lcdf(0)
 normal_lcdf <- function(x, mean = 0, sd = 1) {
   .Call(`normal_lcdf_`, x, mean, sd)
 }
 
-#' Normal Quantile Function
-#'
-#' @param p probability (0 <= p <= 1)
-#' @param mean mean parameter (default is 0)
-#' @param sd standard deviation parameter (default is 1)
-#' @return Quantile function value at `p`
+#' @rdname normal_distribution
 #' @export
-#' @examples
-#' normal_quantile(0.5)
 normal_quantile <- function(p, mean = 0, sd = 1) {
   .Call(`normal_quantile_`, p, mean, sd)
 }

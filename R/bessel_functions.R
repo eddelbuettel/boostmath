@@ -40,6 +40,7 @@
 #' cyl_bessel_j_zero_multiple(0, 1, 5)
 #' # Finding multiple zeros of the Bessel function of the second kind Y_0 starting from index 1
 #' cyl_neumann_zero_multiple(0, 1, 5)
+NULL
 
 #' @rdname bessel_functions
 #' @export
