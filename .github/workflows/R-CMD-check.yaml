@@ -95,9 +95,9 @@ jobs:
           dir.create(libsdir, recursive = TRUE, showWarnings = FALSE)
           cat(sprintf("R_LIB_FOR_PAK=%s\n", libsdir), file = Sys.getenv("GITHUB_ENV"), append = TRUE)
           cat(sprintf("R_LIBS_USER=%s\n", libsdir), file = Sys.getenv("GITHUB_ENV"), append = TRUE)
-          install.packages("pak", lib = libsdir,
-                           repos = c("https://r-lib.r-universe.dev", "https://cloud.r-project.org"),
-                           Ncpus = 4);
+          #install.packages("pak", lib = libsdir,
+          #                 repos = c("https://r-lib.r-universe.dev", "https://cloud.r-project.org"),
+          #                 Ncpus = 4);
         shell: Rscript {0}
 
       - uses: r-lib/actions/setup-r-dependencies@v2

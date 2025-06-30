@@ -66,7 +66,6 @@ As well as numerical differentiation by finite-differencing or the complex-step 
 
 ```{r}
 finite_difference_derivative(exp, 1.7)
-
 complex_step_derivative(exp, 1.7)
 ```
 
