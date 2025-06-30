@@ -8,6 +8,7 @@
 #' @param q Probability value (0 <= q <= 1)
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/beta_functions.html) for more details on the mathematical background.
 #' @examples
+#' \dontrun{
 #' # Euler beta function B(2, 3)
 #' beta_boost(2, 3)
 #' # Normalised incomplete beta function I_x(2, 3) for x = 0.5
@@ -24,15 +25,16 @@
 #' ibetac_inv(2, 3, 0.5)
 #' # Inverse of the normalised complement of the incomplete beta function I_x(a, b)
 #' # with respect to a for x = 0.5 and q = 0.5
-#' # ibetac_inva(3, 0.5, 0.5)
+#' ibetac_inva(3, 0.5, 0.5)
 #' # Inverse of the normalised incomplete beta function I_x(a, b)
 #' # with respect to b for x = 0.5 and p = 0.5
-#' # ibeta_invb(0.8, 0.5, 0.5)
+#' ibeta_invb(0.8, 0.5, 0.5)
 #' # Inverse of the normalised complement of the incomplete beta function I_x(a, b)
 #' # with respect to b for x = 0.5 and q = 0.5
-#' # ibetac_invb(2, 0.5, 0.5)
+#' ibetac_invb(2, 0.5, 0.5)
 #' # Derivative of the incomplete beta function with respect to x for a = 2, b = 3, x = 0.5
 #' ibeta_derivative(2, 3, 0.5)
+#' }
 NULL
 
 #' @rdname beta_functions

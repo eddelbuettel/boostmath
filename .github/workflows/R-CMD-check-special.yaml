@@ -37,6 +37,9 @@ jobs:
           - { label: "clang20",
               name: "clang20",
               container: "ghcr.io/r-hub/containers/clang20:latest"}
+          - { label: "nold",
+              name: "clannoldg20",
+              container: "ghcr.io/r-hub/containers/nold:latest"}
 
     env:
       MAKEFLAGS: -j4
