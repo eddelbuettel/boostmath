@@ -57,28 +57,36 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - name: Install R & RTools (ARM64)
+      - name: Cache Windows ARM R Installers
+        id: cache
         if: matrix.config.os == 'windows-11-arm'
+        uses: actions/cache@v3
+        with:
+          path: |
+            C:/rtools45-aarch64
+            C:/Program Files/R-aarch64
+          key: ${{ runner.os }}-R-${{ matrix.config.r }}-aarch64
+
+      - name: Install R & RTools (ARM64)
+        if: matrix.config.os == 'windows-11-arm' && steps.cache.outputs.cache-hit != 'true'
         run: |
           $url = "https://www.r-project.org/nosvn/winutf8/aarch64/R-4-signed/R-${{ matrix.config.r }}-aarch64.exe"
           Invoke-WebRequest `
               -Uri https://www.r-project.org/nosvn/winutf8/aarch64/R-4-signed/R-${{ matrix.config.r }}-aarch64.exe `
-              -OutFile R-${{ matrix.config.r }}-aarch64.exe
+              -OutFile ../R-${{ matrix.config.r }}-aarch64.exe
           Start-Process `
-              -FilePath R-${{ matrix.config.r }}-aarch64.exe `
+              -FilePath ../R-${{ matrix.config.r }}-aarch64.exe `
               -ArgumentList "/INSTALL /VERYSILENT /SUPPRESSMSGBOXES" -Wait
 
           Invoke-WebRequest `
               -Uri https://github.com/r-hub/rtools45/releases/download/latest/rtools45-aarch64.exe `
-              -OutFile "rtools45-aarch64.exe"
+              -OutFile "../rtools45-aarch64.exe"
           Start-Process `
-              -FilePath "rtools45-aarch64.exe" `
+              -FilePath "../rtools45-aarch64.exe" `
               -ArgumentList "/INSTALL /VERYSILENT /SUPPRESSMSGBOXES" -Wait
 
           echo "C:/rtools45-aarch64/usr/bin;C:/rtools45-aarch64/aarch64-w64-mingw32.static.posix/bin" | Out-File -Append -FilePath $env:GITHUB_PATH -Encoding utf8
-          echo "C:\Program Files\R-aarch64\R-${{ matrix.config.r }}\bin" | Out-File -Append -FilePath $env:GITHUB_PATH -Encoding utf8
-          Remove-Item -Path "R-${{ matrix.config.r }}-aarch64.exe"
-          Remove-Item -Path "rtools45-aarch64.exe"
+          echo "C:/Program Files/R-aarch64/R-${{ matrix.config.r }}/bin" | Out-File -Append -FilePath $env:GITHUB_PATH -Encoding utf8
 
       - name: Install pak on Windows ARM
         if: matrix.config.os == 'windows-11-arm'
