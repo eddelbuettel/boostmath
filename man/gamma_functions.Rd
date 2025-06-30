@@ -74,6 +74,7 @@ gamma_p_derivative(a, z)
 Functions to compute the gamma function, its logarithm, digamma, trigamma, polygamma, and various incomplete gamma functions.
 }
 \examples{
+\dontrun{
 # Gamma function for z = 5
 tgamma(5)
 # Gamma function for (1 + z) - 1, where z = 5
@@ -103,11 +104,12 @@ gamma_q_inv(5, 0.5)
 # Inverse of the normalised lower incomplete gamma function for a = 5, p = 0.5
 gamma_p_inv(5, 0.5)
 # Inverse of the normalised upper incomplete gamma function with respect to a for z = 2, q = 0.5
-# gamma_q_inva(2, 0.5)
+gamma_q_inva(2, 0.5)
 # Inverse of the normalised lower incomplete gamma function with respect to a for z = 2, p = 0.5
-# gamma_p_inva(2, 0.5)
+gamma_p_inva(2, 0.5)
 # Derivative of the normalised upper incomplete gamma function for a = 5, z = 2
 gamma_p_derivative(5, 2)
+}
 }
 \seealso{
 \href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/gamma.html}{Boost Documentation} for more details on the mathematical background.

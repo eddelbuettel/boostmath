@@ -32,6 +32,7 @@ non_central_chi_squared_quantile(p, df, lambda)
 Functions to compute the probability density function, cumulative distribution function, and quantile function for the Noncentral Chi-Squared distribution.
 }
 \examples{
+\dontrun{
 # Noncentral Chi-Squared distribution with 3 degrees of freedom and noncentrality
 # parameter 1
 non_central_chi_squared_pdf(2, 3, 1)
@@ -39,6 +40,7 @@ non_central_chi_squared_lpdf(2, 3, 1)
 non_central_chi_squared_cdf(2, 3, 1)
 non_central_chi_squared_lcdf(2, 3, 1)
 non_central_chi_squared_quantile(0.5, 3, 1)
+}
 }
 \seealso{
 \href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_chi_squared.html}{Boost Documentation} for more details on the mathematical background.
