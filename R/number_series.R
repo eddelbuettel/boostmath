@@ -1,108 +1,91 @@
-#' Bernoulli Numbers \eqn{(B_{2n})}
+#' @title Number Series
+#' @description Functions to compute Bernoulli numbers, tangent numbers, fibonacci numbers, and prime numbers.
+#' @name number_series
+#' @param n Index of number to compute (must be a non-negative integer)
+#' @param start_index The starting index for the range of numbers (must be a non-negative integer)
+#' @param number_of_bernoullis_b2n The number of Bernoulli numbers to compute
+#' @param number_of_tangent_t2n The number of tangent numbers to compute
+#' @param number_of_primes The number of prime numbers to compute
+#' @details
+#' Efficient computation of Bernoulli numbers, tangent numbers, fibonacci numbers, and prime numbers.
 #'
-#' Computes the Bernoulli numbers \eqn{(B_{2n})} for even indices.
+#' The `checked_` functions ensure that the input is within valid bounds, while the `unchecked_` functions do not perform such checks,
+#' allowing for potentially faster computation at the risk of overflow or invalid input.
 #'
-#' @param n Index of the Bernoulli number (must be a non-negative integer)
-#' @return The value of the Bernoulli number \eqn{(B_{2n})}.
+#' The `range_` functions allow for computing a sequence of numbers starting from a specified index.
+#'
+#' The `max_` functions return the maximum index for which the respective numbers can be computed using precomputed lookup tables.
+#'
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/number_series.html) for more details on the mathematical background.
+#'
+#' @examples
+#' bernoulli_b2n(10)
+#' max_bernoulli_b2n()
+#' unchecked_bernoulli_b2n(10)
+#' bernoulli_b2n_range(0, 10)
+#' tangent_t2n(10)
+#' tangent_t2n_range(0, 10)
+#' prime(10)
+#' max_prime()
+#' fibonacci(10)
+#' unchecked_fibonacci(10)
+NULL
+
+#' @rdname number_series
 #' @export
 bernoulli_b2n <- function(n) {
   .Call(`bernoulli_b2n_`, n)
 }
 
-#' Maximum Bernoulli Number \eqn{(B_{2n})} in Lookup Table
-#'
-#' Returns the maximum index \eqn{(n)} for which Bernoulli numbers \eqn{(B_{2n})} are precomputed.
-#'
-#' @return The maximum index \eqn{(n)} for which Bernoulli numbers \eqn{(B_{2n})} can be computed.
+#' @rdname number_series
 #' @export
 max_bernoulli_b2n <- function() {
   .Call(`max_bernoulli_b2n_`)
 }
 
-#' Bernoulli Numbers \eqn{(B_{2n})} Lookup Table (Unchecked)
-#'
-#' Computes the Bernoulli numbers \eqn{(B_{2n})} for even indices without bounds checking.
-#'
-#' @param n Index of the Bernoulli number (must be a non-negative integer)
-#' @return The value of the Bernoulli number \eqn{(B_{2n})}.
+#' @rdname number_series
 #' @export
 unchecked_bernoulli_b2n <- function(n) {
   .Call(`unchecked_bernoulli_b2n_`, n)
 }
 
-#' Bernoulli Numbers \eqn{(B_{2n})} Range
-#'
-#' Computes a range of Bernoulli numbers \eqn{(B_{2n})} starting from a given index.
-#'
-#' @param start_index The starting index for the Bernoulli numbers (must be a non-negative integer)
-#' @param number_of_bernoullis_b2n The number of Bernoulli numbers to compute
-#' @return A numeric vector containing the Bernoulli numbers \eqn{(B_{2n})} for the specified range.
+#' @rdname number_series
 #' @export
 bernoulli_b2n_range <- function(start_index, number_of_bernoullis_b2n) {
   .Call(`bernoulli_b2n_range_`, start_index, number_of_bernoullis_b2n)
 }
 
-#' Tangent Numbers (\eqn{T_{2n}})
-#'
-# Computes the tangent numbers \eqn{(T_{2n})} for even indices.
-#'
-#' @param n Index of the tangent number (must be a non-negative integer)
-#' @return The value of the tangent number \eqn{(T_{2n})}.
+#' @rdname number_series
 #' @export
 tangent_t2n <- function(n) {
   .Call(`tangent_t2n_`, n)
 }
 
-#' Tangent Numbers (\eqn{T_{2n}}) Range
-#'
-#' Computes a range of tangent numbers \eqn{(T_{2n})} starting from a given index.
-#'
-#' @param start_index The starting index for the tangent numbers (must be a non-negative integer)
-#' @param number_of_tangent_t2n The number of tangent numbers to compute
-#' @return A numeric vector containing the tangent numbers \eqn{(T_{2n})} for the specified range.
+#' @rdname number_series
 #' @export
 tangent_t2n_range <- function(start_index, number_of_tangent_t2n) {
   .Call(`tangent_t2n_range_`, start_index, number_of_tangent_t2n)
 }
 
-#' Lookup Table of Prime Numbers
-#'
-#' Computes the n-th prime number using a lookup table.
-#'
-#' @param n Index of the prime number (must be a positive integer)
-#' @return The n-th prime number.
+#' @rdname number_series
 #' @export
 prime <- function(n) {
   .Call(`prime_`, n)
 }
 
-#' Largest Prime Number in Lookup Table
-#'
-#' Returns the largest n-th prime number that can be computed using the lookup table.
-#'
-#' @return The largest n-th prime number available in the lookup table.
+#' @rdname number_series
 #' @export
 max_prime <- function() {
   .Call(`max_prime_`)
 }
 
-#' Fibonacci Number
-#'
-#' Computes the n-th Fibonacci number, checking for overflow before computation.
-#'
-#' @param n Index of the Fibonacci number (must be a non-negative integer)
-#' @return The n-th Fibonacci number.
+#' @rdname number_series
 #' @export
 fibonacci <- function(n) {
   .Call(`fibonacci_`, n)
 }
 
-#' Fibonacci Number (Unchecked)
-#'
-#' Computes the n-th Fibonacci number without checking for overflow.
-#'
-#' @param n Index of the Fibonacci number (must be a non-negative integer)
-#' @return The n-th Fibonacci number.
+#' @rdname number_series
 #' @export
 unchecked_fibonacci <- function(n) {
   .Call(`unchecked_fibonacci_`, n)
