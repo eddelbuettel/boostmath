@@ -1,99 +1,75 @@
-#' Sine of Pi
-#'
-#' Computes the sine of a value multiplied by pi.
-#'
+#' @title Basic Mathematical Functions
+#' @name basic_functions
+#' @description Functions to compute sine, cosine, logarithm, exponential, cube root, square root, power, hypotenuse, and inverse square root.
 #' @param x Input numeric value
-#' @return The sine of x multiplied by pi.
+#' @param y Second input numeric value (for power and hypotenuse functions)
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/basic_functions.html) for more details on the mathematical background.
+#' @examples
+#' # sin(pi * 0.5)
+#' sin_pi(0.5)
+#' # cos(pi * 0.5)
+#' cos_pi(0.5)
+#' # log(1 + 0.5)
+#' log1p_boost(0.5)
+#' # exp(0.5) - 1
+#' expm1_boost(0.5)
+#' cbrt(8)
+#' # sqrt(1 + 0.5) - 1
+#' sqrt1pm1(0.5)
+#' # 2^3 - 1
+#' powm1(2, 3)
+#' hypot(3, 4)
+#' rsqrt(4)
+
+#' @rdname basic_functions
 #' @export
 sin_pi <- function(x) {
   .Call(`sin_pi_`, x)
 }
 
-#' Cosine of Pi
-#'
-#' Computes the cosine of a value multiplied by pi.
-#'
-#' @param x Input numeric value
-#' @return The cosine of x multiplied by pi.
+#' @rdname basic_functions
 #' @export
 cos_pi <- function(x) {
   .Call(`cos_pi_`, x)
 }
 
-#' Logarithm of 1 plus x
-#'
-#' Computes the natural logarithm of 1 plus x.
-#'
-#' @param x Input numeric value
-#' @return The natural logarithm of 1 plus x.
+#' @rdname basic_functions
 #' @export
 log1p_boost <- function(x) {
   .Call(`log1p_`, x)
 }
 
-#' Exponential of x and substract 1
-#'
-#' Computes the exponential of x and subtracts 1.
-#'
-#' @param x Input numeric value
-#' @return The exponential of x minus 1.
+#' @rdname basic_functions
 #' @export
 expm1_boost <- function(x) {
   .Call(`expm1_`, x)
 }
 
-#' Cube root of x
-#'
-#' Computes the cube root of x.
-#'
-#' @param x Input numeric value
-#' @return The cube root of x.
+#' @rdname basic_functions
 #' @export
 cbrt <- function(x) {
   .Call(`cbrt_`, x)
 }
 
-#' Square root of 1 plus x minus 1
-#'
-#' Subtract 1 from the square root of 1 plus x.
-#'
-#' @param x Input numeric value
-#' @return The square root of 1 plus x minus 1.
+#' @rdname basic_functions
 #' @export
 sqrt1pm1 <- function(x) {
   .Call(`sqrt1pm1_`, x)
 }
 
-#' Power of x raised to the power of y minus 1
-#'
-#' Computes x raised to the power of y minus 1.
-#'
-#' @param x Input numeric value
-#' @param y Exponent value
-#' @return The value of x raised to the power of y minus 1.
+#' @rdname basic_functions
 #' @export
 powm1 <- function(x, y) {
   .Call(`powm1_`, x, y)
 }
 
-#' Hypotenuse
-#'
-#' Computes the hypotenuse of a right triangle given the lengths of the two sides.
-#'
-#' @param x Input numeric value representing one side of the triangle
-#' @param y Input numeric value representing the other side of the triangle
-#' @return The length of the hypotenuse.
+#' @rdname basic_functions
 #' @export
 hypot <- function(x, y) {
   .Call(`hypot_`, x, y)
 }
 
-#' Inverse square root
-#'
-#' Computes the inverse square root of x.
-#'
-#' @param x Input numeric value
-#' @return The inverse square root of x.
+#' @rdname basic_functions
 #' @export
 rsqrt <- function(x) {
   .Call(`rsqrt_`, x)

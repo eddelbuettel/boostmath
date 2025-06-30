@@ -1,53 +1,43 @@
-#' Arcsine Distribution Probability Density Function
-#'
+#' @title Arcsine Distribution Functions
+#' @name arcsine_distribution
+#' @description Functions to compute the probability density function, cumulative distribution function, and quantile function for the arcsine distribution.
 #' @param x quantile
+#' @param p probability
 #' @param x_min minimum value of the distribution (default is 0)
 #' @param x_max maximum value of the distribution (default is 1)
-#' @return Probability density function value at `x`
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/arcsine.html) for more details on the mathematical background.
+#' @examples
+#' arcsine_pdf(0.5)
+#' arcsine_lpdf(0.5)
+#' arcsine_cdf(0.5)
+#' arcsine_lcdf(0.5)
+#' arcsine_quantile(0.5)
+
+#' @rdname arcsine_distribution
 #' @export
 arcsine_pdf <- function(x, x_min = 0, x_max = 1) {
   .Call(`arcsine_pdf_`, x, x_min, x_max)
 }
 
-#' Arcsine Distribution Log Probability Density Function
-#'
-#' @param x quantile
-#' @param x_min minimum value of the distribution (default is 0)
-#' @param x_max maximum value of the distribution (default is 1)
-#' @return Log probability density function value at `x`
+#' @rdname arcsine_distribution
 #' @export
 arcsine_lpdf <- function(x, x_min = 0, x_max = 1) {
   .Call(`arcsine_lpdf_`, x, x_min, x_max)
 }
 
-#' Arcsine Distribution Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param x_min minimum value of the distribution (default is 0)
-#' @param x_max maximum value of the distribution (default is 1)
-#' @return Cumulative distribution function value at `x`
+#' @rdname arcsine_distribution
 #' @export
 arcsine_cdf <- function(x, x_min = 0, x_max = 1) {
   .Call(`arcsine_cdf_`, x, x_min, x_max)
 }
 
-#' Arcsine Distribution Log Cumulative Distribution Function
-#'
-#' @param x quantile
-#' @param x_min minimum value of the distribution (default is 0)
-#' @param x_max maximum value of the distribution (default is 1)
-#' @return Log cumulative distribution function value at `x`
+#' @rdname arcsine_distribution
 #' @export
 arcsine_lcdf <- function(x, x_min = 0, x_max = 1) {
   .Call(`arcsine_lcdf_`, x, x_min, x_max)
 }
 
-#' Arcsine Distribution Quantile Function
-#'
-#' @param p probability
-#' @param x_min minimum value of the distribution (default is 0)
-#' @param x_max maximum value of the distribution (default is 1)
-#' @return Quantile function value at `p`
+#' @rdname arcsine_distribution
 #' @export
 arcsine_quantile <- function(p, x_min = 0, x_max = 1) {
   .Call(`arcsine_quantile_`, p, x_min, x_max)
