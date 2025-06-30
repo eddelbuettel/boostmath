@@ -11,8 +11,6 @@
 #include <boost/math/special_functions/rsqrt.hpp>
 #include "../boostmath/macros.hpp"
 
-extern "C" {
-
 UNARY_BOOST_FUNCTION(sin_pi, double);
 UNARY_BOOST_FUNCTION(cos_pi, double);
 UNARY_BOOST_FUNCTION(log1p, double);
@@ -22,5 +20,3 @@ UNARY_BOOST_FUNCTION(sqrt1pm1, double);
 BINARY_BOOST_FUNCTION(powm1, double, double);
 BINARY_BOOST_FUNCTION(hypot, double, double);
 UNARY_BOOST_FUNCTION(rsqrt, double);
-
-}

@@ -3,27 +3,18 @@
 #include <boost/math/special_functions/bernoulli.hpp>
 #include <boost/math/special_functions/prime.hpp>
 #include <boost/math/special_functions/fibonacci.hpp>
+#include "../boostmath/macros.hpp"
+
+UNARY_BOOST_FUNCTION(bernoulli_b2n, double);
+UNARY_BOOST_FUNCTION(unchecked_bernoulli_b2n, int);
+UNARY_BOOST_FUNCTION(tangent_t2n, double);
+UNARY_BOOST_FUNCTION(fibonacci, int);
+UNARY_BOOST_FUNCTION(unchecked_fibonacci, int);
 
 extern "C" {
-  SEXP bernoulli_b2n_(SEXP n_) {
-    BEGIN_CPP11
-    int n = cpp11::as_cpp<int>(n_);
-    double result = boost::math::bernoulli_b2n<double>(n);
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
   SEXP max_bernoulli_b2n_() {
     BEGIN_CPP11
     int result = boost::math::max_bernoulli_b2n<double>::value;
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP unchecked_bernoulli_b2n_(SEXP n_) {
-    BEGIN_CPP11
-    int n = cpp11::as_cpp<int>(n_);
-    double result = boost::math::unchecked_bernoulli_b2n<double>(n);
     return cpp11::as_sexp(result);
     END_CPP11
   }
@@ -35,14 +26,6 @@ extern "C" {
     std::vector<double> results(number_of_bernoullis_b2n);
     boost::math::bernoulli_b2n<double>(start_index, number_of_bernoullis_b2n, results.begin());
     return cpp11::as_sexp(results);
-    END_CPP11
-  }
-
-  SEXP tangent_t2n_(SEXP n_) {
-    BEGIN_CPP11
-    int n = cpp11::as_cpp<int>(n_);
-    double result = boost::math::tangent_t2n<double>(n);
-    return cpp11::as_sexp(result);
     END_CPP11
   }
 
@@ -67,22 +50,6 @@ extern "C" {
   SEXP max_prime_() {
     BEGIN_CPP11
     int result = boost::math::max_prime;
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP fibonacci_(SEXP n_) {
-    BEGIN_CPP11
-    int n = cpp11::as_cpp<int>(n_);
-    int result = boost::math::fibonacci<double>(n);
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP unchecked_fibonacci_(SEXP n_) {
-    BEGIN_CPP11
-    int n = cpp11::as_cpp<int>(n_);
-    int result = boost::math::unchecked_fibonacci<double>(n);
     return cpp11::as_sexp(result);
     END_CPP11
   }

@@ -4,8 +4,6 @@
 #include <boost/math/special_functions/bessel_prime.hpp>
 #include "../boostmath/macros.hpp"
 
-extern "C" {
-
 BINARY_BOOST_FUNCTION(cyl_bessel_j, double, double);
 BINARY_BOOST_FUNCTION(cyl_neumann, double, double);
 BINARY_BOOST_FUNCTION(cyl_bessel_j_zero, double, int);
@@ -21,6 +19,7 @@ BINARY_BOOST_FUNCTION(cyl_bessel_k_prime, double, double);
 BINARY_BOOST_FUNCTION(sph_bessel_prime, uint64_t, double);
 BINARY_BOOST_FUNCTION(sph_neumann_prime, uint64_t, double);
 
+extern "C" {
 
   SEXP cyl_bessel_j_zero_multiple_(SEXP v_, SEXP start_index_, SEXP number_of_zeros_) {
     BEGIN_CPP11

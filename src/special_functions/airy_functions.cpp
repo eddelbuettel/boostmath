@@ -3,14 +3,14 @@
 #include <boost/math/special_functions/airy.hpp>
 #include "../boostmath/macros.hpp"
 
-extern "C" {
-
 UNARY_BOOST_FUNCTION(airy_ai, double);
 UNARY_BOOST_FUNCTION(airy_bi, double);
 UNARY_BOOST_FUNCTION(airy_ai_prime, double);
 UNARY_BOOST_FUNCTION(airy_bi_prime, double);
 UNARY_BOOST_FUNCTION(airy_ai_zero, int);
 UNARY_BOOST_FUNCTION(airy_bi_zero, int);
+
+extern "C" {
 
   SEXP airy_ai_zero_multiple_(SEXP start_index_, SEXP number_of_zeros_) {
     BEGIN_CPP11

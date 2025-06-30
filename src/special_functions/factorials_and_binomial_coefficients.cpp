@@ -2,53 +2,18 @@
 #include <cpp11/declarations.hpp>
 #include <boost/math/special_functions/factorials.hpp>
 #include <boost/math/special_functions/binomial.hpp>
+#include "../boostmath/macros.hpp"
+
+UNARY_BOOST_FUNCTION(factorial, uint64_t);
+UNARY_BOOST_FUNCTION(unchecked_factorial, uint64_t);
+UNARY_BOOST_FUNCTION(double_factorial, uint64_t);
+BINARY_BOOST_FUNCTION(rising_factorial, double, uint64_t);
+BINARY_BOOST_FUNCTION(falling_factorial, double, uint64_t);
 
 extern "C" {
-  SEXP factorial_(SEXP i_) {
-    BEGIN_CPP11
-    uint64_t i = cpp11::as_cpp<uint64_t>(i_);
-    double result = boost::math::factorial<double>(i);
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP unchecked_factorial_(SEXP i_) {
-    BEGIN_CPP11
-    uint64_t i = cpp11::as_cpp<uint64_t>(i_);
-    double result = boost::math::unchecked_factorial<double>(i);
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
   SEXP max_factorial_() {
     BEGIN_CPP11
     uint64_t result = boost::math::max_factorial<double>::value;
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP double_factorial_(SEXP i_) {
-    BEGIN_CPP11
-    uint64_t i = cpp11::as_cpp<uint64_t>(i_);
-    double result = boost::math::double_factorial<double>(i);
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP rising_factorial_(SEXP x_, SEXP i_) {
-    BEGIN_CPP11
-    double x = cpp11::as_cpp<double>(x_);
-    int i = cpp11::as_cpp<int>(i_);
-    double result = boost::math::rising_factorial<double>(x, i);
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP falling_factorial_(SEXP x_, SEXP i_) {
-    BEGIN_CPP11
-    double x = cpp11::as_cpp<double>(x_);
-    uint64_t i = cpp11::as_cpp<uint64_t>(i_);
-    double result = boost::math::falling_factorial<double>(x, i);
     return cpp11::as_sexp(result);
     END_CPP11
   }
