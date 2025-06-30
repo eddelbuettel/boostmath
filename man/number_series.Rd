@@ -42,8 +42,6 @@ unchecked_fibonacci(n)
 \item{number_of_bernoullis_b2n}{The number of Bernoulli numbers to compute}
 
 \item{number_of_tangent_t2n}{The number of tangent numbers to compute}
-
-\item{number_of_primes}{The number of prime numbers to compute}
 }
 \description{
 Functions to compute Bernoulli numbers, tangent numbers, fibonacci numbers, and prime numbers.

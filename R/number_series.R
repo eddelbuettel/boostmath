@@ -5,7 +5,6 @@
 #' @param start_index The starting index for the range of numbers (must be a non-negative integer)
 #' @param number_of_bernoullis_b2n The number of Bernoulli numbers to compute
 #' @param number_of_tangent_t2n The number of tangent numbers to compute
-#' @param number_of_primes The number of prime numbers to compute
 #' @details
 #' Efficient computation of Bernoulli numbers, tangent numbers, fibonacci numbers, and prime numbers.
 #'
