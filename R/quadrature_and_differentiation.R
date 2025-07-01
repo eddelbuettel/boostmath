@@ -68,3 +68,38 @@ finite_difference_derivative <- function(f, x, order = 1) {
 complex_step_derivative <- function(f, x) {
   .Call(`complex_step_derivative_`, f, x)
 }
+
+#' @title Double Exponential Quadrature
+#' @name double_exponential_quadrature
+#' @description Functions for numerical integration using double exponential quadrature methods such as tanh-sinh, sinh-sinh, and exp-sinh quadrature.
+#' @param f A function to integrate. It should accept a single numeric value and return a single numeric value.
+#' @param a The lower limit of integration.
+#' @param b The upper limit of integration.
+#' @param tol The tolerance for the approximation. Default is `.Machine$double.eps`.
+#' @param max_refinements The maximum number of refinements to apply. Default is 15 for tanh-sinh and 9 for sinh-sinh and exp-sinh.
+#' @examples
+#' # Tanh-sinh quadrature of log(x) from 0 to 1
+#' tanh_sinh(function(x) { log(x) * log1p(-x) }, a = 0, b = 1)
+#' # Sinh-sinh quadrature of exp(-x^2)
+#' sinh_sinh(function(x) { exp(-x * x) })
+#' # Exp-sinh quadrature of exp(-3*x) from 0 to Inf
+#' exp_sinh(function(x) { exp(-3 * x) }, a = 0, b = Inf)
+NULL
+
+#' @rdname double_exponential_quadrature
+#' @export
+tanh_sinh <- function(f, a, b, tol = .Machine$double.eps, max_refinements = 15) {
+  .Call(`tanh_sinh_`, f, a, b, tol, max_refinements)
+}
+
+#' @rdname double_exponential_quadrature
+#' @export
+sinh_sinh <- function(f, tol = .Machine$double.eps, max_refinements = 9) {
+  .Call(`sinh_sinh_`, f, tol, max_refinements)
+}
+
+#' @rdname double_exponential_quadrature
+#' @export
+exp_sinh <- function(f, a, b, tol = .Machine$double.eps, max_refinements = 9) {
+  .Call(`exp_sinh_`, f, a, b, tol, max_refinements)
+}
