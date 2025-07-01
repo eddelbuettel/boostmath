@@ -25,7 +25,7 @@ beta_pdf <- function(x, alpha, beta) {
 #' @rdname beta_distribution
 #' @export
 beta_lpdf <- function(x, alpha, beta) {
-  .Call(`beta_lpdf_`, x, alpha, beta)
+  .Call(`beta_logpdf_`, x, alpha, beta)
 }
 
 #' @rdname beta_distribution
@@ -37,7 +37,7 @@ beta_cdf <- function(x, alpha, beta) {
 #' @rdname beta_distribution
 #' @export
 beta_lcdf <- function(x, alpha, beta) {
-  .Call(`beta_lcdf_`, x, alpha, beta)
+  .Call(`beta_logcdf_`, x, alpha, beta)
 }
 
 #' @rdname beta_distribution

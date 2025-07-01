@@ -24,7 +24,7 @@ cauchy_pdf <- function(x, location = 0, scale = 1) {
 #' @rdname cauchy_distribution
 #' @export
 cauchy_lpdf <- function(x, location = 0, scale = 1) {
-  .Call(`cauchy_lpdf_`, x, location, scale)
+  .Call(`cauchy_logpdf_`, x, location, scale)
 }
 
 #' @rdname cauchy_distribution
@@ -36,7 +36,7 @@ cauchy_cdf <- function(x, location = 0, scale = 1) {
 #' @rdname cauchy_distribution
 #' @export
 cauchy_lcdf <- function(x, location = 0, scale = 1) {
-  .Call(`cauchy_lcdf_`, x, location, scale)
+  .Call(`cauchy_logcdf_`, x, location, scale)
 }
 
 #' @rdname cauchy_distribution

@@ -23,7 +23,7 @@ arcsine_pdf <- function(x, x_min = 0, x_max = 1) {
 #' @rdname arcsine_distribution
 #' @export
 arcsine_lpdf <- function(x, x_min = 0, x_max = 1) {
-  .Call(`arcsine_lpdf_`, x, x_min, x_max)
+  .Call(`arcsine_logpdf_`, x, x_min, x_max)
 }
 
 #' @rdname arcsine_distribution
@@ -35,7 +35,7 @@ arcsine_cdf <- function(x, x_min = 0, x_max = 1) {
 #' @rdname arcsine_distribution
 #' @export
 arcsine_lcdf <- function(x, x_min = 0, x_max = 1) {
-  .Call(`arcsine_lcdf_`, x, x_min, x_max)
+  .Call(`arcsine_logcdf_`, x, x_min, x_max)
 }
 
 #' @rdname arcsine_distribution

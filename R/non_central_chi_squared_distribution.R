@@ -27,7 +27,7 @@ non_central_chi_squared_pdf <- function(x, df, lambda) {
 #' @rdname non_central_chi_squared_distribution
 #' @export
 non_central_chi_squared_lpdf <- function(x, df, lambda) {
-  .Call(`non_central_chi_squared_lpdf_`, x, df, lambda)
+  .Call(`non_central_chi_squared_logpdf_`, x, df, lambda)
 }
 
 #' @rdname non_central_chi_squared_distribution
@@ -39,7 +39,7 @@ non_central_chi_squared_cdf <- function(x, df, lambda) {
 #' @rdname non_central_chi_squared_distribution
 #' @export
 non_central_chi_squared_lcdf <- function(x, df, lambda) {
-  .Call(`non_central_chi_squared_lcdf_`, x, df, lambda)
+  .Call(`non_central_chi_squared_logcdf_`, x, df, lambda)
 }
 
 #' @rdname non_central_chi_squared_distribution

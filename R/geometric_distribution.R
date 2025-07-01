@@ -23,7 +23,7 @@ geometric_pdf <- function(x, prob) {
 #' @rdname geometric_distribution
 #' @export
 geometric_lpdf <- function(x, prob) {
-  .Call(`geometric_lpdf_`, x, prob)
+  .Call(`geometric_logpdf_`, x, prob)
 }
 
 #' @rdname geometric_distribution
@@ -35,7 +35,7 @@ geometric_cdf <- function(x, prob) {
 #' @rdname geometric_distribution
 #' @export
 geometric_lcdf <- function(x, prob) {
-  .Call(`geometric_lcdf_`, x, prob)
+  .Call(`geometric_logcdf_`, x, prob)
 }
 
 #' @rdname geometric_distribution

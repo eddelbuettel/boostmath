@@ -24,7 +24,7 @@ extreme_value_pdf <- function(x, location = 0, scale = 1) {
 #' @rdname extreme_value_distribution
 #' @export
 extreme_value_lpdf <- function(x, location = 0, scale = 1) {
-  .Call(`extreme_value_lpdf_`, x, location, scale)
+  .Call(`extreme_value_logpdf_`, x, location, scale)
 }
 
 #' @rdname extreme_value_distribution
@@ -36,7 +36,7 @@ extreme_value_cdf <- function(x, location = 0, scale = 1) {
 #' @rdname extreme_value_distribution
 #' @export
 extreme_value_lcdf <- function(x, location = 0, scale = 1) {
-  .Call(`extreme_value_lcdf_`, x, location, scale)
+  .Call(`extreme_value_logcdf_`, x, location, scale)
 }
 
 #' @rdname extreme_value_distribution

@@ -81,4 +81,58 @@
     END_CPP11 \
   }
 
+#define BINARY_DISTRIBUTION_BOOST_IMPL(func, dist, arg1_type, arg2_type) \
+  extern "C" SEXP dist##_##func##_(SEXP x_, SEXP y_, SEXP z_) { \
+    BEGIN_CPP11 \
+    arg1_type x = cpp11::as_cpp<arg1_type>(x_); \
+    arg2_type y = cpp11::as_cpp<arg2_type>(y_); \
+    auto result = boost::math::func(boost::math::dist##_distribution<>(y), x); \
+    return cpp11::as_sexp(result); \
+    END_CPP11 \
+  }
+
+#define BINARY_DISTRIBUTION_BOOST(dist, arg1_type, arg2_type) \
+  BINARY_DISTRIBUTION_BOOST_IMPL(pdf, dist, arg1_type, arg2_type) \
+  BINARY_DISTRIBUTION_BOOST_IMPL(logpdf, dist, arg1_type, arg2_type) \
+  BINARY_DISTRIBUTION_BOOST_IMPL(cdf, dist, arg1_type, arg2_type) \
+  BINARY_DISTRIBUTION_BOOST_IMPL(logcdf, dist, arg1_type, arg2_type) \
+  BINARY_DISTRIBUTION_BOOST_IMPL(quantile, dist, double, arg2_type)
+
+#define TERNARY_DISTRIBUTION_BOOST_IMPL(func, dist, arg1_type, arg2_type, arg3_type) \
+  extern "C" SEXP dist##_##func##_(SEXP x_, SEXP y_, SEXP z_) { \
+    BEGIN_CPP11 \
+    arg1_type x = cpp11::as_cpp<arg1_type>(x_); \
+    arg2_type y = cpp11::as_cpp<arg2_type>(y_); \
+    arg3_type z = cpp11::as_cpp<arg3_type>(z_); \
+    auto result = boost::math::func(boost::math::dist##_distribution<>(y, z), x); \
+    return cpp11::as_sexp(result); \
+    END_CPP11 \
+  }
+
+#define TERNARY_DISTRIBUTION_BOOST(dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_IMPL(pdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_IMPL(logpdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_IMPL(cdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_IMPL(logcdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_IMPL(quantile, dist, double, arg2_type, arg3_type)
+
+#define QUARTERNARY_DISTRIBUTION_BOOST_IMPL(func, dist, arg1_type, arg2_type, arg3_type, arg4_type) \
+  extern "C" SEXP dist##_##func##_(SEXP x_, SEXP y_, SEXP z_, SEXP w_) { \
+    BEGIN_CPP11 \
+    arg1_type x = cpp11::as_cpp<arg1_type>(x_); \
+    arg2_type y = cpp11::as_cpp<arg2_type>(y_); \
+    arg3_type z = cpp11::as_cpp<arg3_type>(z_); \
+    arg4_type w = cpp11::as_cpp<arg4_type>(w_); \
+    auto result = boost::math::func(boost::math::dist##_distribution<>(y, z, w), x); \
+    return cpp11::as_sexp(result); \
+    END_CPP11 \
+  }
+
+#define QUARTERNARY_DISTRIBUTION_BOOST(dist, arg1_type, arg2_type, arg3_type, arg4_type) \
+  QUARTERNARY_DISTRIBUTION_BOOST_IMPL(pdf, dist, arg1_type, arg2_type, arg3_type, arg4_type) \
+  QUARTERNARY_DISTRIBUTION_BOOST_IMPL(logpdf, dist, arg1_type, arg2_type, arg3_type, arg4_type) \
+  QUARTERNARY_DISTRIBUTION_BOOST_IMPL(cdf, dist, arg1_type, arg2_type, arg3_type, arg4_type) \
+  QUARTERNARY_DISTRIBUTION_BOOST_IMPL(logcdf, dist, arg1_type, arg2_type, arg3_type, arg4_type) \
+  QUARTERNARY_DISTRIBUTION_BOOST_IMPL(quantile, dist, double, arg2_type, arg3_type, arg4_type)
+
 #endif

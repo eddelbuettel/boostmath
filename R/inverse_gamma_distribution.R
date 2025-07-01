@@ -24,7 +24,7 @@ inverse_gamma_pdf <- function(x, shape, scale) {
 #' @rdname inverse_gamma_distribution
 #' @export
 inverse_gamma_lpdf <- function(x, shape, scale) {
-  .Call(`inverse_gamma_lpdf_`, x, shape, scale)
+  .Call(`inverse_gamma_logpdf_`, x, shape, scale)
 }
 
 #' @rdname inverse_gamma_distribution
@@ -36,7 +36,7 @@ inverse_gamma_cdf <- function(x, shape, scale) {
 #' @rdname inverse_gamma_distribution
 #' @export
 inverse_gamma_lcdf <- function(x, shape, scale) {
-  .Call(`inverse_gamma_lcdf_`, x, shape, scale)
+  .Call(`inverse_gamma_logcdf_`, x, shape, scale)
 }
 
 #' @rdname inverse_gamma_distribution

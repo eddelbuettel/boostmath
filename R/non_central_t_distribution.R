@@ -24,7 +24,7 @@ non_central_t_pdf <- function(x, df, delta) {
 #' @rdname non_central_t_distribution
 #' @export
 non_central_t_lpdf <- function(x, df, delta) {
-  .Call(`non_central_t_lpdf_`, x, df, delta)
+  .Call(`non_central_t_logpdf_`, x, df, delta)
 }
 
 #' @rdname non_central_t_distribution
@@ -36,7 +36,7 @@ non_central_t_cdf <- function(x, df, delta) {
 #' @rdname non_central_t_distribution
 #' @export
 non_central_t_lcdf <- function(x, df, delta) {
-  .Call(`non_central_t_lcdf_`, x, df, delta)
+  .Call(`non_central_t_logcdf_`, x, df, delta)
 }
 
 #' @rdname non_central_t_distribution

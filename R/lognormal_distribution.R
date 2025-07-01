@@ -24,7 +24,7 @@ lognormal_pdf <- function(x, location = 0, scale = 1) {
 #' @rdname lognormal_distribution
 #' @export
 lognormal_lpdf <- function(x, location = 0, scale = 1) {
-  .Call(`lognormal_lpdf_`, x, location, scale)
+  .Call(`lognormal_logpdf_`, x, location, scale)
 }
 
 #' @rdname lognormal_distribution
@@ -36,7 +36,7 @@ lognormal_cdf <- function(x, location = 0, scale = 1) {
 #' @rdname lognormal_distribution
 #' @export
 lognormal_lcdf <- function(x, location = 0, scale = 1) {
-  .Call(`lognormal_lcdf_`, x, location, scale)
+  .Call(`lognormal_logcdf_`, x, location, scale)
 }
 
 #' @rdname lognormal_distribution

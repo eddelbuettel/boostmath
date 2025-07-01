@@ -23,7 +23,7 @@ exponential_pdf <- function(x, lambda) {
 #' @rdname exponential_distribution
 #' @export
 exponential_lpdf <- function(x, lambda) {
-  .Call(`exponential_lpdf_`, x, lambda)
+  .Call(`exponential_logpdf_`, x, lambda)
 }
 
 #' @rdname exponential_distribution
@@ -35,7 +35,7 @@ exponential_cdf <- function(x, lambda) {
 #' @rdname exponential_distribution
 #' @export
 exponential_lcdf <- function(x, lambda) {
-  .Call(`exponential_lcdf_`, x, lambda)
+  .Call(`exponential_logcdf_`, x, lambda)
 }
 
 #' @rdname exponential_distribution

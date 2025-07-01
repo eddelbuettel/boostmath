@@ -23,7 +23,7 @@ chi_squared_pdf <- function(x, df) {
 #' @rdname chi_squared_distribution
 #' @export
 chi_squared_lpdf <- function(x, df) {
-  .Call(`chi_squared_lpdf_`, x, df)
+  .Call(`chi_squared_logpdf_`, x, df)
 }
 
 #' @rdname chi_squared_distribution
@@ -35,7 +35,7 @@ chi_squared_cdf <- function(x, df) {
 #' @rdname chi_squared_distribution
 #' @export
 chi_squared_lcdf <- function(x, df) {
-  .Call(`chi_squared_lcdf_`, x, df)
+  .Call(`chi_squared_logcdf_`, x, df)
 }
 
 #' @rdname chi_squared_distribution

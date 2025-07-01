@@ -24,7 +24,7 @@ normal_pdf <- function(x, mean = 0, sd = 1) {
 #' @rdname normal_distribution
 #' @export
 normal_lpdf <- function(x, mean = 0, sd = 1) {
-  .Call(`normal_lpdf_`, x, mean, sd)
+  .Call(`normal_logpdf_`, x, mean, sd)
 }
 
 #' @rdname normal_distribution
@@ -36,7 +36,7 @@ normal_cdf <- function(x, mean = 0, sd = 1) {
 #' @rdname normal_distribution
 #' @export
 normal_lcdf <- function(x, mean = 0, sd = 1) {
-  .Call(`normal_lcdf_`, x, mean, sd)
+  .Call(`normal_logcdf_`, x, mean, sd)
 }
 
 #' @rdname normal_distribution

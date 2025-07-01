@@ -25,7 +25,7 @@ hypergeometric_pdf <- function(x, r, n, N) {
 #' @rdname hypergeometric_distribution
 #' @export
 hypergeometric_lpdf <- function(x, r, n, N) {
-  .Call(`hypergeometric_lpdf_`, x, r, n, N)
+  .Call(`hypergeometric_logpdf_`, x, r, n, N)
 }
 
 #' @rdname hypergeometric_distribution
@@ -37,7 +37,7 @@ hypergeometric_cdf <- function(x, r, n, N) {
 #' @rdname hypergeometric_distribution
 #' @export
 hypergeometric_lcdf <- function(x, r, n, N) {
-  .Call(`hypergeometric_lcdf_`, x, r, n, N)
+  .Call(`hypergeometric_logcdf_`, x, r, n, N)
 }
 
 #' @rdname hypergeometric_distribution

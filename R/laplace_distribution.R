@@ -24,7 +24,7 @@ laplace_pdf <- function(x, location = 0, scale = 1) {
 #' @rdname laplace_distribution
 #' @export
 laplace_lpdf <- function(x, location = 0, scale = 1) {
-  .Call(`laplace_lpdf_`, x, location, scale)
+  .Call(`laplace_logpdf_`, x, location, scale)
 }
 
 #' @rdname laplace_distribution
@@ -36,7 +36,7 @@ laplace_cdf <- function(x, location = 0, scale = 1) {
 #' @rdname laplace_distribution
 #' @export
 laplace_lcdf <- function(x, location = 0, scale = 1) {
-  .Call(`laplace_lcdf_`, x, location, scale)
+  .Call(`laplace_logcdf_`, x, location, scale)
 }
 
 #' @rdname laplace_distribution

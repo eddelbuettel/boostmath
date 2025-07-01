@@ -24,7 +24,7 @@ weibull_pdf <- function(x, shape = 1, scale = 1) {
 #' @rdname weibull_distribution
 #' @export
 weibull_lpdf <- function(x, shape = 1, scale = 1) {
-  .Call(`weibull_lpdf_`, x, shape, scale)
+  .Call(`weibull_logpdf_`, x, shape, scale)
 }
 
 #' @rdname weibull_distribution
@@ -36,7 +36,7 @@ weibull_cdf <- function(x, shape = 1, scale = 1) {
 #' @rdname weibull_distribution
 #' @export
 weibull_lcdf <- function(x, shape = 1, scale = 1) {
-  .Call(`weibull_lcdf_`, x, shape, scale)
+  .Call(`weibull_logcdf_`, x, shape, scale)
 }
 
 #' @rdname weibull_distribution

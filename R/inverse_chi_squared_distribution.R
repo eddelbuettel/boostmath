@@ -24,7 +24,7 @@ inverse_chi_squared_pdf <- function(x, df, scale = 1) {
 #' @rdname inverse_chi_squared_distribution
 #' @export
 inverse_chi_squared_lpdf <- function(x, df, scale = 1) {
-  .Call(`inverse_chi_squared_lpdf_`, x, df, scale)
+  .Call(`inverse_chi_squared_logpdf_`, x, df, scale)
 }
 
 #' @rdname inverse_chi_squared_distribution
@@ -36,7 +36,7 @@ inverse_chi_squared_cdf <- function(x, df, scale = 1) {
 #' @rdname inverse_chi_squared_distribution
 #' @export
 inverse_chi_squared_lcdf <- function(x, df, scale = 1) {
-  .Call(`inverse_chi_squared_lcdf_`, x, df, scale)
+  .Call(`inverse_chi_squared_logcdf_`, x, df, scale)
 }
 
 #' @rdname inverse_chi_squared_distribution

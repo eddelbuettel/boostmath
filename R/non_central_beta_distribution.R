@@ -26,7 +26,7 @@ non_central_beta_pdf <- function(x, alpha, beta, lambda) {
 #' @rdname non_central_beta_distribution
 #' @export
 non_central_beta_lpdf <- function(x, alpha, beta, lambda) {
-  .Call(`non_central_beta_lpdf_`, x, alpha, beta, lambda)
+  .Call(`non_central_beta_logpdf_`, x, alpha, beta, lambda)
 }
 
 #' @rdname non_central_beta_distribution
@@ -38,7 +38,7 @@ non_central_beta_cdf <- function(x, alpha, beta, lambda) {
 #' @rdname non_central_beta_distribution
 #' @export
 non_central_beta_lcdf <- function(x, alpha, beta, lambda) {
-  .Call(`non_central_beta_lcdf_`, x, alpha, beta, lambda)
+  .Call(`non_central_beta_logcdf_`, x, alpha, beta, lambda)
 }
 
 #' @rdname non_central_beta_distribution

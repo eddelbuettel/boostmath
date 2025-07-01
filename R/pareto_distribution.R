@@ -24,7 +24,7 @@ pareto_pdf <- function(x, shape = 1, scale = 1) {
 #' @rdname pareto_distribution
 #' @export
 pareto_lpdf <- function(x, shape = 1, scale = 1) {
-  .Call(`pareto_lpdf_`, x, shape, scale)
+  .Call(`pareto_logpdf_`, x, shape, scale)
 }
 
 #' @rdname pareto_distribution
@@ -36,7 +36,7 @@ pareto_cdf <- function(x, shape = 1, scale = 1) {
 #' @rdname pareto_distribution
 #' @export
 pareto_lcdf <- function(x, shape = 1, scale = 1) {
-  .Call(`pareto_lcdf_`, x, shape, scale)
+  .Call(`pareto_logcdf_`, x, shape, scale)
 }
 
 #' @rdname pareto_distribution

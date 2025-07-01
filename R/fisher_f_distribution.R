@@ -24,7 +24,7 @@ fisher_f_pdf <- function(x, df1, df2) {
 #' @rdname fisher_f_distribution
 #' @export
 fisher_f_lpdf <- function(x, df1, df2) {
-  .Call(`fisher_f_lpdf_`, x, df1, df2)
+  .Call(`fisher_f_logpdf_`, x, df1, df2)
 }
 
 #' @rdname fisher_f_distribution
@@ -36,7 +36,7 @@ fisher_f_cdf <- function(x, df1, df2) {
 #' @rdname fisher_f_distribution
 #' @export
 fisher_f_lcdf <- function(x, df1, df2) {
-  .Call(`fisher_f_lcdf_`, x, df1, df2)
+  .Call(`fisher_f_logcdf_`, x, df1, df2)
 }
 
 #' @rdname fisher_f_distribution

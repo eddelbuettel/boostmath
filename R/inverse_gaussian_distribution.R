@@ -24,7 +24,7 @@ inverse_gaussian_pdf <- function(x, mu, lambda) {
 #' @rdname inverse_gaussian_distribution
 #' @export
 inverse_gaussian_lpdf <- function(x, mu, lambda) {
-  .Call(`inverse_gaussian_lpdf_`, x, mu, lambda)
+  .Call(`inverse_gaussian_logpdf_`, x, mu, lambda)
 }
 
 #' @rdname inverse_gaussian_distribution
@@ -36,7 +36,7 @@ inverse_gaussian_cdf <- function(x, mu, lambda) {
 #' @rdname inverse_gaussian_distribution
 #' @export
 inverse_gaussian_lcdf <- function(x, mu, lambda) {
-  .Call(`inverse_gaussian_lcdf_`, x, mu, lambda)
+  .Call(`inverse_gaussian_logcdf_`, x, mu, lambda)
 }
 
 #' @rdname inverse_gaussian_distribution

@@ -24,7 +24,7 @@ binomial_pdf <- function(k, n, prob) {
 #' @rdname binomial_distribution
 #' @export
 binomial_lpdf <- function(k, n, prob) {
-  .Call(`binomial_lpdf_`, k, n, prob)
+  .Call(`binomial_logpdf_`, k, n, prob)
 }
 
 #' @rdname binomial_distribution
@@ -36,7 +36,7 @@ binomial_cdf <- function(k, n, prob) {
 #' @rdname binomial_distribution
 #' @export
 binomial_lcdf <- function(k, n, prob) {
-  .Call(`binomial_lcdf_`, k, n, prob)
+  .Call(`binomial_logcdf_`, k, n, prob)
 }
 
 #' @rdname binomial_distribution

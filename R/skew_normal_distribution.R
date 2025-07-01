@@ -25,7 +25,7 @@ skew_normal_pdf <- function(x, location = 0, scale = 1, shape = 0) {
 #' @rdname skew_normal_distribution
 #' @export
 skew_normal_lpdf <- function(x, location = 0, scale = 1, shape = 0) {
-  .Call(`skew_normal_lpdf_`, x, location, scale, shape)
+  .Call(`skew_normal_logpdf_`, x, location, scale, shape)
 }
 
 #' @rdname skew_normal_distribution
@@ -37,7 +37,7 @@ skew_normal_cdf <- function(x, location = 0, scale = 1, shape = 0) {
 #' @rdname skew_normal_distribution
 #' @export
 skew_normal_lcdf <- function(x, location = 0, scale = 1, shape = 0) {
-  .Call(`skew_normal_lcdf_`, x, location, scale, shape)
+  .Call(`skew_normal_logcdf_`, x, location, scale, shape)
 }
 
 #' @rdname skew_normal_distribution

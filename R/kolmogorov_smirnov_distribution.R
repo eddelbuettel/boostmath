@@ -23,7 +23,7 @@ kolmogorov_smirnov_pdf <- function(x, n) {
 #' @rdname kolmogorov_smirnov_distribution
 #' @export
 kolmogorov_smirnov_lpdf <- function(x, n) {
-  .Call(`kolmogorov_smirnov_lpdf_`, x, n)
+  .Call(`kolmogorov_smirnov_logpdf_`, x, n)
 }
 
 #' @rdname kolmogorov_smirnov_distribution
@@ -35,7 +35,7 @@ kolmogorov_smirnov_cdf <- function(x, n) {
 #' @rdname kolmogorov_smirnov_distribution
 #' @export
 kolmogorov_smirnov_lcdf <- function(x, n) {
-  .Call(`kolmogorov_smirnov_lcdf_`, x, n)
+  .Call(`kolmogorov_smirnov_logcdf_`, x, n)
 }
 
 #' @rdname kolmogorov_smirnov_distribution

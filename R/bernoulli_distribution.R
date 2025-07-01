@@ -22,7 +22,7 @@ bernoulli_pdf <- function(x, p_success) {
 #' @rdname bernoulli_distribution
 #' @export
 bernoulli_lpdf <- function(x, p_success) {
-  .Call(`bernoulli_lpdf_`, x, p_success)
+  .Call(`bernoulli_logpdf_`, x, p_success)
 }
 
 #' @rdname bernoulli_distribution
@@ -34,7 +34,7 @@ bernoulli_cdf <- function(x, p_success) {
 #' @rdname bernoulli_distribution
 #' @export
 bernoulli_lcdf <- function(x, p_success) {
-  .Call(`bernoulli_lcdf_`, x, p_success)
+  .Call(`bernoulli_logcdf_`, x, p_success)
 }
 
 #' @rdname bernoulli_distribution

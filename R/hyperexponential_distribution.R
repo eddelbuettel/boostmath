@@ -24,7 +24,7 @@ hyperexponential_pdf <- function(x, probabilities, rates) {
 #' @rdname hyperexponential_distribution
 #' @export
 hyperexponential_lpdf <- function(x, probabilities, rates) {
-  .Call(`hyperexponential_lpdf_`, x, probabilities, rates)
+  .Call(`hyperexponential_logpdf_`, x, probabilities, rates)
 }
 
 #' @rdname hyperexponential_distribution
@@ -36,7 +36,7 @@ hyperexponential_cdf <- function(x, probabilities, rates) {
 #' @rdname hyperexponential_distribution
 #' @export
 hyperexponential_lcdf <- function(x, probabilities, rates) {
-  .Call(`hyperexponential_lcdf_`, x, probabilities, rates)
+  .Call(`hyperexponential_logcdf_`, x, probabilities, rates)
 }
 
 #' @rdname hyperexponential_distribution

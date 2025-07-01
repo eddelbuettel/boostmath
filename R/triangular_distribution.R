@@ -25,7 +25,7 @@ triangular_pdf <- function(x, lower = 0, mode = 1, upper = 2) {
 #' @rdname triangular_distribution
 #' @export
 triangular_lpdf <- function(x, lower = 0, mode = 1, upper = 2) {
-  .Call(`triangular_lpdf_`, x, lower, mode, upper)
+  .Call(`triangular_logpdf_`, x, lower, mode, upper)
 }
 
 #' @rdname triangular_distribution
@@ -37,7 +37,7 @@ triangular_cdf <- function(x, lower = 0, mode = 1, upper = 2) {
 #' @rdname triangular_distribution
 #' @export
 triangular_lcdf <- function(x, lower = 0, mode = 1, upper = 2) {
-  .Call(`triangular_lcdf_`, x, lower, mode, upper)
+  .Call(`triangular_logcdf_`, x, lower, mode, upper)
 }
 
 #' @rdname triangular_distribution

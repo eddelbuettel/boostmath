@@ -24,7 +24,7 @@ uniform_pdf <- function(x, lower = 0, upper = 1) {
 #' @rdname uniform_distribution
 #' @export
 uniform_lpdf <- function(x, lower = 0, upper = 1) {
-  .Call(`uniform_lpdf_`, x, lower, upper)
+  .Call(`uniform_logpdf_`, x, lower, upper)
 }
 
 #' @rdname uniform_distribution
@@ -36,7 +36,7 @@ uniform_cdf <- function(x, lower = 0, upper = 1) {
 #' @rdname uniform_distribution
 #' @export
 uniform_lcdf <- function(x, lower = 0, upper = 1) {
-  .Call(`uniform_lcdf_`, x, lower, upper)
+  .Call(`uniform_logcdf_`, x, lower, upper)
 }
 
 #' @rdname uniform_distribution

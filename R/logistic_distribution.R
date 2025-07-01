@@ -24,7 +24,7 @@ logistic_pdf <- function(x, location = 0, scale = 1) {
 #' @rdname logistic_distribution
 #' @export
 logistic_lpdf <- function(x, location = 0, scale = 1) {
-  .Call(`logistic_lpdf_`, x, location, scale)
+  .Call(`logistic_logpdf_`, x, location, scale)
 }
 
 #' @rdname logistic_distribution
@@ -36,7 +36,7 @@ logistic_cdf <- function(x, location = 0, scale = 1) {
 #' @rdname logistic_distribution
 #' @export
 logistic_lcdf <- function(x, location = 0, scale = 1) {
-  .Call(`logistic_lcdf_`, x, location, scale)
+  .Call(`logistic_logcdf_`, x, location, scale)
 }
 
 #' @rdname logistic_distribution

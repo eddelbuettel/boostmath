@@ -23,7 +23,7 @@ poisson_pdf <- function(x, lambda = 1) {
 #' @rdname poisson_distribution
 #' @export
 poisson_lpdf <- function(x, lambda = 1) {
-  .Call(`poisson_lpdf_`, x, lambda)
+  .Call(`poisson_logpdf_`, x, lambda)
 }
 
 #' @rdname poisson_distribution
@@ -35,7 +35,7 @@ poisson_cdf <- function(x, lambda = 1) {
 #' @rdname poisson_distribution
 #' @export
 poisson_lcdf <- function(x, lambda = 1) {
-  .Call(`poisson_lcdf_`, x, lambda)
+  .Call(`poisson_logcdf_`, x, lambda)
 }
 
 #' @rdname poisson_distribution

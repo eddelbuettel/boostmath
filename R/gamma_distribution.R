@@ -24,7 +24,7 @@ gamma_pdf <- function(x, shape, scale) {
 #' @rdname gamma_distribution
 #' @export
 gamma_lpdf <- function(x, shape, scale) {
-  .Call(`gamma_lpdf_`, x, shape, scale)
+  .Call(`gamma_logpdf_`, x, shape, scale)
 }
 
 #' @rdname gamma_distribution
@@ -36,7 +36,7 @@ gamma_cdf <- function(x, shape, scale) {
 #' @rdname gamma_distribution
 #' @export
 gamma_lcdf <- function(x, shape, scale) {
-  .Call(`gamma_lcdf_`, x, shape, scale)
+  .Call(`gamma_logcdf_`, x, shape, scale)
 }
 
 #' @rdname gamma_distribution

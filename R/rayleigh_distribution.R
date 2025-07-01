@@ -23,7 +23,7 @@ rayleigh_pdf <- function(x, scale = 1) {
 #' @rdname rayleigh_distribution
 #' @export
 rayleigh_lpdf <- function(x, scale = 1) {
-  .Call(`rayleigh_lpdf_`, x, scale)
+  .Call(`rayleigh_logpdf_`, x, scale)
 }
 
 #' @rdname rayleigh_distribution
@@ -35,7 +35,7 @@ rayleigh_cdf <- function(x, scale = 1) {
 #' @rdname rayleigh_distribution
 #' @export
 rayleigh_lcdf <- function(x, scale = 1) {
-  .Call(`rayleigh_lcdf_`, x, scale)
+  .Call(`rayleigh_logcdf_`, x, scale)
 }
 
 #' @rdname rayleigh_distribution

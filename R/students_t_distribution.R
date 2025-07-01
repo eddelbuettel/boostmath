@@ -23,7 +23,7 @@ students_t_pdf <- function(x, df = 1) {
 #' @rdname students_t_distribution
 #' @export
 students_t_lpdf <- function(x, df = 1) {
-  .Call(`students_t_lpdf_`, x, df)
+  .Call(`students_t_logpdf_`, x, df)
 }
 
 #' @rdname students_t_distribution
@@ -35,7 +35,7 @@ students_t_cdf <- function(x, df = 1) {
 #' @rdname students_t_distribution
 #' @export
 students_t_lcdf <- function(x, df = 1) {
-  .Call(`students_t_lcdf_`, x, df)
+  .Call(`students_t_logcdf_`, x, df)
 }
 
 #' @rdname students_t_distribution
