@@ -32,6 +32,8 @@ extern "C" {
       case 8:
         result = boost::math::differentiation::finite_difference_derivative<decltype(func), double, 8>(func, x);
         break;
+      default:
+        result = boost::math::differentiation::finite_difference_derivative<decltype(func), double>(func, x);
     }
 
     return cpp11::as_sexp(result);
