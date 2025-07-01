@@ -42,5 +42,5 @@ negative_binomial_lcdf <- function(x, successes, success_fraction) {
 #' @rdname negative_binomial_distribution
 #' @export
 negative_binomial_quantile <- function(p, successes, success_fraction) {
-  .Call(`negative_binomial_quantile`, p, successes, success_fraction)
+  .Call(`negative_binomial_quantile_`, p, successes, success_fraction)
 }
