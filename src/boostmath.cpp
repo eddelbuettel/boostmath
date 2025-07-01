@@ -7,6 +7,7 @@
 #include "special_functions/exponential_integrals.cpp"
 #include "special_functions/factorials_and_binomial_coefficients.cpp"
 #include "special_functions/gamma_functions.cpp"
+#include "special_functions/hankel_functions.cpp"
 #include "special_functions/hypergeometric_functions.cpp"
 #include "special_functions/inverse_hyperbolic_functions.cpp"
 #include "special_functions/jacobi_elliptic_functions.cpp"

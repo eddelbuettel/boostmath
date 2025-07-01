@@ -82,6 +82,7 @@ extern "C" {
   SEXP chebyshev_t_prime_(SEXP n_, SEXP x_);
   SEXP chebyshev_clenshaw_recurrence_(SEXP c_, SEXP x_);
   SEXP chebyshev_clenshaw_recurrence_ab_(SEXP c_, SEXP a_, SEXP b_, SEXP x_);
+  SEXP spherical_harmonic_(SEXP n_, SEXP m_, SEXP theta_, SEXP phi_);
   SEXP spherical_harmonic_r_(SEXP n_, SEXP m_, SEXP theta_, SEXP phi_);
   SEXP spherical_harmonic_i_(SEXP n_, SEXP m_, SEXP theta_, SEXP phi_);
   SEXP gegenbauer_(SEXP n_, SEXP lambda_, SEXP x_);
@@ -178,6 +179,12 @@ extern "C" {
   // exponential_integrals.cpp
   SEXP expint_en_(SEXP n_, SEXP z_);
   SEXP expint_ei_(SEXP z_);
+
+  // hankel_functions.cpp
+  SEXP cyl_hankel_1_(SEXP v_, SEXP x_);
+  SEXP cyl_hankel_2_(SEXP v_, SEXP x_);
+  SEXP sph_hankel_1_(SEXP v_, SEXP x_);
+  SEXP sph_hankel_2_(SEXP v_, SEXP x_);
 
   // hypergeometric_functions.cpp
   SEXP hypergeometric_1F0_(SEXP a_, SEXP z_);
@@ -578,6 +585,7 @@ extern "C" {
     {"chebyshev_t_prime_", (DL_FUNC) &chebyshev_t_prime_, 2},
     {"chebyshev_clenshaw_recurrence_", (DL_FUNC) &chebyshev_clenshaw_recurrence_, 2},
     {"chebyshev_clenshaw_recurrence_ab_", (DL_FUNC) &chebyshev_clenshaw_recurrence_ab_, 4},
+    {"spherical_harmonic_", (DL_FUNC) &spherical_harmonic_, 4},
     {"spherical_harmonic_r_", (DL_FUNC) &spherical_harmonic_r_, 4},
     {"spherical_harmonic_i_", (DL_FUNC) &spherical_harmonic_i_, 4},
     {"gegenbauer_", (DL_FUNC) &gegenbauer_, 3},
@@ -674,6 +682,12 @@ extern "C" {
     // exponential_integrals.cpp
     {"expint_en_", (DL_FUNC) &expint_en_, 2},
     {"expint_ei_", (DL_FUNC) &expint_ei_, 1},
+
+    // hankel_functions.cpp
+    {"cyl_hankel_1_", (DL_FUNC) &cyl_hankel_1_, 2},
+    {"cyl_hankel_2_", (DL_FUNC) &cyl_hankel_2_, 2},
+    {"sph_hankel_1_", (DL_FUNC) &sph_hankel_1_, 2},
+    {"sph_hankel_2_", (DL_FUNC) &sph_hankel_2_, 2},
 
     // hypergeometric_functions.cpp
     {"hypergeometric_1F0_", (DL_FUNC) &hypergeometric_1F0_, 2},

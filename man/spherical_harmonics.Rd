@@ -2,10 +2,13 @@
 % Please edit documentation in R/polynomials.R
 \name{spherical_harmonics}
 \alias{spherical_harmonics}
+\alias{spherical_harmonic}
 \alias{spherical_harmonic_r}
 \alias{spherical_harmonic_i}
 \title{Spherical Harmonics}
 \usage{
+spherical_harmonic(n, m, theta, phi)
+
 spherical_harmonic_r(n, m, theta, phi)
 
 spherical_harmonic_i(n, m, theta, phi)
@@ -23,6 +26,8 @@ spherical_harmonic_i(n, m, theta, phi)
 Functions to compute spherical harmonics and related functions.
 }
 \examples{
+# Spherical harmonic function Y_2^1(0.5, 0.5)
+spherical_harmonic(2, 1, 0.5, 0.5)
 # Real part of the spherical harmonic function Y_2^1(0.5, 0.5)
 spherical_harmonic_r(2, 1, 0.5, 0.5)
 # Imaginary part of the spherical harmonic function Y_2^1(0.5, 0.5)

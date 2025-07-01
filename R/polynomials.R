@@ -209,11 +209,19 @@ chebyshev_clenshaw_recurrence_ab <- function(c, a, b, x) {
 #' @param theta Polar angle (colatitude)
 #' @param phi Azimuthal angle (longitude)
 #' @examples
+#' # Spherical harmonic function Y_2^1(0.5, 0.5)
+#' spherical_harmonic(2, 1, 0.5, 0.5)
 #' # Real part of the spherical harmonic function Y_2^1(0.5, 0.5)
 #' spherical_harmonic_r(2, 1, 0.5, 0.5)
 #' # Imaginary part of the spherical harmonic function Y_2^1(0.5, 0.5)
 #' spherical_harmonic_i(2, 1, 0.5, 0.5)
 NULL
+
+#' @rdname spherical_harmonics
+#' @export
+spherical_harmonic <- function(n, m, theta, phi) {
+  .Call(`spherical_harmonic_`, n, m, theta, phi)
+}
 
 #' @rdname spherical_harmonics
 #' @export

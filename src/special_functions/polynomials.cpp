@@ -24,6 +24,7 @@ TERNARY_BOOST_FUNCTION(chebyshev_next, double, double, double);
 BINARY_BOOST_FUNCTION(chebyshev_t, uint64_t, double);
 BINARY_BOOST_FUNCTION(chebyshev_u, uint64_t, double);
 BINARY_BOOST_FUNCTION(chebyshev_t_prime, uint64_t, double);
+QUARTERNARY_BOOST_FUNCTION(spherical_harmonic, uint64_t, int, double, double);
 QUARTERNARY_BOOST_FUNCTION(spherical_harmonic_r, uint64_t, int, double, double);
 QUARTERNARY_BOOST_FUNCTION(spherical_harmonic_i, uint64_t, int, double, double);
 TERNARY_BOOST_FUNCTION(gegenbauer, uint64_t, double, double);
