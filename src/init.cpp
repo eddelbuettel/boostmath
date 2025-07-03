@@ -218,10 +218,14 @@ extern "C" {
   // owens_t_function.cpp
   SEXP owens_t_(SEXP h_, SEXP a_);
 
-  // quadrature_and_differentiation/double_exponential.cppAdd commentMore actions
+  // quadrature_and_differentiation/double_exponential.cpp
   SEXP tanh_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
   SEXP sinh_sinh_(SEXP f_, SEXP tol_, SEXP max_refinements_);
   SEXP exp_sinh_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
+
+  // quadrature_and_differentiation/fourier_integrals.cpp
+  SEXP ooura_fourier_sin_(SEXP f_, SEXP omega_, SEXP relative_error_tolerance_, SEXP levels_);
+  SEXP ooura_fourier_cos_(SEXP f_, SEXP omega_, SEXP relative_error_tolerance_, SEXP levels_);
 
   // quadrature_and_differentiation/trapezoidal.cpp
   SEXP trapezoidal_(SEXP f_, SEXP a_, SEXP b_, SEXP tol_, SEXP max_refinements_);
@@ -726,10 +730,14 @@ extern "C" {
     // owens_t_function.cpp
     {"owens_t_", (DL_FUNC) &owens_t_, 2},
 
-    // quadrature_and_differentiation/double_exponential.cppAdd commentMore actions
+    // quadrature_and_differentiation/double_exponential.cpp
     {"tanh_sinh_", (DL_FUNC) &tanh_sinh_, 5},
     {"sinh_sinh_", (DL_FUNC) &sinh_sinh_, 3},
     {"exp_sinh_", (DL_FUNC) &exp_sinh_, 5},
+
+    // quadrature_and_differentiation/fourier_integrals.cpp
+    {"ooura_fourier_sin_", (DL_FUNC) &ooura_fourier_sin_, 4},
+    {"ooura_fourier_cos_", (DL_FUNC) &ooura_fourier_cos_, 4},
 
     // quadrature_and_differentiation/trapezoidal.cpp
     {"trapezoidal_", (DL_FUNC) &trapezoidal_, 5},

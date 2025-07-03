@@ -103,3 +103,32 @@ sinh_sinh <- function(f, tol = .Machine$double.eps, max_refinements = 9) {
 exp_sinh <- function(f, a, b, tol = .Machine$double.eps, max_refinements = 9) {
   .Call(`exp_sinh_`, f, a, b, tol, max_refinements)
 }
+
+#' @title Ooura Fourier Integrals
+#' @name ooura_fourier_integrals
+#'
+#' @description Computing Fourier sine and cosine integrals using Ooura's method.
+#'
+#' @param f A function to integrate. It should accept a single numeric value and
+#'          return a single numeric value.
+#' @param omega The frequency parameter for the sine integral.
+#' @param relative_error_tolerance The relative error tolerance for the approximation.
+#' @param levels The number of levels of refinement to apply. Default is 8.
+#' @examples
+#' # Fourier sine integral of sin(x) with omega = 1
+#' ooura_fourier_sin(function(x) { 1 / x }, omega = 1)
+#' # Fourier cosine integral of cos(x) with omega = 1
+#' ooura_fourier_cos(function(x) { 1/ (x * x + 1) }, omega = 1)
+NULL
+
+#' @rdname ooura_fourier_integrals
+#' @export
+ooura_fourier_sin <- function(f, omega = 1, relative_error_tolerance = sqrt(.Machine$double.eps), levels = 8) {
+  .Call(`ooura_fourier_sin_`, f, omega, relative_error_tolerance, levels)
+}
+
+#' @rdname ooura_fourier_integrals
+#' @export
+ooura_fourier_cos <- function(f, omega = 1, relative_error_tolerance = sqrt(.Machine$double.eps), levels = 8) {
+  .Call(`ooura_fourier_cos_`, f, omega, relative_error_tolerance, levels)
+}
