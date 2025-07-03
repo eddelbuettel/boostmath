@@ -15,7 +15,7 @@
 #include "special_functions/number_series.cpp"
 #include "special_functions/owens_t_function.cpp"
 #include "special_functions/polynomials.cpp"
-#include "special_functions/riemann_zeta_function.cpp"
+#include "special_functions/zeta_functions.cpp"
 #include "special_functions/sinus_cardinal_hyperbolic_functions.cpp"
 
 #include "quadrature_and_differentiation/double_exponential.cpp"

@@ -19,3 +19,7 @@ Computes the Owens T function of h and a, giving the probability of
 the event (X > h and 0 < Y < a * X) where X and Y are independent
 standard normal random variables.
 }
+\examples{
+# Owens T Function
+owens_t(1, 0.5)
+}

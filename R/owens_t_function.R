@@ -8,6 +8,9 @@
 #' @param a The second argument of the Owens T function
 #' @return The value of the Owens T function at (h, a).
 #' @export
+#' @examples
+#' # Owens T Function
+#' owens_t(1, 0.5)
 owens_t <- function(h, a) {
   .Call(`owens_t_`, h, a)
 }
