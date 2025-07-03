@@ -2,7 +2,7 @@
 title: "Boost Math - Root Finding and Minimisation Algorithms"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Boost Math}
+  %\VignetteIndexEntry{Boost Math - Root Finding and Minimisation Algorithms}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

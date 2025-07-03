@@ -2,7 +2,7 @@
 title: "Boost Math - Vector Functionals"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Boost Math}
+  %\VignetteIndexEntry{Boost Math - Vector Functionals}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

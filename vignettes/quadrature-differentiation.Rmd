@@ -2,7 +2,7 @@
 title: "Boost Math - Quadrature and Differentiation"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Boost Math}
+  %\VignetteIndexEntry{Boost Math - Quadrature and Differentiation}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
