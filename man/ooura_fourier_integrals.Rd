@@ -9,14 +9,14 @@
 ooura_fourier_sin(
   f,
   omega = 1,
-  relative_error_tolerance = sqrt(.Machine$double.eps),
+  relative_error_tolerance = sqrt(sqrt(.Machine$double.eps)),
   levels = 8
 )
 
 ooura_fourier_cos(
   f,
   omega = 1,
-  relative_error_tolerance = sqrt(.Machine$double.eps),
+  relative_error_tolerance = sqrt(sqrt(.Machine$double.eps)),
   levels = 8
 )
 }

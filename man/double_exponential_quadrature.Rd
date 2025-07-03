@@ -7,11 +7,11 @@
 \alias{exp_sinh}
 \title{Double Exponential Quadrature}
 \usage{
-tanh_sinh(f, a, b, tol = .Machine$double.eps, max_refinements = 15)
+tanh_sinh(f, a, b, tol = sqrt(.Machine$double.eps), max_refinements = 15)
 
-sinh_sinh(f, tol = .Machine$double.eps, max_refinements = 9)
+sinh_sinh(f, tol = sqrt(.Machine$double.eps), max_refinements = 9)
 
-exp_sinh(f, a, b, tol = .Machine$double.eps, max_refinements = 9)
+exp_sinh(f, a, b, tol = sqrt(.Machine$double.eps), max_refinements = 9)
 }
 \arguments{
 \item{f}{A function to integrate. It should accept a single numeric value and return a single numeric value.}
@@ -20,7 +20,7 @@ exp_sinh(f, a, b, tol = .Machine$double.eps, max_refinements = 9)
 
 \item{b}{The upper limit of integration.}
 
-\item{tol}{The tolerance for the approximation. Default is \code{.Machine$double.eps}.}
+\item{tol}{The tolerance for the approximation. Default is \code{sqrt(.Machine$double.eps)}.}
 
 \item{max_refinements}{The maximum number of refinements to apply. Default is 15 for tanh-sinh and 9 for sinh-sinh and exp-sinh.}
 }

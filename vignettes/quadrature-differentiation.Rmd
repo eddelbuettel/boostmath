@@ -39,8 +39,11 @@ gauss_legendre(exp, 0, 1, points = 7)
 ### [Gauss-Kronrod Quadrature](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/gauss_kronrod.html)
 
 ```{r}
-# Gauss-Kronrod integration of log(x) from 1 to 2
-gauss_kronrod(log, 1, 2, points = 5)
+# Adaptive Gauss-Kronrod integration of log(x) from 1 to 2
+gauss_kronrod(log, 1, 2, points = 15, max_depth = 10)
+
+# Non-adaptive Gauss-Kronrod integration of log(x) from 1 to 2
+gauss_kronrod(log, 1, 2, points = 15, max_depth = 0)
 ```
 
 ### [Double-Exponential Quadrature](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/double_exponential.html)

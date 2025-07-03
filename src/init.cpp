@@ -234,7 +234,7 @@ extern "C" {
   SEXP gauss_legendre_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
 
   // quadrature_and_differentiation/gauss_kronrod.cpp
-  SEXP gauss_kronrod_(SEXP f_, SEXP a_, SEXP b_, SEXP points_);
+  SEXP gauss_kronrod_(SEXP f_, SEXP a_, SEXP b_, SEXP points_, SEXP max_depth_, SEXP tol_);
 
   // quadrature_and_differentiation/numerical_differentiation.cpp
   SEXP finite_difference_derivative_(SEXP f_, SEXP x_, SEXP order_);
@@ -746,7 +746,7 @@ extern "C" {
     {"gauss_legendre_", (DL_FUNC) &gauss_legendre_, 4},
 
     // quadrature_and_differentiation/gauss_kronrod.cpp
-    {"gauss_kronrod_", (DL_FUNC) &gauss_kronrod_, 4},
+    {"gauss_kronrod_", (DL_FUNC) &gauss_kronrod_, 6},
 
     // quadrature_and_differentiation/numerical_differentiation.cpp
     {"finite_difference_derivative_", (DL_FUNC) &finite_difference_derivative_, 3},
