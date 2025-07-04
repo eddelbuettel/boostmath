@@ -25,5 +25,5 @@ expint_en(1, 2)
 expint_ei(2)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/exponential_integrals.html}{Boost Documentation} for
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/expint.html}{Boost Documentation} for
 }

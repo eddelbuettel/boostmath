@@ -122,5 +122,5 @@ f <- function(x) (x - 2)^2 + 1
 brent_find_minima(f, lower = 0, upper = 4)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/roots_and_minima.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/root_finding.html}{Boost Documentation} for more details on the mathematical background.
 }

@@ -35,5 +35,5 @@ erf_inv(0.5)
 erfc_inv(0.5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/error_functions.html}{Boost Documentation} for more details
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/sf_erf.html}{Boost Documentation} for more details
 }

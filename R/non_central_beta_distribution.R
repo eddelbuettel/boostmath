@@ -6,7 +6,7 @@
 #' @param beta second shape parameter (beta > 0)
 #' @param lambda noncentrality parameter (lambda >= 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_beta.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_beta_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Noncentral Beta distribution with shape parameters alpha = 2, beta = 3
 #' # and noncentrality parameter lambda = 1

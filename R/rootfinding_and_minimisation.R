@@ -3,7 +3,7 @@
 #' @description Functions for root-finding and minimisation using various algorithms.
 #' @details This package provides a set of functions for finding roots of equations and minimising functions using different numerical methods. The methods include bisection, bracket and solve, TOMS
 #' 748, Newton-Raphson, Halley's method, Schroder's method, and Brent's method. It also includes functions for finding roots of polynomials (quadratic, cubic, quartic) and computing minima.
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/roots_and_minima.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/root_finding.html) for more details on the mathematical background.
 #' @param f A function to find the root of or to minimise. It should take and return a single numeric value for root-finding, or a numeric vector for minimisation.
 #' @param lower The lower bound of the interval to search for the root or minimum.
 #' @param upper The upper bound of the interval to search for the root or minimum.
@@ -83,7 +83,6 @@ brent_find_minima <- function(f, lower, upper, digits = .Machine$double.digits, 
 #' @name polynomial_root_finding
 #' @description Functions for finding roots of polynomials of various degrees.
 #' @details This package provides functions to find roots of quadratic, cubic, and quartic polynomials. The functions return the roots as numeric vectors.
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/polynomials.html) for more details on the mathematical background.
 #' @param a Coefficient of the polynomial term (e.g., for quadratic ax^2 + bx + c, a is the coefficient of x^2).
 #' @param b Coefficient of the linear term (e.g., for quadratic ax^2 + bx + c, b is the coefficient of x).
 #' @param c Constant term (e.g., for quadratic ax^2 + bx + c, c is the constant).

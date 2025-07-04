@@ -69,5 +69,5 @@ jacobi_theta4m1(x, q)
 jacobi_theta4m1tau(x, tau)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/jacobi_theta.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/jacobi_theta.html}{Boost Documentation} for more details on the mathematical background.
 }

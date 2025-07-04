@@ -100,5 +100,5 @@ jacobi_zeta(0.5, pi / 4)
 heuman_lambda(0.5, pi / 4)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/elliptic_integrals.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/ellint.html}{Boost Documentation} for more details on the mathematical background.
 }

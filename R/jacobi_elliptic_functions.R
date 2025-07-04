@@ -1,7 +1,7 @@
 #' @title Jacobi Elliptic Functions
 #' @name jacobi_elliptic_functions
 #' @description Functions to compute the Jacobi elliptic functions: sn, cn, dn, and others.
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/jacobi_elliptic.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/jacobi.html) for more details on the mathematical background.
 #' @param k Elliptic modulus (0 <= k < 1)
 #' @param u Argument of the elliptic functions
 #' @examples

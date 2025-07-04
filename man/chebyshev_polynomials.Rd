@@ -56,5 +56,5 @@ chebyshev_clenshaw_recurrence(c(1, 0, -1), 0.5)
 chebyshev_clenshaw_recurrence_ab(c(1, 0, -1), 0, 1, 0.5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/chebyshev.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/sf_poly/chebyshev.html}{Boost Documentation} for more details on the mathematical background.
 }

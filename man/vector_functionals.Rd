@@ -72,5 +72,5 @@ lp_distance(c(1, -2, 3), c(4, -5, 6), 3)
 total_variation(c(1, 2, 1, 3))
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/vector_functionals.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/vector_functionals.html}{Boost Documentation} for more details on the mathematical background.
 }

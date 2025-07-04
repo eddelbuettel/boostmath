@@ -50,6 +50,3 @@ cubic_root_residual(1, -6, 11, -6, 1)
 # Example of finding cubic root condition number
 cubic_root_condition_number(1, -6, 11, -6, 1)
 }
-\seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/polynomials.html}{Boost Documentation} for more details on the mathematical background.
-}

@@ -56,5 +56,5 @@ legendre_next(2, 0.5, legendre_p(2, 0.5), legendre_p(1, 0.5))
 legendre_next_m(2, 1, 0.5, legendre_p_m(2, 1, 0.5), legendre_p_m(1, 1, 0.5))
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/legendre.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/sf_poly/legendre.html}{Boost Documentation} for more details on the mathematical background.
 }

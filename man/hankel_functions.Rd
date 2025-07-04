@@ -30,3 +30,6 @@ cyl_hankel_2(2, 0.5)
 sph_hankel_1(2, 0.5)
 sph_hankel_2(2, 0.5)
 }
+\seealso{
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/hankel.html}{Boost Documentation} for more details on the mathematical background.
+}

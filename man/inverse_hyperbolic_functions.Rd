@@ -28,5 +28,5 @@ asinh_boost(1)
 atanh_boost(0.5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/inverse_hyperbolic.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/inv_hyper.html}{Boost Documentation} for more details on the mathematical background.
 }

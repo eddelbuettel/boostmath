@@ -23,3 +23,6 @@ standard normal random variables.
 # Owens T Function
 owens_t(1, 0.5)
 }
+\seealso{
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/owens_t.html}{Boost Documentation} for more details on the mathematical background.
+}

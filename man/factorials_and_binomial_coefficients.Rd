@@ -54,5 +54,5 @@ falling_factorial(3, 2)
 binomial_coefficient(5, 2)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/special_functions/factorials_and_binomial_coefficients.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/factorials.html}{Boost Documentation} for more details on the mathematical background.
 }
