@@ -40,5 +40,5 @@ beta_lcdf(0.5, 2, 5)
 beta_quantile(0.5, 2, 5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/beta.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/beta_dist.html}{Boost Documentation} for more details on the mathematical background.
 }

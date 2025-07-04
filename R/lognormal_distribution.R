@@ -5,7 +5,7 @@
 #' @param location location parameter (default is 0)
 #' @param scale scale parameter (default is 1)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/lognormal.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/lognormal_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Log Normal distribution with location = 0, scale = 1
 #' lognormal_pdf(0)

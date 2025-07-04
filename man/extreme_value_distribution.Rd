@@ -40,5 +40,5 @@ extreme_value_lcdf(0)
 extreme_value_quantile(0.5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/extreme_value.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/extreme_dist.html}{Boost Documentation} for more details on the mathematical background.
 }

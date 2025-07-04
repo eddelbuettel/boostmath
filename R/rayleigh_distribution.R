@@ -4,7 +4,7 @@
 #' @param x quantile
 #' @param scale scale parameter (default is 1)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/rayleigh.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/rayleigh.html) for more details on the mathematical background.
 #' @examples
 #' # Rayleigh distribution with scale = 1
 #' rayleigh_pdf(1)

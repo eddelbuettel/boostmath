@@ -6,7 +6,7 @@
 #' @param n number of draws (n >= 0)
 #' @param N population size (N >= r)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/hypergeometric.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/hypergeometric_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Hypergeometric distribution with r = 5, n = 10, N = 20
 #' hypergeometric_pdf(3, 5, 10, 20)

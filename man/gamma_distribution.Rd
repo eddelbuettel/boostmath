@@ -40,5 +40,5 @@ gamma_lcdf(2, 3, 4)
 gamma_quantile(0.5, 3, 4)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/gamma.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/gamma_dist.html}{Boost Documentation} for more details on the mathematical background.
 }

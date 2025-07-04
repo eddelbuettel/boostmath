@@ -5,7 +5,7 @@
 #' @param df degrees of freedom (df > 0)
 #' @param delta noncentrality parameter (delta >= 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_t.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_t_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Noncentral T distribution with 3 degrees of freedom and noncentrality parameter 1
 #' non_central_t_pdf(0, 3, 1)

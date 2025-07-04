@@ -5,7 +5,7 @@
 #' @param successes number of successes (successes >= 0)
 #' @param success_fraction probability of success on each trial (0 <= success_fraction <= 1)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/negative_binomial.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/negative_binomial_dist.html) for more details on the mathematical background.
 #' @examples
 #' negative_binomial_pdf(3, 5, 0.5)
 #' negative_binomial_lpdf(3, 5, 0.5)

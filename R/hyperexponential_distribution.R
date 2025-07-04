@@ -5,7 +5,7 @@
 #' @param probabilities vector of probabilities (sum must be 1)
 #' @param rates vector of rates (all rates must be > 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/hyperexponential.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/hyperexponential_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Hyperexponential distribution with probabilities = c(0.5, 0.5) and rates = c(1, 2)
 #' hyperexponential_pdf(2, c(0.5, 0.5), c(1, 2))

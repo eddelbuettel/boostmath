@@ -5,9 +5,9 @@
 #' @param n number of trials (n >= 0)
 #' @param prob probability of success on each trial (0 <= prob <= 1)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/binomial.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/binomial_dist.html) for more details on the mathematical background.
 #' @examples
-#' # Binomial distribution with n = 10, prob = 0.5
+#' # Binomial dist ribution with n = 10, prob = 0.5
 #' binomial_pdf(3, 10, 0.5)
 #' binomial_lpdf(3, 10, 0.5)
 #' binomial_cdf(3, 10, 0.5)

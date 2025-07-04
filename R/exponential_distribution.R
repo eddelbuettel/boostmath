@@ -4,7 +4,7 @@
 #' @param x quantile
 #' @param lambda rate parameter (lambda > 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/exponential.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/exp_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Exponential distribution with rate parameter lambda = 2
 #' exponential_pdf(1, 2)

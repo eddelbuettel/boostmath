@@ -5,7 +5,7 @@
 #' @param lower lower bound of the distribution (default is 0)
 #' @param upper upper bound of the distribution (default is 1)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/uniform.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/uniform_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Uniform distribution with lower = 0, upper = 1
 #' uniform_pdf(0.5)

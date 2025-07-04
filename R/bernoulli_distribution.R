@@ -4,7 +4,7 @@
 #' @param x quantile (0 or 1)
 #' @param p_success probability of success (0 <= p_success <= 1)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/bernoulli.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/bernoulli_dist.html) for more details on the mathematical background.
 #' @examples
 #' bernoulli_pdf(1, 0.5)
 #' bernoulli_lpdf(1, 0.5)

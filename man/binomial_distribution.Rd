@@ -32,7 +32,7 @@ binomial_quantile(p, n, prob)
 Functions to compute the probability density function, cumulative distribution function, and quantile function for the Binomial distribution.
 }
 \examples{
-# Binomial distribution with n = 10, prob = 0.5
+# Binomial dist ribution with n = 10, prob = 0.5
 binomial_pdf(3, 10, 0.5)
 binomial_lpdf(3, 10, 0.5)
 binomial_cdf(3, 10, 0.5)
@@ -40,5 +40,5 @@ binomial_lcdf(3, 10, 0.5)
 binomial_quantile(0.5, 10, 0.5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/binomial.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/binomial_dist.html}{Boost Documentation} for more details on the mathematical background.
 }

@@ -5,7 +5,7 @@
 #' @param mu mean parameter (mu > 0)
 #' @param lambda scale (precision) parameter (lambda > 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/inverse_gaussian.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_gaussian_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Inverse Gaussian distribution with mu = 3, lambda = 4
 #' inverse_gaussian_pdf(2, 3, 4)

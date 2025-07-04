@@ -40,5 +40,5 @@ hyperexponential_lcdf(2, c(0.5, 0.5), c(1, 2))
 hyperexponential_quantile(0.5, c(0.5, 0.5), c(1, 2))
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/hyperexponential.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/hyperexponential_dist.html}{Boost Documentation} for more details on the mathematical background.
 }

@@ -6,7 +6,7 @@
 #' @param scale scale parameter (default is 1)
 #' @param shape shape parameter (default is 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/skew_normal.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Skew Normal distribution with location = 0, scale = 1, shape = 0
 #' skew_normal_pdf(0)

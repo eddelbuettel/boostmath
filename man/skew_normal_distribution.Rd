@@ -42,5 +42,5 @@ skew_normal_lcdf(0)
 skew_normal_quantile(0.5)
 }
 \seealso{
-\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/skew_normal.html}{Boost Documentation} for more details on the mathematical background.
+\href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html}{Boost Documentation} for more details on the mathematical background.
 }

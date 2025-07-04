@@ -5,7 +5,7 @@
 #' @param df degrees of freedom (df > 0)
 #' @param lambda noncentrality parameter (lambda >= 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/noncentral_chi_squared.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_chi_squared_dist.html) for more details on the mathematical background.
 #' @examples
 #' \dontrun{
 #' # Noncentral Chi-Squared distribution with 3 degrees of freedom and noncentrality

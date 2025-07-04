@@ -5,7 +5,7 @@
 #' @param df1 degrees of freedom for the numerator (df1 > 0)
 #' @param df2 degrees of freedom for the denominator (df2 > 0)
 #' @param p probability (0 <= p <= 1)
-#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/distributions/fisher_f.html) for more details on the mathematical background.
+#' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/f_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Fisher F distribution with df1 = 5, df2 = 2
 #' fisher_f_pdf(1, 5, 2)
