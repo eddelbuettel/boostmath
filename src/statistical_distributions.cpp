@@ -1,7 +1,7 @@
 #include <cpp11.hpp>
 #include <cpp11/declarations.hpp>
 #include <boost/math/distributions.hpp>
-#include "../boostmath/macros.hpp"
+#include "boostmath/macros.hpp"
 
 TERNARY_DISTRIBUTION_BOOST(arcsine, double, double, double)
 BINARY_DISTRIBUTION_BOOST(bernoulli, int, double)
