@@ -33,7 +33,7 @@ Functions to compute the probability density function, cumulative distribution f
 }
 \examples{
 # Distribution only available with Boost version 1.87.0 or later.
-if (packageVersion("BH") >= "1.87.0") {
+\dontrun{
 # Holtsmark distribution with location 0 and scale 1
   holtsmark_pdf(3)
   holtsmark_lpdf(3)

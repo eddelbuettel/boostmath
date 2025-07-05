@@ -8,7 +8,7 @@
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/holtsmark_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Distribution only available with Boost version 1.87.0 or later.
-#' if (packageVersion("BH") >= "1.87.0") {
+#' \dontrun{
 #' # Holtsmark distribution with location 0 and scale 1
 #'   holtsmark_pdf(3)
 #'   holtsmark_lpdf(3)

@@ -33,7 +33,7 @@ Functions to compute the probability density function, cumulative distribution f
 }
 \examples{
 # Distribution only available with Boost version 1.87.0 or later.
-if (packageVersion("BH") >= "1.87.0") {
+\dontrun{
 # Landau distribution with location 0 and scale 1
   landau_pdf(3)
   landau_lpdf(3)

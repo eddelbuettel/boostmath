@@ -33,7 +33,7 @@ Functions to compute the probability density function, cumulative distribution f
 }
 \examples{
 # Distribution only available with Boost version 1.87.0 or later.
-if (packageVersion("BH") >= "1.87.0") {
+\dontrun{
 # SaS Point5 distribution with location 0 and scale 1
   saspoint5_pdf(3)
   saspoint5_lpdf(3)

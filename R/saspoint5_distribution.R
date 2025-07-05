@@ -8,7 +8,7 @@
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/saspoint5_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Distribution only available with Boost version 1.87.0 or later.
-#' if (packageVersion("BH") >= "1.87.0") {
+#' \dontrun{
 #' # SaS Point5 distribution with location 0 and scale 1
 #'   saspoint5_pdf(3)
 #'   saspoint5_lpdf(3)
