@@ -38,7 +38,7 @@ QUARTERNARY_DISTRIBUTION_BOOST(triangular, double, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(uniform, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(weibull, double, double, double)
 
-#if BOOST_VERSION >= 107000
+#if BOOST_VERSION >= 108700
 TERNARY_DISTRIBUTION_BOOST(holtsmark, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(landau, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(mapairy, double, double, double)
