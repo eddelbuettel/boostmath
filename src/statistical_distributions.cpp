@@ -38,14 +38,7 @@ QUARTERNARY_DISTRIBUTION_BOOST(triangular, double, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(uniform, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(weibull, double, double, double)
 
-#if BOOST_VERSION >= 108700
 TERNARY_DISTRIBUTION_BOOST(holtsmark, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(landau, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(mapairy, double, double, double)
 TERNARY_DISTRIBUTION_BOOST(saspoint5, double, double, double)
-#else
-TERNARY_DISTRIBUTION_BOOST_MISSING(holtsmark, double, double, double)
-TERNARY_DISTRIBUTION_BOOST_MISSING(landau, double, double, double)
-TERNARY_DISTRIBUTION_BOOST_MISSING(mapairy, double, double, double)
-TERNARY_DISTRIBUTION_BOOST_MISSING(saspoint5, double, double, double)
-#endif
