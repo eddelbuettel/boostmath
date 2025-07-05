@@ -32,12 +32,15 @@ landau_quantile(p, location = 0, scale = 1)
 Functions to compute the probability density function, cumulative distribution function, and quantile function for the Landau distribution.
 }
 \examples{
+Distribution only available with Boost version 1.87.0 or later.
+if (packageVersion("BH") >= "1.87.0") {
 # Landau distribution with location 0 and scale 1
-landau_pdf(3)
-landau_lpdf(3)
-landau_cdf(3)
-landau_lcdf(3)
-landau_quantile(0.5)
+  landau_pdf(3)
+  landau_lpdf(3)
+  landau_cdf(3)
+  landau_lcdf(3)
+  landau_quantile(0.5)
+}
 }
 \seealso{
 \href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/landau_dist.html}{Boost Documentation} for more details on the mathematical background.
