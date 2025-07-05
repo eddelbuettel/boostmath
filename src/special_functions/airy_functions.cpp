@@ -9,26 +9,5 @@ UNARY_BOOST_FUNCTION(airy_ai_prime, double);
 UNARY_BOOST_FUNCTION(airy_bi_prime, double);
 UNARY_BOOST_FUNCTION(airy_ai_zero, int);
 UNARY_BOOST_FUNCTION(airy_bi_zero, int);
-
-extern "C" {
-
-  SEXP airy_ai_zero_multiple_(SEXP start_index_, SEXP number_of_zeros_) {
-    BEGIN_CPP11
-    int start_index = cpp11::as_cpp<int>(start_index_);
-    uint64_t number_of_zeros = cpp11::as_cpp<uint64_t>(number_of_zeros_);
-    std::vector<double> result(number_of_zeros);
-    boost::math::airy_ai_zero<double>(start_index, number_of_zeros, result.begin());
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-
-  SEXP airy_bi_zero_multiple_(SEXP start_index_, SEXP number_of_zeros_) {
-    BEGIN_CPP11
-    int start_index = cpp11::as_cpp<int>(start_index_);
-    uint64_t number_of_zeros = cpp11::as_cpp<uint64_t>(number_of_zeros_);
-    std::vector<double> result(number_of_zeros);
-    boost::math::airy_bi_zero<double>(start_index, number_of_zeros, result.begin());
-    return cpp11::as_sexp(result);
-    END_CPP11
-  }
-}
+BINARY_BOOST_FUNCTION_VECTOR_SUFFIX(airy_ai_zero, multiple_, uint64_t, uint64_t);
+BINARY_BOOST_FUNCTION_VECTOR_SUFFIX(airy_bi_zero, multiple_, uint64_t, uint64_t);

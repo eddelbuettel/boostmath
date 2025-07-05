@@ -317,6 +317,13 @@ extern "C" {
   SEXP geometric_logcdf_(SEXP x_, SEXP prob_);
   SEXP geometric_quantile_(SEXP p_, SEXP prob_);
 
+  // statistical_distributions/holtsmark.cpp
+  SEXP holtsmark_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP holtsmark_logpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP holtsmark_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP holtsmark_logcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP holtsmark_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
   // statistical_distributions/hyperexponential.cpp
   SEXP hyperexponential_pdf_(SEXP x_, SEXP probabilities_, SEXP rates_);
   SEXP hyperexponential_logpdf_(SEXP x_, SEXP probabilities_, SEXP rates_);
@@ -359,6 +366,13 @@ extern "C" {
   SEXP kolmogorov_smirnov_logcdf_(SEXP x_, SEXP n_);
   SEXP kolmogorov_smirnov_quantile_(SEXP p_, SEXP n_);
 
+  // statistical_distributions/landau.cpp
+  SEXP landau_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP landau_logpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP landau_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP landau_logcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP landau_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
   // statistical_distributions/laplace.cpp
   SEXP laplace_pdf_(SEXP x_, SEXP location_, SEXP scale_);
   SEXP laplace_logpdf_(SEXP x_, SEXP location_, SEXP scale_);
@@ -379,6 +393,13 @@ extern "C" {
   SEXP lognormal_cdf_(SEXP x_, SEXP location_, SEXP scale_);
   SEXP lognormal_logcdf_(SEXP x_, SEXP location_, SEXP scale_);
   SEXP lognormal_quantile_(SEXP p_, SEXP location_, SEXP scale_);
+
+  // statistical_distributions/mapairy.cpp
+  SEXP mapairy_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP mapairy_logpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP mapairy_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP mapairy_logcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP mapairy_quantile_(SEXP p_, SEXP location_, SEXP scale_);
 
   // statistical_distributions/negative_binomial.cpp
   SEXP negative_binomial_pdf_(SEXP x_, SEXP successes_, SEXP success_fraction_);
@@ -442,6 +463,13 @@ extern "C" {
   SEXP rayleigh_cdf_(SEXP x_, SEXP scale_);
   SEXP rayleigh_logcdf_(SEXP x_, SEXP scale_);
   SEXP rayleigh_quantile_(SEXP p_, SEXP scale_);
+
+  // statistical_distributions/saspoint5.cpp
+  SEXP saspoint5_pdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP saspoint5_logpdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP saspoint5_cdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP saspoint5_logcdf_(SEXP x_, SEXP location_, SEXP scale_);
+  SEXP saspoint5_quantile_(SEXP p_, SEXP location_, SEXP scale_);
 
   // statistical_distributions/skew_normal.cpp
   SEXP skew_normal_pdf_(SEXP x_, SEXP location_, SEXP scale_, SEXP shape_);
@@ -829,6 +857,13 @@ extern "C" {
     {"geometric_logcdf_", (DL_FUNC) &geometric_logcdf_, 2},
     {"geometric_quantile_", (DL_FUNC) &geometric_quantile_, 2},
 
+    // statistical_distributions/holtsmark.cpp
+    {"holtsmark_pdf_", (DL_FUNC) &holtsmark_pdf_, 3},
+    {"holtsmark_logpdf_", (DL_FUNC) &holtsmark_logpdf_, 3},
+    {"holtsmark_cdf_", (DL_FUNC) &holtsmark_cdf_, 3},
+    {"holtsmark_logcdf_", (DL_FUNC) &holtsmark_logcdf_, 3},
+    {"holtsmark_quantile_", (DL_FUNC) &holtsmark_quantile_, 3},
+
     // statistical_distributions/hyperexponential.cpp
     {"hyperexponential_pdf_", (DL_FUNC) &hyperexponential_pdf_, 3},
     {"hyperexponential_logpdf_", (DL_FUNC) &hyperexponential_logpdf_, 3},
@@ -871,6 +906,13 @@ extern "C" {
     {"kolmogorov_smirnov_logcdf_", (DL_FUNC) &kolmogorov_smirnov_logcdf_, 2},
     {"kolmogorov_smirnov_quantile_", (DL_FUNC) &kolmogorov_smirnov_quantile_, 2},
 
+    // statistical_distributions/landau.cpp
+    {"landau_pdf_", (DL_FUNC) &landau_pdf_, 3},
+    {"landau_logpdf_", (DL_FUNC) &landau_logpdf_, 3},
+    {"landau_cdf_", (DL_FUNC) &landau_cdf_, 3},
+    {"landau_logcdf_", (DL_FUNC) &landau_logcdf_, 3},
+    {"landau_quantile_", (DL_FUNC) &landau_quantile_, 3},
+
     // statistical_distributions/laplace.cpp
     {"laplace_pdf_", (DL_FUNC) &laplace_pdf_, 3},
     {"laplace_logpdf_", (DL_FUNC) &laplace_logpdf_, 3},
@@ -891,6 +933,13 @@ extern "C" {
     {"lognormal_cdf_", (DL_FUNC) &lognormal_cdf_, 3},
     {"lognormal_logcdf_", (DL_FUNC) &lognormal_logcdf_, 3},
     {"lognormal_quantile_", (DL_FUNC) &lognormal_quantile_, 3},
+
+    // statistical_distributions/mapairy.cpp
+    {"mapairy_pdf_", (DL_FUNC) &mapairy_pdf_, 3},
+    {"mapairy_logpdf_", (DL_FUNC) &mapairy_logpdf_, 3},
+    {"mapairy_cdf_", (DL_FUNC) &mapairy_cdf_, 3},
+    {"mapairy_logcdf_", (DL_FUNC) &mapairy_logcdf_, 3},
+    {"mapairy_quantile_", (DL_FUNC) &mapairy_quantile_, 3},
 
     // statistical_distributions/negative_binomial.cpp
     {"negative_binomial_pdf_", (DL_FUNC) &negative_binomial_pdf_, 3},
@@ -954,6 +1003,13 @@ extern "C" {
     {"rayleigh_cdf_", (DL_FUNC) &rayleigh_cdf_, 2},
     {"rayleigh_logcdf_", (DL_FUNC) &rayleigh_logcdf_, 2},
     {"rayleigh_quantile_", (DL_FUNC) &rayleigh_quantile_, 2},
+
+    // statistical_distributions/saspoint5.cpp
+    {"saspoint5_pdf_", (DL_FUNC) &saspoint5_pdf_, 3},
+    {"saspoint5_logpdf_", (DL_FUNC) &saspoint5_logpdf_, 3},
+    {"saspoint5_cdf_", (DL_FUNC) &saspoint5_cdf_, 3},
+    {"saspoint5_logcdf_", (DL_FUNC) &saspoint5_logcdf_, 3},
+    {"saspoint5_quantile_", (DL_FUNC) &saspoint5_quantile_, 3},
 
     // statistical_distributions/skew_normal.cpp
     {"skew_normal_pdf_", (DL_FUNC) &skew_normal_pdf_, 4},

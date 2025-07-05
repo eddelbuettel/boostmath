@@ -22,7 +22,7 @@ extern "C" {
       case n: \
         result = boost::math::quadrature::gauss<double, n>::integrate(func, a, b); \
         break;
-#define BOOST_PP_LOCAL_LIMITS (1, 100)
+#define BOOST_PP_LOCAL_LIMITS (1, 200)
 #include BOOST_PP_LOCAL_ITERATE()
     }
 

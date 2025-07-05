@@ -26,8 +26,8 @@ trapezoidal <- function(f, a, b, tol = sqrt(.Machine$double.eps), max_refinement
 #' @rdname numerical_integration
 #' @export
 gauss_legendre <- function(f, a, b, points = 7) {
-  if (points > 100) {
-    stop("points must be less than or equal to 100", call. = FALSE)
+  if (points > 200) {
+    stop("points must be less than or equal to 200", call. = FALSE)
   }
   .Call(`gauss_legendre_`, f, a, b, points)
 }
