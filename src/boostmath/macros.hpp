@@ -141,6 +141,21 @@
   TERNARY_DISTRIBUTION_BOOST_IMPL(logcdf, dist, arg1_type, arg2_type, arg3_type) \
   TERNARY_DISTRIBUTION_BOOST_IMPL(quantile, dist, double, arg2_type, arg3_type)
 
+#define TERNARY_DISTRIBUTION_BOOST_MISSING_IMPL(func, dist, arg1_type, arg2_type, arg3_type) \
+  extern "C" SEXP dist##_##func##_(SEXP x_, SEXP y_, SEXP z_) { \
+    BEGIN_CPP11 \
+    cpp11::stop("The BH package needs to be updated to at least 1.87 to use this distirbution"); \
+    return R_NilValue; \
+    END_CPP11 \
+  }
+
+#define TERNARY_DISTRIBUTION_BOOST_MISSING(dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_MISSING_IMPL(pdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_MISSING_IMPL(logpdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_MISSING_IMPL(cdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_MISSING_IMPL(logcdf, dist, arg1_type, arg2_type, arg3_type) \
+  TERNARY_DISTRIBUTION_BOOST_MISSING_IMPL(quantile, dist, double, arg2_type, arg3_type)
+
 #define QUARTERNARY_DISTRIBUTION_BOOST_IMPL(func, dist, arg1_type, arg2_type, arg3_type, arg4_type) \
   extern "C" SEXP dist##_##func##_(SEXP x_, SEXP y_, SEXP z_, SEXP w_) { \
     BEGIN_CPP11 \
