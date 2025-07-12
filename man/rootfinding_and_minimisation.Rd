@@ -103,9 +103,12 @@ f <- function(x) x^2 - 2
 bisect(f, lower = 0, upper = 2)
 bracket_and_solve_root(f, guess = 1, factor = 0.1, rising = TRUE)
 toms748_solve(f, lower = 0, upper = 2)
+f <- function(x) c(x^2 - 2, 2 * x)
 newton_raphson_iterate(f, guess = 1, lower = 0, upper = 2)
+f <- function(x) c(x^2 - 2, 2 * x, 2)
 halley_iterate(f, guess = 1, lower = 0, upper = 2)
 schroder_iterate(f, guess = 1, lower = 0, upper = 2)
+f <- function(x) (x - 2)^2 + 1
 brent_find_minima(f, lower = 0, upper = 4)
 }
 \seealso{
