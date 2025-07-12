@@ -37,6 +37,9 @@ airy_bi_zero_multiple(start_index, number_of_zeros)
 
 \item{number_of_zeros}{The number of zeros to find.}
 }
+\value{
+Single numeric value for the Airy functions and their derivatives, or a vector of length \code{number_of_zeros} for the multiple zero functions.
+}
 \description{
 Functions to compute the Airy functions Ai and Bi, their derivatives, and their zeros.
 }

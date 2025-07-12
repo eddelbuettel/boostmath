@@ -22,6 +22,9 @@ spherical_harmonic_i(n, m, theta, phi)
 
 \item{phi}{Azimuthal angle (longitude)}
 }
+\value{
+A single complex value with the computed spherical harmonic function, or its real and imaginary parts.
+}
 \description{
 Functions to compute spherical harmonics and related functions.
 }

@@ -9,6 +9,7 @@
 #' @param k Elliptic modulus (for incomplete elliptic integrals)
 #' @param n Characteristic (for incomplete elliptic integrals of the third kind)
 #' @param phi Amplitude (for incomplete elliptic integrals)
+#' @return A single numeric value with the computed elliptic integral.
 #' @examples
 #' # Carlson's elliptic integral Rf with parameters x = 1, y = 2, z = 3
 #' ellint_rf(1, 2, 3)

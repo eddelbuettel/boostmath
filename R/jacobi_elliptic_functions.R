@@ -4,6 +4,7 @@
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/jacobi.html) for more details on the mathematical background.
 #' @param k Elliptic modulus (0 <= k < 1)
 #' @param u Argument of the elliptic functions
+#' @return For `jacobi_elliptic`, a list containing the values of the Jacobi elliptic functions: `sn`, `cn`, `dn`. For individual functions, a single numeric value is returned.
 #' @examples
 #' # Jacobi Elliptic Functions
 #' k <- 0.5

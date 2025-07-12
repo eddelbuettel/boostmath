@@ -15,6 +15,9 @@ expint_ei(z)
 
 \item{z}{Argument of the integral (for En and Ei)}
 }
+\value{
+A single numeric value with the computed exponential integral.
+}
 \description{
 Functions to compute various exponential integrals, including En and Ei.
 }

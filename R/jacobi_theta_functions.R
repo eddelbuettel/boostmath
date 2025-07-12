@@ -5,6 +5,7 @@
 #' @param x Input value
 #' @param q The nome parameter of the Jacobi theta function (0 < q < 1)
 #' @param tau The nome parameter of the Jacobi theta function (tau = u + iv, where u and v are real numbers)
+#' @return A single numeric value with the computed Jacobi theta function.
 #' @examples
 #' # Jacobi Theta Functions
 #' x <- 0.5

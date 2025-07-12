@@ -21,6 +21,9 @@ erfc_inv(p)
 
 \item{p}{Probability value (0 <= p <= 1)}
 }
+\value{
+A single numeric value with the computed error function, complementary error function, or their inverses.
+}
 \description{
 Functions to compute the error function, complementary error function, and their inverses.
 }

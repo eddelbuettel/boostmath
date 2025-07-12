@@ -35,6 +35,9 @@ gauss_kronrod(
 
 \item{max_depth}{Sets the maximum number of interval splittings for Gauss-Kronrod permitted before stopping. Set this to zero for non-adaptive quadrature.}
 }
+\value{
+A single numeric value with the computed integral.
+}
 \description{
 Functions for numerical integration using various methods such as trapezoidal rule, Gauss-Legendre quadrature, and Gauss-Kronrod quadrature.
 }

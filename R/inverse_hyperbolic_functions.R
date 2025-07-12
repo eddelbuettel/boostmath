@@ -3,6 +3,7 @@
 #' @description Functions to compute the inverse hyperbolic functions: acosh, asinh, and atanh.
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/inv_hyper.html) for more details on the mathematical background.
 #' @param x Input numeric value
+#' @return A single numeric value with the computed inverse hyperbolic function.
 #' @examples
 #' # Inverse Hyperbolic Cosine
 #' acosh_boost(2)

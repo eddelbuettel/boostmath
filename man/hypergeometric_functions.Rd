@@ -36,6 +36,9 @@ hypergeometric_pFq(a, b, z)
 
 \item{a2}{Second parameter of the hypergeometric function}
 }
+\value{
+A single numeric value with the computed hypergeometric function.
+}
 \description{
 Functions to compute various hypergeometric functions.
 }

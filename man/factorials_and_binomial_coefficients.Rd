@@ -34,6 +34,9 @@ binomial_coefficient(n, k)
 
 \item{k}{Number of elements to choose for binomial coefficients.}
 }
+\value{
+A single numeric value with the computed factorial, double factorial, rising factorial, falling factorial, or binomial coefficient.
+}
 \description{
 Functions to compute factorials, double factorials, rising and falling factorials, and binomial coefficients.
 }

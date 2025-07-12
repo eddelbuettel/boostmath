@@ -27,6 +27,9 @@ jacobi_derivative(n, alpha, beta, x, k)
 
 \item{k}{Order of the derivative}
 }
+\value{
+A single numeric value with the computed Jacobi polynomial, its derivative, or k-th derivative.
+}
 \description{
 Functions to compute Jacobi polynomials, their derivatives, and related functions.
 }

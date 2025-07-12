@@ -37,6 +37,9 @@ chebyshev_clenshaw_recurrence_ab(c, a, b, x)
 
 \item{b}{Upper bound of the interval}
 }
+\value{
+A single numeric value with the computed Chebyshev polynomial, its derivative, or related functions.
+}
 \description{
 Functions to compute Chebyshev polynomials of the first and second kind.
 }

@@ -43,6 +43,9 @@ unchecked_fibonacci(n)
 
 \item{number_of_tangent_t2n}{The number of tangent numbers to compute}
 }
+\value{
+A single numeric value for the Bernoulli numbers, tangent numbers, fibonacci numbers, or prime numbers, or a vector of values for ranges.
+}
 \description{
 Functions to compute Bernoulli numbers, tangent numbers, fibonacci numbers, and prime numbers.
 }

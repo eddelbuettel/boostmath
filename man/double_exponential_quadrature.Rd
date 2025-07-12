@@ -24,6 +24,9 @@ exp_sinh(f, a, b, tol = sqrt(.Machine$double.eps), max_refinements = 9)
 
 \item{max_refinements}{The maximum number of refinements to apply. Default is 15 for tanh-sinh and 9 for sinh-sinh and exp-sinh.}
 }
+\value{
+A single numeric value with the computed integral.
+}
 \description{
 Functions for numerical integration using double exponential quadrature methods such as tanh-sinh, sinh-sinh, and exp-sinh quadrature.
 }

@@ -99,26 +99,13 @@ This package provides a set of functions for finding roots of equations and mini
 748, Newton-Raphson, Halley's method, Schroder's method, and Brent's method. It also includes functions for finding roots of polynomials (quadratic, cubic, quartic) and computing minima.
 }
 \examples{
-# Example of finding a root using bisection method
 f <- function(x) x^2 - 2
 bisect(f, lower = 0, upper = 2)
-#' # Example of finding a root using bracket and solve method
-f <- function(x) x^2 - 2
 bracket_and_solve_root(f, guess = 1, factor = 0.1, rising = TRUE)
-# Example of finding a root using TOMS 748 algorithm
-f <- function(x) x^2 - 2
 toms748_solve(f, lower = 0, upper = 2)
-# Example of finding a root using Newton-Raphson method
-f <- function(x) c(x^2 - 2, 2 * x)
 newton_raphson_iterate(f, guess = 1, lower = 0, upper = 2)
-# Example of finding a root using Halley's method
-f <- function(x) c(x^2 - 2, 2 * x, 2)
 halley_iterate(f, guess = 1, lower = 0, upper = 2)
-# Example of finding a root using Schroder's method
-f <- function(x) c(x^2 - 2, 2 * x, 2)
 schroder_iterate(f, guess = 1, lower = 0, upper = 2)
-# Example of finding a minimum using Brent's method
-f <- function(x) (x - 2)^2 + 1
 brent_find_minima(f, lower = 0, upper = 4)
 }
 \seealso{

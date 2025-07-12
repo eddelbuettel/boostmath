@@ -8,6 +8,7 @@
 #' @param tol The tolerance for the approximation. Default is `sqrt(.Machine$double.eps)`.
 #' @param max_refinements The maximum number of refinements to apply. Default is 12.
 #' @param points The number of evaluation points to use in the Gauss-Legendre or Gauss-Kronrod quadrature.
+#' @return A single numeric value with the computed integral.
 #' @examples
 #' # Trapezoidal rule integration of sin(x) from 0 to pi
 #' trapezoidal(sin, 0, pi)
@@ -78,6 +79,7 @@ complex_step_derivative <- function(f, x) {
 #' @param b The upper limit of integration.
 #' @param tol The tolerance for the approximation. Default is `sqrt(.Machine$double.eps)`.
 #' @param max_refinements The maximum number of refinements to apply. Default is 15 for tanh-sinh and 9 for sinh-sinh and exp-sinh.
+#' @return A single numeric value with the computed integral.
 #' @examples
 #' # Tanh-sinh quadrature of log(x) from 0 to 1
 #' tanh_sinh(function(x) { log(x) * log1p(-x) }, a = 0, b = 1)
@@ -115,6 +117,7 @@ exp_sinh <- function(f, a, b, tol = sqrt(.Machine$double.eps), max_refinements =
 #' @param omega The frequency parameter for the sine integral.
 #' @param relative_error_tolerance The relative error tolerance for the approximation.
 #' @param levels The number of levels of refinement to apply. Default is 8.
+#' @return A single numeric value with the computed Fourier sine or cosine integral, with attribute 'relative_error' indicating the relative error of the approximation.
 #' @examples
 #' # Fourier sine integral of sin(x) with omega = 1
 #' ooura_fourier_sin(function(x) { 1 / x }, omega = 1)

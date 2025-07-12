@@ -4,6 +4,7 @@
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/lambert_w.html)
 #' for more details on the mathematical background.
 #' @param z Argument of the Lambert W function
+#' @return A single numeric value with the computed Lambert W function or its derivative.
 #' @examples
 #' # Lambert W Function (Principal Branch)
 #' lambert_w0(0.3)

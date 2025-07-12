@@ -47,6 +47,9 @@ jacobi_theta4m1tau(x, tau)
 
 \item{tau}{The nome parameter of the Jacobi theta function (tau = u + iv, where u and v are real numbers)}
 }
+\value{
+A single numeric value with the computed Jacobi theta function.
+}
 \description{
 Functions to compute the Jacobi theta functions \eqn{(\theta_1, \theta_2, \theta_3, \theta_4)} parameterised by either \eqn{(q)} or \eqn{(\tau)}.
 }

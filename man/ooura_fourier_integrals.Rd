@@ -30,6 +30,9 @@ return a single numeric value.}
 
 \item{levels}{The number of levels of refinement to apply. Default is 8.}
 }
+\value{
+A single numeric value with the computed Fourier sine or cosine integral, with attribute 'relative_error' indicating the relative error of the approximation.
+}
 \description{
 Computing Fourier sine and cosine integrals using Ooura's method.
 }

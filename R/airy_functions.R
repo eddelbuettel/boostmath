@@ -5,6 +5,7 @@
 #' @param m The index of the zero to find (1-based).
 #' @param start_index The starting index for the zeros (1-based).
 #' @param number_of_zeros The number of zeros to find.
+#' @return Single numeric value for the Airy functions and their derivatives, or a vector of length `number_of_zeros` for the multiple zero functions.
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/airy.html) for more details on the mathematical background.
 #' @examples
 #' airy_ai(2)

@@ -36,6 +36,9 @@ rsqrt(x)
 
 \item{y}{Second input numeric value (for power and hypotenuse functions)}
 }
+\value{
+A single numeric value with the computed result of the function.
+}
 \description{
 Functions to compute sine, cosine, logarithm, exponential, cube root, square root, power, hypotenuse, and inverse square root.
 }

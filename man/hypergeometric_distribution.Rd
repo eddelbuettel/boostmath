@@ -30,6 +30,9 @@ hypergeometric_quantile(p, r, n, N)
 
 \item{p}{probability (0 <= p <= 1)}
 }
+\value{
+A single numeric value with the computed probability density, log-probability density, cumulative distribution, log-cumulative distribution, or quantile depending on the function called.
+}
 \description{
 Functions to compute the probability density function, cumulative distribution function, and quantile function for the Hypergeometric distribution.
 }

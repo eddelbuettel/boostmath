@@ -19,6 +19,9 @@ lambert_wm1_prime(z)
 \arguments{
 \item{z}{Argument of the Lambert W function}
 }
+\value{
+A single numeric value with the computed Lambert W function or its derivative.
+}
 \description{
 Functions to compute the Lambert W function and its derivatives for the principal branch (\eqn{W_0}) and the branch -1 (\eqn{W_{-1}}).
 }

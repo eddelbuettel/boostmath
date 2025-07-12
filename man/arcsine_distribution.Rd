@@ -28,6 +28,9 @@ arcsine_quantile(p, x_min = 0, x_max = 1)
 
 \item{p}{probability}
 }
+\value{
+A single numeric value with the computed probability density, log-probability density, cumulative distribution, log-cumulative distribution, or quantile depending on the function called.
+}
 \description{
 Functions to compute the probability density function, cumulative distribution function, and quantile function for the arcsine distribution.
 }

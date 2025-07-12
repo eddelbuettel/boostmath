@@ -3,6 +3,7 @@
 #' @description Functions to compute the sinus cardinal function and hyperbolic sinus cardinal function.
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/sinc.html) for more details on the mathematical background.
 #' @param x Input value
+#' @return A single numeric value with the computed sinus cardinal or hyperbolic sinus cardinal function.
 #' @examples
 #' # Sinus cardinal function
 #' sinc_pi(0.5)

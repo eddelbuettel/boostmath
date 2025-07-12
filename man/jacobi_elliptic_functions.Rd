@@ -48,6 +48,9 @@ jacobi_sn(k, u)
 
 \item{u}{Argument of the elliptic functions}
 }
+\value{
+For \code{jacobi_elliptic}, a list containing the values of the Jacobi elliptic functions: \code{sn}, \code{cn}, \code{dn}. For individual functions, a single numeric value is returned.
+}
 \description{
 Functions to compute the Jacobi elliptic functions: sn, cn, dn, and others.
 }

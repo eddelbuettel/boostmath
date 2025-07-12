@@ -7,6 +7,7 @@
 #' @param m The index of the zero to find (1-based).
 #' @param start_index The starting index for the zeros (1-based).
 #' @param number_of_zeros The number of zeros to find.
+#' @return Single numeric value for the Bessel functions and their derivatives, or a vector of length `number_of_zeros` for the multiple zero functions.
 #' @examples
 #' # Bessel function of the first kind J_0(1)
 #' cyl_bessel_j(0, 1)

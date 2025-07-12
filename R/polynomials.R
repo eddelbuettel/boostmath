@@ -7,6 +7,7 @@
 #' @param x Argument of the polynomial
 #' @param Pl Value of the Legendre polynomial \eqn{(P_l(x))}
 #' @param Plm1 Value of the Legendre polynomial \eqn{(P_{l-1}(x))}
+#' @return A single numeric value with the computed Legendre polynomial, its derivative, zeros, or related functions.
 #' @examples
 #' # Legendre polynomial of the first kind P_2(0.5)
 #' legendre_p(2, 0.5)
@@ -75,6 +76,7 @@ legendre_next_m <- function(n, m, x, Pl, Plm1) {
 #' @param x Argument of the polynomial
 #' @param Ln Value of the Laguerre polynomial \eqn{(L_n(x))}
 #' @param Lnm1 Value of the Laguerre polynomial \eqn{(L_{n-1}(x))}
+#' @return A single numeric value with the computed Laguerre polynomial, its derivative, or related functions.
 #' @examples
 #' # Laguerre polynomial of the first kind L_2(0.5)
 #' laguerre(2, 0.5)
@@ -118,6 +120,7 @@ laguerre_next_m <- function(n, m, x, Ln, Lnm1) {
 #' @param x Argument of the polynomial
 #' @param Hn Value of the Hermite polynomial \eqn{(H_n(x))}
 #' @param Hnm1 Value of the Hermite polynomial \eqn{(H_{n-1}(x))}
+#' @return A single numeric value with the computed Hermite polynomial or its next value.
 #' @examples
 #' # Hermite polynomial H_2(0.5)
 #' hermite(2, 0.5)
@@ -148,6 +151,7 @@ hermite_next <- function(n, x, Hn, Hnm1) {
 #' @param c Coefficients of the Chebyshev polynomial
 #' @param a Lower bound of the interval
 #' @param b Upper bound of the interval
+#' @return A single numeric value with the computed Chebyshev polynomial, its derivative, or related functions.
 #' @examples
 #' # Chebyshev polynomial of the first kind T_2(0.5)
 #' chebyshev_t(2, 0.5)
@@ -208,6 +212,7 @@ chebyshev_clenshaw_recurrence_ab <- function(c, a, b, x) {
 #' @param m Order of the spherical harmonic
 #' @param theta Polar angle (colatitude)
 #' @param phi Azimuthal angle (longitude)
+#' @return A single complex value with the computed spherical harmonic function, or its real and imaginary parts.
 #' @examples
 #' # Spherical harmonic function Y_2^1(0.5, 0.5)
 #' spherical_harmonic(2, 1, 0.5, 0.5)
@@ -243,6 +248,7 @@ spherical_harmonic_i <- function(n, m, theta, phi) {
 #' @param lambda Parameter of the polynomial
 #' @param x Argument of the polynomial
 #' @param k Order of the derivative
+#' @return A single numeric value with the computed Gegenbauer polynomial, its derivative, or k-th derivative.
 #' @examples
 #' # Gegenbauer polynomial C_2^(1)(0.5)
 #' gegenbauer(2, 1, 0.5)
@@ -279,6 +285,7 @@ gegenbauer_derivative <- function(n, lambda, x, k) {
 #' @param beta Second parameter of the polynomial
 #' @param x Argument of the polynomial
 #' @param k Order of the derivative
+#' @return A single numeric value with the computed Jacobi polynomial, its derivative, or k-th derivative.
 #' @examples
 #' # Jacobi polynomial P_2^(1, 2)(0.5)
 #' jacobi(2, 1, 2, 0.5)

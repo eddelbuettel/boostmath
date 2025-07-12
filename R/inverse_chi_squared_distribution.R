@@ -5,6 +5,7 @@
 #' @param df degrees of freedom (df > 0)
 #' @param scale scale parameter (default is 1)
 #' @param p probability (0 <= p <= 1)
+#' @return A single numeric value with the computed probability density, log-probability density, cumulative distribution, log-cumulative distribution, or quantile depending on the function called.
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_chi_squared_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Inverse Chi-Squared distribution with 3 degrees of freedom, scale = 1

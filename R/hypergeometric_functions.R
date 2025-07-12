@@ -7,6 +7,7 @@
 #' @param z Argument of the hypergeometric function
 #' @param a1 First parameter of the hypergeometric function
 #' @param a2 Second parameter of the hypergeometric function
+#' @return A single numeric value with the computed hypergeometric function.
 #' @examples
 #' # Hypergeometric Function 1F0
 #' hypergeometric_1F0(2, 0.2)

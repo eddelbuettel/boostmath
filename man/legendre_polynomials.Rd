@@ -36,6 +36,9 @@ legendre_next_m(n, m, x, Pl, Plm1)
 
 \item{Plm1}{Value of the Legendre polynomial \eqn{(P_{l-1}(x))}}
 }
+\value{
+A single numeric value with the computed Legendre polynomial, its derivative, zeros, or related functions.
+}
 \description{
 Functions to compute Legendre polynomials of the first and second kind, their derivatives, zeros, and related functions.
 }

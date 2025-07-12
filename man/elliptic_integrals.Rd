@@ -64,6 +64,9 @@ heuman_lambda(k, phi)
 
 \item{n}{Characteristic (for incomplete elliptic integrals of the third kind)}
 }
+\value{
+A single numeric value with the computed elliptic integral.
+}
 \description{
 Functions to compute various elliptic integrals, including Carlson's elliptic integrals and incomplete elliptic integrals.
 }

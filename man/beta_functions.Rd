@@ -51,6 +51,9 @@ ibeta_derivative(a, b, x)
 
 \item{q}{Probability value (0 <= q <= 1)}
 }
+\value{
+A single numeric value with the computed beta function, normalised incomplete beta function, or their complements, depending on the function called.
+}
 \description{
 Functions to compute the Euler beta function, normalised incomplete beta function, and their complements, as well as their inverses and derivatives.
 }

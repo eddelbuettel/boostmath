@@ -19,6 +19,9 @@ hermite_next(n, x, Hn, Hnm1)
 
 \item{Hnm1}{Value of the Hermite polynomial \eqn{(H_{n-1}(x))}}
 }
+\value{
+A single numeric value with the computed Hermite polynomial or its next value.
+}
 \description{
 Functions to compute Hermite polynomials.
 }

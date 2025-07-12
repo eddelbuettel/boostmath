@@ -5,6 +5,7 @@
 #' @param probabilities vector of probabilities (sum must be 1)
 #' @param rates vector of rates (all rates must be > 0)
 #' @param p probability (0 <= p <= 1)
+#' @return A single numeric value with the computed probability density, log-probability density, cumulative distribution, log-cumulative distribution, or quantile depending on the function called.
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/dist_ref/dists/hyperexponential_dist.html) for more details on the mathematical background.
 #' @examples
 #' # Hyperexponential distribution with probabilities = c(0.5, 0.5) and rates = c(1, 2)

@@ -3,6 +3,7 @@
 #' @description Functions to compute sine, cosine, logarithm, exponential, cube root, square root, power, hypotenuse, and inverse square root.
 #' @param x Input numeric value
 #' @param y Second input numeric value (for power and hypotenuse functions)
+#' @return A single numeric value with the computed result of the function.
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/powers.html)) for more details on the mathematical background.
 #' @examples
 #' # sin(pi * 0.5)

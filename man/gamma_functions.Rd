@@ -70,6 +70,9 @@ gamma_p_derivative(a, z)
 
 \item{p}{Probability value for the incomplete gamma functions}
 }
+\value{
+A single numeric value with the computed gamma function, logarithm, digamma, trigamma, polygamma, or incomplete gamma functions.
+}
 \description{
 Functions to compute the gamma function, its logarithm, digamma, trigamma, polygamma, and various incomplete gamma functions.
 }

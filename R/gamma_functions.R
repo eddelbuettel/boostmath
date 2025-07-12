@@ -9,6 +9,7 @@
 #' @param delta Increment for the ratio of gamma functions
 #' @param q Probability value for the incomplete gamma functions
 #' @param p Probability value for the incomplete gamma functions
+#' @return A single numeric value with the computed gamma function, logarithm, digamma, trigamma, polygamma, or incomplete gamma functions.
 #' @examples
 #' \dontrun{
 #' # Gamma function for z = 5

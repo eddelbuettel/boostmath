@@ -16,6 +16,9 @@ atanh_boost(x)
 \arguments{
 \item{x}{Input numeric value}
 }
+\value{
+A single numeric value with the computed inverse hyperbolic function.
+}
 \description{
 Functions to compute the inverse hyperbolic functions: acosh, asinh, and atanh.
 }

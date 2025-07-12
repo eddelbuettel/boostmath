@@ -13,6 +13,9 @@ sinhc_pi(x)
 \arguments{
 \item{x}{Input value}
 }
+\value{
+A single numeric value with the computed sinus cardinal or hyperbolic sinus cardinal function.
+}
 \description{
 Functions to compute the sinus cardinal function and hyperbolic sinus cardinal function.
 }

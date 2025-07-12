@@ -27,6 +27,9 @@ laguerre_next_m(n, m, x, Ln, Lnm1)
 
 \item{Lnm1}{Value of the Laguerre polynomial \eqn{(L_{n-1}(x))}}
 }
+\value{
+A single numeric value with the computed Laguerre polynomial, its derivative, or related functions.
+}
 \description{
 Functions to compute Laguerre polynomials of the first kind.
 }

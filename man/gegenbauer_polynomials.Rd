@@ -22,6 +22,9 @@ gegenbauer_derivative(n, lambda, x, k)
 
 \item{k}{Order of the derivative}
 }
+\value{
+A single numeric value with the computed Gegenbauer polynomial, its derivative, or k-th derivative.
+}
 \description{
 Functions to compute Gegenbauer polynomials, their derivatives, and related functions.
 }

@@ -63,6 +63,9 @@ sph_neumann_prime(v, x)
 
 \item{number_of_zeros}{The number of zeros to find.}
 }
+\value{
+Single numeric value for the Bessel functions and their derivatives, or a vector of length \code{number_of_zeros} for the multiple zero functions.
+}
 \description{
 Functions to compute Bessel functions of the first and second kind, their modified versions, spherical Bessel functions, and their derivatives and zeros.
 }

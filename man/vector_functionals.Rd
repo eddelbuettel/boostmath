@@ -44,6 +44,9 @@ total_variation(x)
 
 \item{p}{A positive integer indicating the order of the norm or distance (for Lp functions).}
 }
+\value{
+A single numeric value with the computed norm or distance.
+}
 \description{
 Functions to compute various vector norms and distances.
 }

@@ -21,6 +21,9 @@ sph_hankel_2(v, x)
 
 \item{x}{Argument of the Hankel function}
 }
+\value{
+A single complex value with the computed Hankel function.
+}
 \description{
 Functions to compute cyclic and spherical Hankel functions of the first and second kinds.
 }

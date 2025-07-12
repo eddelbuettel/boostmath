@@ -6,6 +6,7 @@
 #' @param x Base value for rising and falling factorials.
 #' @param n Total number of elements for binomial coefficients.
 #' @param k Number of elements to choose for binomial coefficients.
+#' @return A single numeric value with the computed factorial, double factorial, rising factorial, falling factorial, or binomial coefficient.
 #' @examples
 #' # Factorial of 5
 #' factorial_boost(5)

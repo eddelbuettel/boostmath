@@ -5,6 +5,7 @@
 #' @param x A numeric vector.
 #' @param y A numeric vector of the same length as `x` (for distance functions).
 #' @param p A positive integer indicating the order of the norm or distance (for Lp functions).
+#' @return A single numeric value with the computed norm or distance.
 #' @examples
 #' # L0 Pseudo Norm
 #' l0_pseudo_norm(c(1, 0, 2, 0, 3))
