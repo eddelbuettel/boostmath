@@ -101,6 +101,7 @@ jobs:
         with:
           upload-snapshots: true
           check-dir: '"check"'
+          args: "--as-cran"
 
       - name: Check WASM build
         if: matrix.config.os == 'wasm'
