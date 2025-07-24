@@ -5,7 +5,6 @@
 \alias{beta_boost}
 \alias{ibeta}
 \alias{ibetac}
-\alias{beta_incomplete}
 \alias{betac}
 \alias{ibeta_inv}
 \alias{ibetac_inv}
@@ -16,13 +15,11 @@
 \alias{ibeta_derivative}
 \title{Beta Functions}
 \usage{
-beta_boost(a, b)
+beta_boost(a, b, x = NULL)
 
 ibeta(a, b, x)
 
 ibetac(a, b, x)
-
-beta_incomplete(a, b, x)
 
 betac(a, b, x)
 
@@ -66,7 +63,7 @@ ibeta(2, 3, 0.5)
 # Normalised complement of the incomplete beta function 1 - I_x(2, 3) for x = 0.5
 ibetac(2, 3, 0.5)
 # Full incomplete beta function B_x(2, 3) for x = 0.5
-beta_incomplete(2, 3, 0.5)
+beta_boost(2, 3, 0.5)
 # Full complement of the incomplete beta function 1 - B_x(2, 3) for x = 0.5
 betac(2, 3, 0.5)
 # Inverse of the normalised incomplete beta function I_x(2, 3) = 0.5

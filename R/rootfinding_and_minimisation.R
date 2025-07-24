@@ -79,6 +79,7 @@ brent_find_minima <- function(f, lower, upper, digits = .Machine$double.digits, 
 #' @param d Coefficient of the cubic term (for cubic ax^3 + bx^2 + cx + d, d is the constant).
 #' @param e Coefficient of the quartic term (for quartic ax^4 + bx^3 + cx^2 + dx + e, e is the constant).
 #' @param root The root to evaluate the residual or condition number at.
+#' @return A numeric vector of the polynomial roots, residual, or condition number.
 #' @examples
 #' # Example of finding quadratic roots
 #' quadratic_roots(1, -3, 2)

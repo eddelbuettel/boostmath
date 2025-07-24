@@ -7,13 +7,9 @@
 \alias{ellint_rj}
 \alias{ellint_rc}
 \alias{ellint_rg}
-\alias{ellint_1_incomplete}
 \alias{ellint_1}
-\alias{ellint_2_incomplete}
 \alias{ellint_2}
-\alias{ellint_3_incomplete}
 \alias{ellint_3}
-\alias{ellint_d_incomplete}
 \alias{ellint_d}
 \alias{jacobi_zeta}
 \alias{heuman_lambda}
@@ -29,21 +25,13 @@ ellint_rc(x, y)
 
 ellint_rg(x, y, z)
 
-ellint_1_incomplete(k, phi)
+ellint_1(k, phi = NULL)
 
-ellint_1(k)
+ellint_2(k, phi = NULL)
 
-ellint_2_incomplete(k, phi)
+ellint_3(k, n, phi = NULL)
 
-ellint_2(k)
-
-ellint_3_incomplete(k, n, phi)
-
-ellint_3(k, n)
-
-ellint_d_incomplete(k, phi)
-
-ellint_d(k)
+ellint_d(k, phi = NULL)
 
 jacobi_zeta(k, phi)
 
@@ -82,19 +70,19 @@ ellint_rc(1, 2)
 # Carlson's elliptic integral Rg with parameters x = 1, y = 2, z = 3
 ellint_rg(1, 2, 3)
 # Incomplete elliptic integral of the first kind with k = 0.5, phi = pi/4
-ellint_1_incomplete(0.5, pi / 4)
+ellint_1(0.5, pi / 4)
 # Complete elliptic integral of the first kind
 ellint_1(0.5)
 # Incomplete elliptic integral of the second kind with k = 0.5, phi = pi/4
-ellint_2_incomplete(0.5, pi / 4)
+ellint_2(0.5, pi / 4)
 # Complete elliptic integral of the second kind
 ellint_2(0.5)
 # Incomplete elliptic integral of the third kind with k = 0.5, n = 0.5, phi = pi/4
-ellint_3_incomplete(0.5, 0.5, pi / 4)
+ellint_3(0.5, 0.5, pi / 4)
 # Complete elliptic integral of the third kind with k = 0.5, n = 0.5
 ellint_3(0.5, 0.5)
 # Incomplete elliptic integral D with k = 0.5, phi = pi/4
-ellint_d_incomplete(0.5, pi / 4)
+ellint_d(0.5, pi / 4)
 # Complete elliptic integral D
 ellint_d(0.5)
 # Jacobi zeta function with k = 0.5, phi = pi/4

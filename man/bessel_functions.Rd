@@ -6,8 +6,6 @@
 \alias{cyl_neumann}
 \alias{cyl_bessel_j_zero}
 \alias{cyl_neumann_zero}
-\alias{cyl_bessel_j_zero_multiple}
-\alias{cyl_neumann_zero_multiple}
 \alias{cyl_bessel_i}
 \alias{cyl_bessel_k}
 \alias{sph_bessel}
@@ -24,13 +22,9 @@ cyl_bessel_j(v, x)
 
 cyl_neumann(v, x)
 
-cyl_bessel_j_zero(v, m)
+cyl_bessel_j_zero(v, m = NULL, start_index = NULL, number_of_zeros = NULL)
 
-cyl_neumann_zero(v, m)
-
-cyl_bessel_j_zero_multiple(v, start_index, number_of_zeros)
-
-cyl_neumann_zero_multiple(v, start_index, number_of_zeros)
+cyl_neumann_zero(v, m = NULL, start_index = NULL, number_of_zeros = NULL)
 
 cyl_bessel_i(v, x)
 
@@ -99,9 +93,9 @@ cyl_bessel_j_zero(0, 1)
 # Finding the first zero of the Bessel function of the second kind Y_0
 cyl_neumann_zero(0, 1)
 # Finding multiple zeros of the Bessel function of the first kind J_0 starting from index 1
-cyl_bessel_j_zero_multiple(0, 1, 5)
+cyl_bessel_j_zero(0, start_index = 1, number_of_zeros = 5)
 # Finding multiple zeros of the Bessel function of the second kind Y_0 starting from index 1
-cyl_neumann_zero_multiple(0, 1, 5)
+cyl_neumann_zero(0, start_index = 1, number_of_zeros = 5)
 }
 \seealso{
 \href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/bessel.html}{Boost Documentation} for more details on the mathematical background.

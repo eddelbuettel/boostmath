@@ -127,12 +127,12 @@ NULL
 
 #' @rdname ooura_fourier_integrals
 #' @export
-ooura_fourier_sin <- function(f, omega = 1, relative_error_tolerance = sqrt(sqrt(.Machine$double.eps)), levels = 8) {
+ooura_fourier_sin <- function(f, omega = 1, relative_error_tolerance = sqrt(.Machine$double.eps), levels = 8) {
   .Call(`ooura_fourier_sin_`, f, omega, relative_error_tolerance, levels)
 }
 
 #' @rdname ooura_fourier_integrals
 #' @export
-ooura_fourier_cos <- function(f, omega = 1, relative_error_tolerance = sqrt(sqrt(.Machine$double.eps)), levels = 8) {
+ooura_fourier_cos <- function(f, omega = 1, relative_error_tolerance = sqrt(.Machine$double.eps), levels = 8) {
   .Call(`ooura_fourier_cos_`, f, omega, relative_error_tolerance, levels)
 }

@@ -5,26 +5,20 @@
 \alias{bernoulli_b2n}
 \alias{max_bernoulli_b2n}
 \alias{unchecked_bernoulli_b2n}
-\alias{bernoulli_b2n_range}
 \alias{tangent_t2n}
-\alias{tangent_t2n_range}
 \alias{prime}
 \alias{max_prime}
 \alias{fibonacci}
 \alias{unchecked_fibonacci}
 \title{Number Series}
 \usage{
-bernoulli_b2n(n)
+bernoulli_b2n(n = NULL, start_index = NULL, number_of_bernoullis_b2n = NULL)
 
 max_bernoulli_b2n()
 
 unchecked_bernoulli_b2n(n)
 
-bernoulli_b2n_range(start_index, number_of_bernoullis_b2n)
-
-tangent_t2n(n)
-
-tangent_t2n_range(start_index, number_of_tangent_t2n)
+tangent_t2n(n = NULL, start_index = NULL, number_of_tangent_t2n = NULL)
 
 prime(n)
 
@@ -63,9 +57,9 @@ The \code{max_} functions return the maximum index for which the respective numb
 bernoulli_b2n(10)
 max_bernoulli_b2n()
 unchecked_bernoulli_b2n(10)
-bernoulli_b2n_range(0, 10)
+bernoulli_b2n(start_index = 0, number_of_bernoullis_b2n = 10)
 tangent_t2n(10)
-tangent_t2n_range(0, 10)
+tangent_t2n(start_index = 0, number_of_tangent_t2n = 10)
 prime(10)
 max_prime()
 fibonacci(10)

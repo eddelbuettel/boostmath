@@ -28,9 +28,9 @@ The [Special Functions](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html
 bernoulli_b2n(10)
 max_bernoulli_b2n()
 unchecked_bernoulli_b2n(10)
-bernoulli_b2n_range(0, 10)
+bernoulli_b2n(start_index = 0, number_of_bernoullis_b2n = 10)
 tangent_t2n(10)
-tangent_t2n_range(0, 10)
+tangent_t2n(start_index = 0, number_of_tangent_t2n = 10)
 prime(10)
 max_prime()
 fibonacci(10)
@@ -105,7 +105,7 @@ ibeta(2, 3, 0.5)
 # Normalised complement of the incomplete beta function 1 - I_x(2, 3) for x = 0.5
 ibetac(2, 3, 0.5)
 # Full incomplete beta function B_x(2, 3) for x = 0.5
-beta_incomplete(2, 3, 0.5)
+beta_boost(2, 3, 0.5)
 # Full complement of the incomplete beta function 1 - B_x(2, 3) for x = 0.5
 betac(2, 3, 0.5)
 # Inverse of the normalised incomplete beta function I_x(2, 3) = 0.5
@@ -233,9 +233,9 @@ cyl_bessel_j_zero(0, 1)
 # Finding the first zero of the Bessel function of the second kind Y_0
 cyl_neumann_zero(0, 1)
 # Finding multiple zeros of the Bessel function of the first kind J_0 starting from index 1
-cyl_bessel_j_zero_multiple(0, 1, 5)
+cyl_bessel_j_zero(0, start_index = 1, number_of_zeros = 5)
 # Finding multiple zeros of the Bessel function of the second kind Y_0 starting from index 1
-cyl_neumann_zero_multiple(0, 1, 5)
+cyl_neumann_zero(0, start_index = 1, number_of_zeros = 5)
 ```
 
 ### [Hankel Functions](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/hankel.html)
@@ -256,8 +256,8 @@ airy_ai_prime(2)
 airy_bi_prime(2)
 airy_ai_zero(1)
 airy_bi_zero(1)
-airy_ai_zero_multiple(1, 5)
-airy_bi_zero_multiple(1, 5)
+airy_ai_zero(start_index = 1, number_of_zeros = 5)
+airy_bi_zero(start_index = 1, number_of_zeros = 5)
 ```
 
 ### [Elliptic Integrals](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/ellint.html)
@@ -274,19 +274,19 @@ ellint_rc(1, 2)
 # Carlson's elliptic integral Rg with parameters x = 1, y = 2, z = 3
 ellint_rg(1, 2, 3)
 # Incomplete elliptic integral of the first kind with k = 0.5, phi = pi/4
-ellint_1_incomplete(0.5, pi / 4)
+ellint_1(0.5, pi / 4)
 # Complete elliptic integral of the first kind
 ellint_1(0.5)
 # Incomplete elliptic integral of the second kind with k = 0.5, phi = pi/4
-ellint_2_incomplete(0.5, pi / 4)
+ellint_2(0.5, pi / 4)
 # Complete elliptic integral of the second kind
 ellint_2(0.5)
 # Incomplete elliptic integral of the third kind with k = 0.5, n = 0.5, phi = pi/4
-ellint_3_incomplete(0.5, 0.5, pi / 4)
+ellint_3(0.5, 0.5, pi / 4)
 # Complete elliptic integral of the third kind with k = 0.5, n = 0.5
 ellint_3(0.5, 0.5)
 # Incomplete elliptic integral D with k = 0.5, phi = pi/4
-ellint_d_incomplete(0.5, pi / 4)
+ellint_d(0.5, pi / 4)
 # Complete elliptic integral D
 ellint_d(0.5)
 # Jacobi zeta function with k = 0.5, phi = pi/4

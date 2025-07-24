@@ -38,9 +38,9 @@
 #' # Finding the first zero of the Bessel function of the second kind Y_0
 #' cyl_neumann_zero(0, 1)
 #' # Finding multiple zeros of the Bessel function of the first kind J_0 starting from index 1
-#' cyl_bessel_j_zero_multiple(0, 1, 5)
+#' cyl_bessel_j_zero(0, start_index = 1, number_of_zeros = 5)
 #' # Finding multiple zeros of the Bessel function of the second kind Y_0 starting from index 1
-#' cyl_neumann_zero_multiple(0, 1, 5)
+#' cyl_neumann_zero(0, start_index = 1, number_of_zeros = 5)
 NULL
 
 #' @rdname bessel_functions
@@ -57,25 +57,37 @@ cyl_neumann <- function(v, x) {
 
 #' @rdname bessel_functions
 #' @export
-cyl_bessel_j_zero <- function(v, m) {
-  .Call(`cyl_bessel_j_zero_`, v, m)
-}
+cyl_bessel_j_zero <- function(v, m = NULL, start_index = NULL, number_of_zeros = NULL) {
+  if (!is.null(m)) {
+    if (!is.null(start_index) && !is.null(number_of_zeros)) {
+      stop("Please provide either 'm' or 'start_index' and 'number_of_zeros', not both.",
+          call. = FALSE)
+    }
+    return(.Call(`cyl_bessel_j_zero_`, v, m))
+  }
 
-#' @rdname bessel_functions
-#' @export
-cyl_neumann_zero <- function(v, m) {
-  .Call(`cyl_neumann_zero_`, v, m)
-}
-
-#' @rdname bessel_functions
-#' @export
-cyl_bessel_j_zero_multiple <- function(v, start_index, number_of_zeros) {
+  if (is.null(start_index) || is.null(number_of_zeros)) {
+    stop("Both 'start_index' and 'number_of_zeros' must be provided when 'm' is NULL.",
+         call. = FALSE)
+  }
   .Call(`cyl_bessel_j_zero_multiple_`, v, start_index, number_of_zeros)
 }
 
 #' @rdname bessel_functions
 #' @export
-cyl_neumann_zero_multiple <- function(v, start_index, number_of_zeros) {
+cyl_neumann_zero <- function(v, m = NULL, start_index = NULL, number_of_zeros = NULL) {
+  if (!is.null(m)) {
+    if (!is.null(start_index) && !is.null(number_of_zeros)) {
+      stop("Please provide either 'm' or 'start_index' and 'number_of_zeros', not both.",
+          call. = FALSE)
+    }
+    return(.Call(`cyl_neumann_zero_`, v, m))
+  }
+
+  if (is.null(start_index) || is.null(number_of_zeros)) {
+    stop("Both 'start_index' and 'number_of_zeros' must be provided when 'm' is NULL.",
+         call. = FALSE)
+  }
   .Call(`cyl_neumann_zero_multiple_`, v, start_index, number_of_zeros)
 }
 

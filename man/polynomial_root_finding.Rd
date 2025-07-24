@@ -32,6 +32,9 @@ quartic_roots(a, b, c, d, e)
 
 \item{e}{Coefficient of the quartic term (for quartic ax^4 + bx^3 + cx^2 + dx + e, e is the constant).}
 }
+\value{
+A numeric vector of the polynomial roots, residual, or condition number.
+}
 \description{
 Functions for finding roots of polynomials of various degrees.
 }

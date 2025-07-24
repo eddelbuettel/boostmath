@@ -17,7 +17,7 @@
 #' # Normalised complement of the incomplete beta function 1 - I_x(2, 3) for x = 0.5
 #' ibetac(2, 3, 0.5)
 #' # Full incomplete beta function B_x(2, 3) for x = 0.5
-#' beta_incomplete(2, 3, 0.5)
+#' beta_boost(2, 3, 0.5)
 #' # Full complement of the incomplete beta function 1 - B_x(2, 3) for x = 0.5
 #' betac(2, 3, 0.5)
 #' # Inverse of the normalised incomplete beta function I_x(2, 3) = 0.5
@@ -40,8 +40,11 @@ NULL
 
 #' @rdname beta_functions
 #' @export
-beta_boost <- function(a, b) {
-  .Call(`beta_`, a, b)
+beta_boost <- function(a, b, x = NULL) {
+  if (is.null(x)) {
+    return(.Call(`beta_`, a, b))
+  }
+  .Call(`beta_incomplete_`, a, b, x)
 }
 
 #' @rdname beta_functions
@@ -56,11 +59,6 @@ ibetac <- function(a, b, x) {
   .Call(`ibetac_`, a, b, x)
 }
 
-#' @rdname beta_functions
-#' @export
-beta_incomplete <- function(a, b, x) {
-  .Call(`beta_incomplete_`, a, b, x)
-}
 
 #' @rdname beta_functions
 #' @export

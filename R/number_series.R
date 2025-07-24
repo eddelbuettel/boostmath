@@ -12,8 +12,6 @@
 #' The `checked_` functions ensure that the input is within valid bounds, while the `unchecked_` functions do not perform such checks,
 #' allowing for potentially faster computation at the risk of overflow or invalid input.
 #'
-#' The `range_` functions allow for computing a sequence of numbers starting from a specified index.
-#'
 #' The `max_` functions return the maximum index for which the respective numbers can be computed using precomputed lookup tables.
 #'
 #' @seealso [Boost Documentation](https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/number_series.html) for more details on the mathematical background.
@@ -22,9 +20,9 @@
 #' bernoulli_b2n(10)
 #' max_bernoulli_b2n()
 #' unchecked_bernoulli_b2n(10)
-#' bernoulli_b2n_range(0, 10)
+#' bernoulli_b2n(start_index = 0, number_of_bernoullis_b2n = 10)
 #' tangent_t2n(10)
-#' tangent_t2n_range(0, 10)
+#' tangent_t2n(start_index = 0, number_of_tangent_t2n = 10)
 #' prime(10)
 #' max_prime()
 #' fibonacci(10)
@@ -33,8 +31,19 @@ NULL
 
 #' @rdname number_series
 #' @export
-bernoulli_b2n <- function(n) {
-  .Call(`bernoulli_b2n_`, n)
+bernoulli_b2n <- function(n = NULL, start_index = NULL, number_of_bernoullis_b2n = NULL) {
+  if (!is.null(n)) {
+    if (!is.null(start_index) || !is.null(number_of_bernoullis_b2n)) {
+      stop("If n is provided, start_index and number_of_bernoullis_b2n should not be used.",
+           call. = FALSE)
+    }
+    return(.Call(`bernoulli_b2n_`, n))
+  }
+  if (is.null(start_index) || is.null(number_of_bernoullis_b2n)) {
+    stop("Either n must be provided or both start_index and number_of_bernoullis_b2n must be provided.",
+         call. = FALSE)
+  }
+  .Call(`bernoulli_b2n_range_`, start_index, number_of_bernoullis_b2n)
 }
 
 #' @rdname number_series
@@ -51,19 +60,18 @@ unchecked_bernoulli_b2n <- function(n) {
 
 #' @rdname number_series
 #' @export
-bernoulli_b2n_range <- function(start_index, number_of_bernoullis_b2n) {
-  .Call(`bernoulli_b2n_range_`, start_index, number_of_bernoullis_b2n)
-}
-
-#' @rdname number_series
-#' @export
-tangent_t2n <- function(n) {
-  .Call(`tangent_t2n_`, n)
-}
-
-#' @rdname number_series
-#' @export
-tangent_t2n_range <- function(start_index, number_of_tangent_t2n) {
+tangent_t2n <- function(n = NULL, start_index = NULL, number_of_tangent_t2n = NULL) {
+  if (!is.null(n)) {
+    if (!is.null(start_index) || !is.null(number_of_tangent_t2n)) {
+      stop("If n is provided, start_index and number_of_tangent_t2n should not be used.",
+           call. = FALSE)
+    }
+    return(.Call(`tangent_t2n_`, n))
+  }
+  if (is.null(start_index) || is.null(number_of_tangent_t2n)) {
+    stop("Either n must be provided or both start_index and number_of_tangent_t2n must be provided.",
+         call. = FALSE)
+  }
   .Call(`tangent_t2n_range_`, start_index, number_of_tangent_t2n)
 }
 

@@ -14,8 +14,8 @@
 #' airy_bi_prime(2)
 #' airy_ai_zero(1)
 #' airy_bi_zero(1)
-#' airy_ai_zero_multiple(1, 5)
-#' airy_bi_zero_multiple(1, 5)
+#' airy_ai_zero(start_index = 1, number_of_zeros = 5)
+#' airy_bi_zero(start_index = 1, number_of_zeros = 5)
 NULL
 
 #' @rdname airy_functions
@@ -44,24 +44,36 @@ airy_bi_prime <- function(x) {
 
 #' @rdname airy_functions
 #' @export
-airy_ai_zero <- function(m) {
-  .Call(`airy_ai_zero_`, m)
-}
+airy_ai_zero <- function(m = NULL, start_index = NULL, number_of_zeros = NULL) {
+  if (!is.null(m)) {
+    if (!is.null(start_index) && !is.null(number_of_zeros)) {
+      stop("Please provide either 'm' or 'start_index' and 'number_of_zeros', not both.",
+          call. = FALSE)
+    }
+    return(.Call(`airy_ai_zero_`, m))
+  }
 
-#' @rdname airy_functions
-#' @export
-airy_bi_zero <- function(m) {
-  .Call(`airy_bi_zero_`, m)
-}
-
-#' @rdname airy_functions
-#' @export
-airy_ai_zero_multiple <- function(start_index, number_of_zeros) {
+  if (is.null(start_index) || is.null(number_of_zeros)) {
+    stop("Both 'start_index' and 'number_of_zeros' must be provided when 'm' is NULL.",
+         call. = FALSE)
+  }
   .Call(`airy_ai_zero_multiple_`, start_index, number_of_zeros)
 }
 
 #' @rdname airy_functions
 #' @export
-airy_bi_zero_multiple <- function(start_index, number_of_zeros) {
+airy_bi_zero <- function(m = NULL, start_index = NULL, number_of_zeros = NULL) {
+  if (!is.null(m)) {
+    if (!is.null(start_index) && !is.null(number_of_zeros)) {
+      stop("Please provide either 'm' or 'start_index' and 'number_of_zeros', not both.",
+          call. = FALSE)
+    }
+    return(.Call(`airy_bi_zero_`, m))
+  }
+
+  if (is.null(start_index) || is.null(number_of_zeros)) {
+    stop("Both 'start_index' and 'number_of_zeros' must be provided when 'm' is NULL.",
+         call. = FALSE)
+  }
   .Call(`airy_bi_zero_multiple_`, start_index, number_of_zeros)
 }

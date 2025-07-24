@@ -22,19 +22,19 @@
 #' # Carlson's elliptic integral Rg with parameters x = 1, y = 2, z = 3
 #' ellint_rg(1, 2, 3)
 #' # Incomplete elliptic integral of the first kind with k = 0.5, phi = pi/4
-#' ellint_1_incomplete(0.5, pi / 4)
+#' ellint_1(0.5, pi / 4)
 #' # Complete elliptic integral of the first kind
 #' ellint_1(0.5)
 #' # Incomplete elliptic integral of the second kind with k = 0.5, phi = pi/4
-#' ellint_2_incomplete(0.5, pi / 4)
+#' ellint_2(0.5, pi / 4)
 #' # Complete elliptic integral of the second kind
 #' ellint_2(0.5)
 #' # Incomplete elliptic integral of the third kind with k = 0.5, n = 0.5, phi = pi/4
-#' ellint_3_incomplete(0.5, 0.5, pi / 4)
+#' ellint_3(0.5, 0.5, pi / 4)
 #' # Complete elliptic integral of the third kind with k = 0.5, n = 0.5
 #' ellint_3(0.5, 0.5)
 #' # Incomplete elliptic integral D with k = 0.5, phi = pi/4
-#' ellint_d_incomplete(0.5, pi / 4)
+#' ellint_d(0.5, pi / 4)
 #' # Complete elliptic integral D
 #' ellint_d(0.5)
 #' # Jacobi zeta function with k = 0.5, phi = pi/4
@@ -75,49 +75,37 @@ ellint_rg <- function(x, y, z) {
 
 #' @rdname elliptic_integrals
 #' @export
-ellint_1_incomplete <- function(k, phi) {
-  .Call(`ellint_1_incomplete_`, k, phi)
-}
-
-#' @rdname elliptic_integrals
-#' @export
-ellint_1 <- function(k) {
+ellint_1 <- function(k, phi = NULL) {
+  if (!is.null(phi)) {
+    return(.Call(`ellint_1_incomplete_`, k, phi))
+  }
   .Call(`ellint_1_`, k)
 }
 
 #' @rdname elliptic_integrals
 #' @export
-ellint_2_incomplete <- function(k, phi) {
-  .Call(`ellint_2_incomplete_`, k, phi)
-}
-
-#' @rdname elliptic_integrals
-#' @export
-ellint_2 <- function(k) {
+ellint_2 <- function(k, phi = NULL) {
+  if (!is.null(phi)) {
+    return(.Call(`ellint_2_incomplete_`, k, phi))
+  }
   .Call(`ellint_2_`, k)
 }
 
 #' @rdname elliptic_integrals
 #' @export
-ellint_3_incomplete <- function(k, n, phi) {
-  .Call(`ellint_3_incomplete_`, k, n, phi)
-}
-
-#' @rdname elliptic_integrals
-#' @export
-ellint_3 <- function(k, n) {
+ellint_3 <- function(k, n, phi = NULL) {
+  if (!is.null(phi)) {
+    return(.Call(`ellint_3_incomplete_`, k, n, phi))
+  }
   .Call(`ellint_3_`, k, n)
 }
 
 #' @rdname elliptic_integrals
 #' @export
-ellint_d_incomplete <- function(k, phi) {
-  .Call(`ellint_d_incomplete_`, k, phi)
-}
-
-#' @rdname elliptic_integrals
-#' @export
-ellint_d <- function(k) {
+ellint_d <- function(k, phi = NULL) {
+  if (!is.null(phi)) {
+    return(.Call(`ellint_d_incomplete_`, k, phi))
+  }
   .Call(`ellint_d_`, k)
 }
 

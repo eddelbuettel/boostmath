@@ -8,8 +8,6 @@
 \alias{airy_bi_prime}
 \alias{airy_ai_zero}
 \alias{airy_bi_zero}
-\alias{airy_ai_zero_multiple}
-\alias{airy_bi_zero_multiple}
 \title{Airy Functions}
 \usage{
 airy_ai(x)
@@ -20,13 +18,9 @@ airy_ai_prime(x)
 
 airy_bi_prime(x)
 
-airy_ai_zero(m)
+airy_ai_zero(m = NULL, start_index = NULL, number_of_zeros = NULL)
 
-airy_bi_zero(m)
-
-airy_ai_zero_multiple(start_index, number_of_zeros)
-
-airy_bi_zero_multiple(start_index, number_of_zeros)
+airy_bi_zero(m = NULL, start_index = NULL, number_of_zeros = NULL)
 }
 \arguments{
 \item{x}{Input numeric value}
@@ -50,8 +44,8 @@ airy_ai_prime(2)
 airy_bi_prime(2)
 airy_ai_zero(1)
 airy_bi_zero(1)
-airy_ai_zero_multiple(1, 5)
-airy_bi_zero_multiple(1, 5)
+airy_ai_zero(start_index = 1, number_of_zeros = 5)
+airy_bi_zero(start_index = 1, number_of_zeros = 5)
 }
 \seealso{
 \href{https://www.boost.org/doc/libs/1_87_0/libs/math/doc/html/math_toolkit/airy.html}{Boost Documentation} for more details on the mathematical background.
