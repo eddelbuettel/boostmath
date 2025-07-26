@@ -40,6 +40,9 @@ jobs:
           - { label: "nold",
               name: "nold",
               container: "ghcr.io/r-hub/containers/nold:latest"}
+          - { label: "lto",
+              name: "lto",
+              container: "ghcr.io/r-hub/containers/lto:latest"}
 
     env:
       MAKEFLAGS: -j4
